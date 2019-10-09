@@ -4,7 +4,7 @@
 
 ### Course "profession of a web developer" / Курс "профессия веб-разработчика"
 ###### 30.092019 - 19.02.2020
-
+[проект](https://denis-str.github.io/LoftSchool/base/index.html)
 
 ##### BASICS OF HTML / БАЗОВЫЙ HTML 
 ###### 30.09.2019 - 01.11.2019
