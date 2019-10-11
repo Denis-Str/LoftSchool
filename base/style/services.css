@@ -1,0 +1,144 @@
+.page {
+  padding-top: 45px;
+  padding-bottom: 80px;
+}
+
+.page__container {
+  max-width: 920px;
+}
+
+.breadcrumbs {
+  margin-bottom: 28px;
+}
+
+.breadcrumbs__list {
+  display: flex;
+}
+
+.breadcrumbs__item:first-child .breadcrumbs__link {
+  color: #f89513;
+  text-decoration: underline;
+}
+
+.breadcrumbs__item:before {
+  content: "/";
+  margin-right: -2px;
+  margin-left: 5px;}
+
+.breadcrumbs__item:first-child::before {
+  display: none;
+}
+
+.breadcrumbs__link {
+  font-family: OpenSans, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  font-style: italic;
+  color: #221f1f;
+}
+
+.breadcrumbs__item:last-child {
+  cursor: default;
+  pointer-events: none;
+}
+
+.service__title,
+.partners__title {
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.module__list {
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 63px;
+}
+
+.module__item {
+  margin-bottom: 47px;
+}
+
+.module__item:not(:nth-child(3n)) {
+  margin-right: 59px;
+}
+
+.module__item::after {
+  display: none;
+}
+
+.module__block {
+  flex-direction: column;
+  max-width: 250px;
+  padding: 0;
+}
+
+.module__block-img {
+  position: relative;
+  margin-right: 0;
+  max-width: 100%;
+  margin-bottom: 28px;
+}
+
+.module__block-pic {
+  object-fit: cover;
+  max-height: 153px;
+  width: 100%;
+  border-radius: 0;
+}
+
+.module__block-subtitle {
+  position: absolute;
+  font-family: OpenSans, Arial, sans-serif;
+  font-size: 24px;
+  letter-spacing: 0.72px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  text-align: center;
+}
+
+
+.module__block-headline {
+  font-family: OpenSans, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #221f1f;
+  margin-bottom: 15px;
+}
+
+
+.module__block-text {
+  font-family: OpenSans;
+  font-size: 14px;
+  font-weight: 300;
+  color: #221f1f;
+}
+
+.partners__title {
+  margin-bottom: 87px;
+}
+
+.partners__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.partners__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  width: 250px;
+  margin-bottom: 51px;
+}
+
+.partners__item:not(:nth-child(3n)) {
+  margin-right: 59px;
+}
+
+.partners__link {
+  display: flex;
+}
