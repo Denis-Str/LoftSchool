@@ -1,3 +1,4 @@
 *.vscode
 *.idea
 /design
+.DS_Store
