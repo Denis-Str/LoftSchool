@@ -23,7 +23,8 @@
 .breadcrumbs__item:before {
   content: "/";
   margin-right: -2px;
-  margin-left: 5px;}
+  margin-left: 5px;
+}
 
 .breadcrumbs__item:first-child::before {
   display: none;
@@ -130,7 +131,7 @@
 .partners__item {
   display: flex;
   align-items: center;
-  justify-content: center;  
+  justify-content: center;
   width: 250px;
   margin-bottom: 51px;
 }
