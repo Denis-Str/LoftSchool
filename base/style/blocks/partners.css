@@ -1,0 +1,32 @@
+.partners__title {
+  margin-bottom: 87px;
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.partners__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.partners__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  margin-bottom: 51px;
+}
+
+.partners__item:not(:nth-child(3n)) {
+  margin-right: 59px;
+}
+
+.partners__link {
+  display: flex;
+  filter : grayscale(1);
+}
+
+.partners__link:hover{
+  filter : grayscale(0);
+}

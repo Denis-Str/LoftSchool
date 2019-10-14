@@ -1,0 +1,24 @@
+.top-news {
+  max-width: 160px;
+}
+
+.top-news__month {
+  margin-bottom: 24px;
+}
+
+.top-news__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.top-news__link {
+  position: relative;
+  display: flex;
+}
+
+.top-news__link::before {
+  content: "";
+  position: absolute;
+  background-color: rgba(245, 245, 345, 0.2);
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,10 @@
+.picture {
+  padding-top: 79px;
+  padding-bottom: 58px;
+  margin: 0;
+}
+
+.picture__container {
+  display: flex;
+  justify-content: center;
+}
