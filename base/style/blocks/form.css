@@ -42,7 +42,7 @@
 
 .form__row-input::placeholder,
 .form__text-field::placeholder {
-  font-family: OpenSansArial, sans-serif;;
+  font-family: OpenSansArial, Arial, sans-serif;;
   font-size: 14px;
   font-weight: 300;
   color: rgba(34, 31, 31, 0.5);
@@ -98,6 +98,47 @@
   border-radius: 3px;
   border: 1px solid #f89513;
 }
+
+.form__option-label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.form__option-label::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border: solid 1px #c9c9c9;
+  border-radius: 50%;
+  background-image: linear-gradient(to top, #ededed, #ffffff);
+  margin-right: 6px;
+}
+
+.form__option-radio:checked+
+.form__option-label {
+  color: #f89513;
+}
+
+.form__option-radio:checked+
+.form__option-label::before {
+  border: solid 1px #f89513;
+  background-image: linear-gradient(to bottom, #ededed, #ffffff);
+}
+
+.form__option-radio:checked+
+.form__option-label::after {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #f89513;
+  left: 7px;
+  top: 7px;
+}
+
 
 .form__btn-submit:hover {
   background-color: #f89513;
