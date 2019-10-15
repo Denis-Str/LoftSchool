@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  /* padding-left: 360px; */
 }
 
 .pagination__list {
@@ -10,7 +11,7 @@
 }
 
 .pagination__counter {
-  margin-right: 40px;
+  margin-right: 24px;
 }
 
 .pagination__item {

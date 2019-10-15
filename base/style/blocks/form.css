@@ -3,8 +3,14 @@
   margin: 0 auto;
 }
 
+.form__title {
+  margin-bottom: 8px;
+  text-align: left;
+  text-transform: none;
+}
+
 .form__field:not(:last-child) {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .form__row {
@@ -23,7 +29,7 @@
 .form__row-label,
 .form__text-label,
 .form__option-question {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .form__row-field,
@@ -65,8 +71,8 @@
 }
 
 .form__text-field {
-  padding-left: 10px;
-  padding-top: 10px;
+  padding-left: 8px;
+  padding-top: 7px;
 }
 
 .form__send {
@@ -84,7 +90,7 @@
 }
 
 .form__option-field:not(:last-child) {
-  margin-right: 21px;
+  margin-right: 17px;
 }
 
 .form__row-input:focus,
@@ -107,7 +113,7 @@
   border: solid 1px #c9c9c9;
   border-radius: 50%;
   background-image: linear-gradient(to top, #ededed, #ffffff);
-  margin-right: 6px;
+  margin-right: 5px;
 }
 
 .form__option-radio:checked+

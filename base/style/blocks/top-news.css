@@ -1,13 +1,19 @@
 .top-news {
   max-width: 160px;
+  padding-top: 3px;
+}
+
+.top-news__title {
+  margin-bottom: 4px;
 }
 
 .top-news__month {
-  margin-bottom: 24px;
+  margin-bottom: 20px;
+  color: #656464;
 }
 
 .top-news__item:not(:last-child) {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .top-news__link {

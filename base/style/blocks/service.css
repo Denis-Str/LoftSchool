@@ -1,83 +1,84 @@
-
-.page {
-  padding-top: 45px;
-  padding-bottom: 80px;
-}
-
-.page__container {
-  max-width: 920px;
+.service-page {
+  padding-top: 35px;
+  padding-bottom: 31px;
 }
 
 .service__title {
   text-align: left;
-  margin-bottom: 50px;
+  margin-bottom: 35px;
 }
 
-.module__list {
+.service .module {
+  /* временно нужны разъяснения */
+  margin-bottom: 75px;
+}
+
+.service__list {
   flex-direction: row;
   flex-wrap: wrap;
-  margin-bottom: 63px;
+  /* margin-bottom: 63px; */
 }
 
-.module__item {
+.service__item:not(:last-child) {
   margin-bottom: 47px;
 }
 
-.module__item:not(:nth-child(3n)) {
+.service__item:not(:nth-child(3n)) {
   margin-right: 59px;
 }
 
-.module__item::after {
+.service__item::after {
   display: none;
 }
 
-.module__block {
+
+.service__block {
   flex-direction: column;
   max-width: 250px;
   padding: 0;
 }
 
-.module__block-img {
+.service__block-img {
   position: relative;
   margin-right: 0;
   max-width: 100%;
-  margin-bottom: 28px;
+  margin-bottom: 21px;
 }
 
-.module__block-pic {
+.service__block-pic {
   object-fit: cover;
   max-height: 153px;
   width: 100%;
   border-radius: 0;
 }
 
-.module__block-subtitle {
+.service__block-subtitle {
   position: absolute;
+  margin-bottom: 0;
   font-family: OpenSans, Arial, sans-serif;
   font-size: 24px;
   letter-spacing: 0.72px;
   font-weight: bold;
   color: #fff;
   text-transform: uppercase;
-  left: 0px;
-  right: 0px;
+  /* left: 0px;
+  right: 0px; */
   width: 100%;
   text-align: center;
 }
 
-
-.module__block-headline {
+.service__block-headline {
   font-family: OpenSans, Arial, sans-serif;
   font-size: 18px;
   font-weight: bold;
   color: #221f1f;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 
-
-.module__block-text {
-  font-family: OpenSans;
+.service__block-text {
+  font-family: OpenSans, Arial, sans-serif;
   font-size: 14px;
   font-weight: 300;
   color: #221f1f;
+  line-height: 1.5;
 }

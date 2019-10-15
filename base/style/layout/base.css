@@ -56,7 +56,10 @@ address {
   margin: 0 auto;
   padding-right: 20px;
   padding-left: 20px;
-  width: 95%;
+}
+
+.container_resize-920 {
+  max-width: 920px;
 }
 
 .header,
@@ -75,11 +78,7 @@ address {
 }
 
 .footer {
-  padding: 14px 0;
-}
-
-.design {
-  max-width: 246px;
+  padding: 10px 0;
 }
 
 .visually-hidden:not(:focus):not(:active),

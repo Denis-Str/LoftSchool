@@ -1,3 +1,10 @@
+.nav {
+  min-width: 340px;
+/* для pixer perfect */
+  padding-top: 7px;
+  padding-left: 15px;
+}
+
 .nav__list {
   display: flex;
   justify-content: space-between;
@@ -10,6 +17,7 @@
 .nav__link {
   display: flex;
   align-items: flex-end;
+  letter-spacing: 1px;
 }
 
 .nav__link::before {
@@ -33,13 +41,10 @@
   background-image: url(../../img/service_icon.png);
 }
 
-.nav__link:hover {
-  color: #f89513;
-}
-
 .nav__link_active-main,
 .nav__link_active-feed,
-.nav__link_active-services {
+.nav__link_active-services,
+.nav__link:hover {
   color: #f89513;
 }
 

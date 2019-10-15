@@ -1,0 +1,19 @@
+.design {
+  max-width: 246px;
+}
+
+.design,
+.design_link {
+  font-family: OpenSans, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: lighter;
+  color: #ffffff;
+}
+
+.design__text-bold {
+  font-weight: bold;
+}
+
+.design_link {
+  text-decoration: underline;
+}

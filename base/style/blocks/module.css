@@ -1,7 +1,10 @@
+.module {
+  margin-bottom: 18px;
+}
+
 .module__list {
   display: flex;
   flex-direction: column;
-  margin-bottom: 70px;
 }
 
 .module__item {
@@ -17,7 +20,7 @@
 }
 
 .module__item:not(:last-child) {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .module__block {
@@ -25,7 +28,7 @@
 }
 
 .module__block {
-  padding-bottom: 20px;
+  padding-bottom: 35px;
 }
 
 .module__block-img {
@@ -39,10 +42,21 @@
   border-radius: 50%;
 }
 
+.module__block-date {
+  margin-bottom: 3px;
+  font-size: 14px;
+  color: #656464;
+  font-weight: lighter;
+}
+
 .module__block-desc {
   max-width: 700px;
 }
 
 .module__block-subtitle {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+.module__block-text {
+  line-height: 29px;
 }
