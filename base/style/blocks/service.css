@@ -8,9 +8,9 @@
   margin-bottom: 35px;
 }
 
-/* .service .module {
-  margin-bottom: 75px;
-} */
+.service .module {
+  margin-bottom: 0;
+}
 
 .service__list {
   flex-direction: row;
