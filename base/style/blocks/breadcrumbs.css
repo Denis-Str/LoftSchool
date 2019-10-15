@@ -11,10 +11,14 @@
   text-decoration: underline;
 }
 
+.breadcrumbs__item:not(:first-child) {
+  margin-left: 5px;
+}
+
 .breadcrumbs__item:before {
   content: "/";
   margin-right: -2px;
-  margin-left: 5px;}
+}
 
 .breadcrumbs__item:first-child::before {
   display: none;

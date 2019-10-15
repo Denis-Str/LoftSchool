@@ -3,13 +3,13 @@
   margin: 0 auto;
 }
 
-.form__row {
-  display: flex;
-  justify-content: space-between;
+.form__field:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 .form__row {
-  margin-bottom: 21px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .form__text {
@@ -20,19 +20,26 @@
   display: flex;
 }
 
-.form__row-label {
-  margin-bottom: 7px;
+.form__row-label,
+.form__text-label,
+.form__option-question {
+  margin-bottom: 10px;
 }
 
 .form__row-field,
 .form__text {
   display: flex;
   flex-direction: column;
+  flex: 1;
+}
+
+.form__row-field:not(:last-child) {
+  margin-right: 23px;
 }
 
 .form__row-input {
   display: flex;
-  width: 269px;
+  width: 100%;
   height: 45px;
   border-radius: 3px;
   border: 1px solid #fff;
@@ -48,16 +55,8 @@
   color: rgba(34, 31, 31, 0.5);
 }
 
-.form__text {
-  margin-bottom: 19px;
-}
-
-.form__text-label {
-  margin-bottom: 10px;
-}
-
 .form__text-field {
-  width: 561px;
+  width: 100%;
   height: 90px;
   border: 1px solid #fff;
   border-radius: 3px;
@@ -73,16 +72,11 @@
 .form__send {
   display: flex;
   justify-content: space-between;
-
 }
 
 .form__option {
   display: flex;
   flex-direction: column;
-}
-
-.form__option-question {
-  margin-bottom: 13px;
 }
 
 .form__option-mode {
