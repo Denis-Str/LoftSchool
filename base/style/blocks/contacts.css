@@ -12,6 +12,7 @@
   background-color: #fff;
   padding-left: 20px;
   padding-top: 17px;
+  padding-bottom: 17px;
   position: absolute;
   top: 90px;
 }
@@ -30,9 +31,9 @@
   padding-top: 5px;
 }
 
-.contacts__mode-break {
+/* .contacts__mode-break {
   margin-bottom: 17px;
-}
+} */
 
 .contacts__timetable:hover {
   color: #fff;

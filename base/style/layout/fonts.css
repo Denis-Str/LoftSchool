@@ -40,6 +40,12 @@
   font-style: normal;
 }
 
+.wrapper {
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.42;
+}
+
 .title__link {
   font-family: Gora, Times, serif;
   font-size: 18px;
@@ -101,6 +107,16 @@
   color: #221f1f;
   font-weight: bold;
 }
+
+.service__block-subtitle {
+  font-family: OpenSans, Arial, sans-serif;
+  font-size: 24px;
+  letter-spacing: 0.72px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+}
+
 
 .top-news__title,
 .top-news__month {

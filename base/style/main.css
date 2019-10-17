@@ -1,6 +1,7 @@
 @import url("../style/layout/normalize.css");
 @import Url("../style/layout/fonts.css");
 @import url("../style/layout/base.css");
+@import url("../style/blocks/header.css");
 @import url("../style/blocks/nav.css");
 @import url("../style/blocks/contacts.css");
 @import url("../style/blocks/picture.css");
@@ -12,9 +13,11 @@
 @import url("../style/blocks/social.css");
 @import url("../style/blocks/breadcrumbs.css");
 @import url("../style/blocks/promo.css");
-@import url("../style/blocks/comments-page.css");
+@import url("../style/blocks/page__comments.css");
 @import url("../style/blocks/feedback.css");
 @import url("../style/blocks/form.css");
-@import url("../style/blocks/partners.css");
+@import url("../style/blocks/page__service.css");
 @import url("../style/blocks/service.css");
+@import url("../style/blocks/partners.css");
 @import url("../style/blocks/design.css");
+@import url("../style/blocks/footer.css");

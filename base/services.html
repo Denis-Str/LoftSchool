@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+  <meta name="viewport" content="width=device-width" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Услуги</title>
   <link rel="stylesheet" href="./style/main.css" />
@@ -19,14 +20,14 @@
           </h1>
           <nav class="nav">
             <ul class="nav__list">
-              <li class="nav__item nav__item_active">
+              <li class="nav__item">
                 <a href="index.html" class="nav__link nav__link_bg-main">Главная</a>
               </li>
               <li class="nav__item">
                 <a href="comments.html" class="nav__link nav__link_bg-feed">Отзывы</a>
               </li>
-              <li class="nav__item">
-                <a href="services.html" class="nav__link nav__link_bg-services nav__link_active-services">Услуги</a>
+              <li class="nav__item nav__item_active">
+                <a href="services.html" class="nav__link nav__link_bg-services">Услуги</a>
               </li>
             </ul>
           </nav>
@@ -43,7 +44,7 @@
         </div>
       </header>
 
-      <main class="service-page">
+      <main class="page page__service">
         <div class="container container_resize-920">
           <div class="breadcrumbs">
             <ul class="breadcrumbs__list">
@@ -57,17 +58,17 @@
           </div>
           <section class="service">
             <h2 class="section-title service__title">Услуги</h2>
-            <div class="module">
-              <ul class="module__list service__list">
-                <li class="module__item service__item">
-                  <div class="module__block service__block">
-                    <div class="module__block-img service__block-img">
-                      <h3 class="module__block-subtitle service__block-subtitle">Фитнес</h3>
-                      <img src="./img/service1.jpg" alt="image" class="module__block-pic service__block-pic" />
+            <div class="service__content">
+              <ul class="service__list">
+                <li class="service__item">
+                  <div class="service__block">
+                    <div class="service__block-img">
+                      <h3 class="service__block-subtitle">Фитнес</h3>
+                      <img src="./img/service1.jpg" alt="image" class="service__block-pic" />
                     </div>
-                    <div class="module__block-desc">
-                      <h4 class="module__block-headline service__block-headline">Фитнес</h4>
-                      <p class="module__block-text service__block-text">
+                    <div class="service__block-desc">
+                      <h4 class="service__block-headline">Фитнес</h4>
+                      <p class="service__block-text">
                         Фитнес - это основное направление в нашем центре.
                         Открыто 6 залов для занятий с 7-00 до 22-00. Работают 24
                         фитнес-тренера, есть авторские и классические программы
@@ -78,15 +79,15 @@
                     </div>
                   </div>
                 </li>
-                <li class="module__item service__item">
-                  <div class="module__block service__block">
-                    <div class="module__block-img service__block-img">
-                      <h3 class="module__block-subtitle service__block-subtitle">Диетолог</h3>
-                      <img src="./img/service2.jpg" alt="image" class="module__block-pic service__block-pic" />
+                <li class="service__item">
+                  <div class="service__block">
+                    <div class="service__block-img">
+                      <h3 class="service__block-subtitle">Диетолог</h3>
+                      <img src="./img/service2.jpg" alt="image" class="service__block-pic" />
                     </div>
-                    <div class="module__block-desc">
-                      <h4 class="module__block-headline service__block-headline">Личный диетолог</h4>
-                      <p class="module__block-text service__block-text">
+                    <div class="service__block-desc">
+                      <h4 class="service__block-headline">Личный диетолог</h4>
+                      <p class="service__block-text">
                         Поможет вам получить более заметный результат от
                         тренировок. Создаст меню на каждый день, с учетом
                         вкусовых предпочтений и особенностей здоровья.
@@ -98,15 +99,15 @@
                     </div>
                   </div>
                 </li>
-                <li class="module__item service__item">
-                  <div class="module__block service__block">
-                    <div class="module__block-img service__block-img">
-                      <h3 class="module__block-subtitle service__block-subtitle">Йога</h3>
-                      <img src="./img/service3.jpg" alt="image" class="module__block-pic service__block-pic" />
+                <li class="service__item">
+                  <div class="service__block">
+                    <div class="service__block-img">
+                      <h3 class="service__block-subtitle">Йога</h3>
+                      <img src="./img/service3.jpg" alt="image" class="service__block-pic" />
                     </div>
-                    <div class="module__block-desc">
-                      <h4 class="module__block-headline service__block-headline">Йога</h4>
-                      <p class="module__block-text service__block-text">
+                    <div class="service__block-desc">
+                      <h4 class="service__block-headline">Йога</h4>
+                      <p class="service__block-text">
                         Гармония души и тела – это базовая составляющая здоровья
                         и красоты. Наш зал для занятий йоги открыт для людей
                         всех возрастов без ограничений. Отдельным направлением
@@ -117,15 +118,15 @@
                     </div>
                   </div>
                 </li>
-                <li class="module__item service__item">
-                  <div class="module__block service__block">
-                    <div class="module__block-img service__block-img">
-                      <h3 class="module__block-subtitle service__block-subtitle">Петли ТРХ</h3>
-                      <img src="./img/service4.jpg" alt="image" class="module__block-pic service__block-pic" />
+                <li class="service__item">
+                  <div class="service__block">
+                    <div class="service__block-img">
+                      <h3 class="service__block-subtitle">Петли ТРХ</h3>
+                      <img src="./img/service4.jpg" alt="image" class="service__block-pic" />
                     </div>
-                    <div class="module__block-desc">
-                      <h4 class="module__block-headline service__block-headline">Петли ТРХ</h4>
-                      <p class="module__block-text service__block-text">
+                    <div class="service__block-desc">
+                      <h4 class="service__block-headline">Петли ТРХ</h4>
+                      <p class="service__block-text">
                         Новое направление для нашего центра, которое стало одним
                         из самых популярных и востребованных. Программа TRX
                         Suspension Training создана для людей с начальным
@@ -138,15 +139,15 @@
                     </div>
                   </div>
                 </li>
-                <li class="module__item service__item">
-                  <div class="module__block service__block">
-                    <div class="module__block-img service__block-img">
-                      <h3 class="module__block-subtitle service__block-subtitle">Кроссфит</h3>
-                      <img src="./img/service5.jpg" alt="image" class="module__block-pic service__block-pic" />
+                <li class="service__item">
+                  <div class="service__block">
+                    <div class="service__block-img">
+                      <h3 class="service__block-subtitle">Кроссфит</h3>
+                      <img src="./img/service5.jpg" alt="image" class="service__block-pic" />
                     </div>
-                    <div class="module__block-desc">
-                      <h4 class="module__block-headline service__block-headline">Кроссфит</h4>
-                      <p class="module__block-text service__block-text">
+                    <div class="service__block-desc">
+                      <h4 class="service__block-headline">Кроссфит</h4>
+                      <p class="service__block-text">
                         Авторская запатентованная программа тренировки,
                         включающая элементы тяжелой атлетики, занятий с гирями,
                         гимнастики. Данная программа безупречно подходит для
@@ -160,15 +161,15 @@
                     </div>
                   </div>
                 </li>
-                <li class="module__item service__item">
-                  <div class="module__block service__block">
-                    <div class="module__block-img service__block-img">
-                      <h3 class="module__block-subtitle service__block-subtitle">Бассейн</h3>
-                      <img src="./img/service6.jpg" alt="image" class="module__block-pic service__block-pic" />
+                <li class="service__item">
+                  <div class="service__block">
+                    <div class="service__block-img">
+                      <h3 class="service__block-subtitle">Бассейн</h3>
+                      <img src="./img/service6.jpg" alt="image" class="service__block-pic" />
                     </div>
-                    <div class="module__block-desc">
-                      <h4 class="module__block-headline service__block-headline">Бассейн</h4>
-                      <p class="module__block-text service__block-text">
+                    <div class="service__block-desc">
+                      <h4 class="service__block-headline">Бассейн</h4>
+                      <p class="service__block-text">
                         Большой 50 метровый бассейн, разделенный на 6 дорожек,
                         позволит заниматься индивидуальным плаванием или
                         аквааэробикой. Занятия проводит сертифицированный тренер
@@ -219,6 +220,7 @@
                 </a>
               </li>
             </ul>
+
           </section>
         </div>
       </main>

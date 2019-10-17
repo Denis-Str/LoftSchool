@@ -41,24 +41,22 @@
   background-image: url(../../img/service_icon.png);
 }
 
-.nav__link_active-main,
-.nav__link_active-feed,
-.nav__link_active-services,
-.nav__link:hover {
+.nav__item:hover .nav__link,
+.nav__item_active .nav__link {
   color: #f89513;
 }
 
-.nav__link_bg-main:hover::before,
-.nav__link_active-main:before {
+.nav__item:hover .nav__link_bg-main::before,
+.nav__item_active .nav__link_bg-main::before {
   background-image: url(../../img/main_icon_hover.png);
 }
 
-.nav__link_bg-feed:hover::before,
-.nav__link_active-feed::before {
+.nav__item:hover .nav__link_bg-feed::before,
+.nav__item_active .nav__link_bg-feed::before {
   background-image: url(../../img/feed_icon_hover.png);
-}
+} 
 
-.nav__link_bg-services:hover::before,
-.nav__link_active-services::before {
+.nav__item:hover .nav__link_bg-services::before,
+.nav__item_active .nav__link_bg-services::before {
   background-image: url(../../img/service_icon_hover.png);
-}
+} 
