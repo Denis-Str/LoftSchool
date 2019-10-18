@@ -1,9 +1,6 @@
-.breadcrumbs {
-  margin-bottom: 8px;
-}
-
 .breadcrumbs__list {
   display: flex;
+  margin-bottom: 8px;
 }
 
 .breadcrumbs__item:first-child .breadcrumbs__link {
@@ -22,14 +19,6 @@
 
 .breadcrumbs__item:first-child::before {
   display: none;
-}
-
-.breadcrumbs__link {
-  font-family: OpenSans, Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 300;
-  font-style: italic;
-  color: #221f1f;
 }
 
 .breadcrumbs__item:last-child {
