@@ -40,6 +40,8 @@
   cursor: pointer;
 }
 
+/* можно скрыть top ом */
+
 .contacts__mode_hidden {
   display: none;
 }
