@@ -1,9 +1,12 @@
-.breadcrumbs__list {
-  display: flex;
+.breadcrumbs {
   margin-bottom: 8px;
 }
 
-.breadcrumbs__item:first-child .breadcrumbs__link {
+.breadcrumbs__list {
+  display: flex;
+}
+
+.breadcrumbs__item:not(:last-child) .breadcrumbs__link {
   color: #f89513;
   text-decoration: underline;
 }
