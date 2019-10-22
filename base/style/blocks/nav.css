@@ -1,17 +1,21 @@
 .nav {
-  min-width: 340px;
-/* для pixer perfect */
-  padding-top: 7px;
-  padding-left: 15px;
+  /* min-width: 340px; */
+  /* padding-top: 7px;
+  padding-left: 15px; */
+  padding-top: 35px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .nav__list {
-  display: flex;
-  justify-content: space-between;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .nav__item:not(:last-child) {
-  margin-right: 27px;
+  margin-bottom: 27px;
 }
 
 .nav__link {
@@ -30,15 +34,15 @@
 }
 
 .nav__link_bg-main::before {
-  background-image: url(../../img/main_icon.png);
+  background-image: url(../../img/new-main-icon.png);
 }
 
 .nav__link_bg-feed::before {
-  background-image: url(../../img/feed_icon.png);
+  background-image: url(../../img/new-feed-icon.png);
 }
 
 .nav__link_bg-services::before {
-  background-image: url(../../img/service_icon.png);
+  background-image: url(../../img/new-service-icon.png);
 }
 
 .nav__item:hover .nav__link,

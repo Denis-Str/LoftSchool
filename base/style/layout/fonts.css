@@ -58,7 +58,7 @@
   font-family: OpenSans, Arial, sans-serif;
   font-size: 12px;
   font-weight: bold;
-  color: #ffffff;
+  color: #221f1f;
   text-transform: uppercase;
 }
 
@@ -99,12 +99,12 @@
 .features__text,
 .features__subtitle {
   font-family: OpenSans, Arial, sans-serif;
+  color: #221f1f;
 }
 
 .module__block-subtitle {
   font-family: Roboto, Arial, sans-serif;
   font-size: 18px;
-  color: #221f1f;
   font-weight: bold;
 }
 

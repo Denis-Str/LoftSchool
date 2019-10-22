@@ -1,0 +1,16 @@
+.content {
+  padding-bottom: 67px;
+
+}
+.content__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content__column-left {
+  width: 275px;
+}
+
+.content__column-right {
+  max-width: 865px;
+}
