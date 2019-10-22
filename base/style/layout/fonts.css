@@ -156,6 +156,14 @@
   font-weight: bold;
 }
 
+.promo__content {
+  font-family: OpenSans, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: #fff;
+  line-height: 30px;
+}
+
 .feedback {
   font-family: OpenSans, Arial, sans-serif;
   font-size: 14px;
