@@ -1,9 +1,11 @@
-.social__list {
-  display: flex;
-}
-
 .social__subtitle {
   margin-bottom: 8px;
+  text-align: center;
+}
+
+.social__list {
+  display: flex;
+  justify-content: center;
 }
 
 .social__link {

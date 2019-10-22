@@ -1,6 +1,8 @@
 .top-news {
+  margin: 0 auto;
+  width: 100%;
   max-width: 160px;
-  padding-top: 3px;
+  margin-bottom: 50px;
 }
 
 .top-news__title {
@@ -10,6 +12,11 @@
 .top-news__month {
   margin-bottom: 20px;
   color: #656464;
+}
+
+.top-news__title, 
+.top-news__month {
+  text-align: center;
 }
 
 .top-news__item:not(:last-child) {
