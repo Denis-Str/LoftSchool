@@ -35,9 +35,14 @@
   margin-bottom: 17px;
 } */
 
+.contacts__timetable {
+  transition: .7s;
+}
+
 .contacts__timetable:hover {
   color: #fff;
   cursor: pointer;
+  transition: .7s;
 }
 
 /* можно скрыть top ом */

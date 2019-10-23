@@ -16,6 +16,7 @@
   background-color: #d0d0d0;
   background-repeat: no-repeat;
   background-position: center;
+  transition: .7s;
 }
 
 .social__item:not(:last-child) {
@@ -44,4 +45,5 @@
 
 .social__link:hover {
   background-color: #f89513;
+  transition: .7s;
 }

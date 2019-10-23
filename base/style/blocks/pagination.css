@@ -23,6 +23,10 @@
   align-items: center;
 }
 
+.pagination__link {
+  transition: .7s;
+}
+
 .pagination__backward,
 .pagination__forward {
   position: relative;
@@ -60,6 +64,7 @@
 
 .pagination__item:not(.pagination__item_active):hover .pagination__link {
   color: #f89513;
+  transition: .7s;
 }
 
 .pagination__item_active {

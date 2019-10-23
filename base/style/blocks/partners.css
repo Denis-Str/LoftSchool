@@ -33,8 +33,10 @@
 .partners__link {
   display: flex;
   filter : grayscale(1);
+  transition: .7s;
 }
 
 .partners__link:hover{
   filter : grayscale(0);
+  transition: .7s;
 }

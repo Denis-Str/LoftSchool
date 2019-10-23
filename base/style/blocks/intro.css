@@ -19,14 +19,14 @@
 .intro__block-anim {
   display: flex;
   flex-direction: column;
-  animation: intro-anim .5s, 0.3, ease;
+  animation: intro-anim .5s, 0.3, ease-out;
 }
 
-.intro__inner-img {
+.intro__block-img {
   margin-bottom: 31px;
 }
 
-.intro__inner-link {
+.intro__block-link {
   width: 171px;
   padding: 16px 0;
   text-align: center;
