@@ -10,11 +10,16 @@
 
 .intro__block {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   background-color: rgba(0, 0, 0, .5);
+}
+
+.intro__block-anim {
+  display: flex;
+  flex-direction: column;
+  animation: intro-anim .5s, 0.3, ease;
 }
 
 .intro__inner-img {
@@ -25,4 +30,29 @@
   width: 171px;
   padding: 16px 0;
   text-align: center;
+}
+
+@keyframes intro-anim {
+  from {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1.3);
+
+  }
+
+  70% {
+    transform: scale(1);
+
+  }
+
+  90% {
+    transform: scale(1.3);
+
+  }
+
+  to {
+    transform: scale(1);
+  }
 }
