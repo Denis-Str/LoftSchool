@@ -170,3 +170,12 @@
   font-weight: 300;
   color: #221f1f;
 }
+
+.btn {
+  font-family: OpenSans, Arial, sans-serif;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+
+}
