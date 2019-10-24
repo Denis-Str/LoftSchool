@@ -23,25 +23,38 @@
   margin-right: 10px;
 }
 
-.social__link_vk {
-  background-image: url(../../img/vk.png);
+.social__link {
+  position: relative;
+}
+.social__link::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.social__link_fb {
-  background-image: url(../../img/fb.png);
+.social__link_vk::after {
+  width: 12px; height: 7px;
+  background: url("../../img/sprites.png") -164px -15px;
 }
 
-.social__link_google {
-  background-image: url(../../img/google.png);
+.social__link_fb::after {
+  width: 6px; height: 13px;
+  background: url("../../img/sprites.png") -164px -52px;
 }
 
-.social__link_tw {
-  background-image: url(../../img/twitter.png);
-}
+.social__link_google::after {
+  width: 15px; height: 9px;
+  background: url("../../img/sprites.png") -15px -107px;}
 
-.social__link_mail {
-  background-image: url(../../img/mail.png);
-}
+.social__link_tw::after {
+  width: 11px; height: 9px;
+  background: url("../../img/sprites.png") -102px -107px;}
+
+.social__link_mail::after {
+  width: 12px; height: 9px;
+  background: url("../../img/sprites.png") -60px -107px;}
 
 .social__link:hover {
   background-color: #f89513;
