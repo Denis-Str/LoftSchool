@@ -69,7 +69,7 @@
   color: #ffffff;
 }
 
-.contacts__timetable {
+.dropdown__link {
   font-family: OpenSans, Arial, sans-serif;
   font-size: 14px;
   font-weight: bold;
@@ -77,15 +77,14 @@
   text-decoration: underline;
 }
 
-.contacts__mode {
+.dropdown__menu {
   font-family: OpenSans, Arial, sans-serif;
   font-size: 14px;
   color: #221f1f;
 }
 
-.contacts__mode-work {
+.dropdown__item {
   font-weight: bold;
-  color: #f89513;
 }
 
 .section-title {
@@ -116,7 +115,6 @@
   color: #fff;
   text-transform: uppercase;
 }
-
 
 .top-news__title,
 .top-news__month {
