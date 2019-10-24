@@ -1,7 +1,7 @@
-.nav {
+/* .nav {
   display: flex;
   justify-content: center;
-}
+} */
 
 .nav_main-mb {
   margin-bottom: 20px;
@@ -15,18 +15,18 @@
   margin-bottom: 66px;
 }
 
-.nav__list {
+/* .nav__list {
   display: flex;
   flex-direction: column;
   width: 100%;
   align-content: center;
-}
+} */
 
 .nav__item {
   width: 44%;
   margin: 0 auto;
   display: flex;
-  justify-content: end;
+  justify-content: flex-start;
 }
 
 .nav__item:not(:last-child) {
