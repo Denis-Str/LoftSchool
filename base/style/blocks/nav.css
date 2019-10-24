@@ -4,24 +4,33 @@
 }
 
 .nav_main-mb {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .nav_comments-mb {
-  margin-bottom: 83px;
+  margin-bottom: 76px;
 }
 
 .nav_services-mb {
-  margin-bottom: 70px;
+  margin-bottom: 66px;
 }
 
 .nav__list {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
+  width: 100%;
+  align-content: center;
+}
+
+.nav__item {
+  width: 44%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: end;
 }
 
 .nav__item:not(:last-child) {
-  margin-bottom: 27px;
+  margin-bottom: 25px;
 }
 
 .nav__link {
@@ -34,7 +43,7 @@
 
 .nav__link::before {
   content: "";
-  margin-right: 19px;
+  margin-right: 18px;
   opacity: 1;
 }
 
@@ -42,6 +51,7 @@
   content: "";
   position: absolute;
   opacity: 0;
+  left: 0;
 }
 
 .nav__link:hover::before {

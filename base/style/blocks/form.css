@@ -116,21 +116,18 @@
   transition: .5s;
 }
 
-.form__option-radio:checked+
-.form__option-label {
+.form__option-radio:checked+.form__option-label {
   color: #f89513;
   transition: .5s;
 }
 
-.form__option-radio:checked+
-.form__option-label::before {
+.form__option-radio:checked+.form__option-label::before {
   border: solid 1px #f89513;
   background-image: linear-gradient(to bottom, #ededed, #ffffff);
   transition: .5s;
 }
 
-.form__option-radio:checked+
-.form__option-label::after {
+.form__option-radio:checked+.form__option-label::after {
   position: absolute;
   content: "";
   width: 8px;

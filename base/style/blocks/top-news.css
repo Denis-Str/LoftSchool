@@ -1,8 +1,11 @@
 .top-news {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 160px;
-  margin-bottom: 50px;
+  /*margin: 0 auto;*/
+  /*width: 100%;*/
+  /*max-width: 160px;*/
+}
+
+.top-news_mb {
+  margin-bottom: 47px;
 }
 
 .top-news__title {
@@ -20,12 +23,13 @@
 }
 
 .top-news__item:not(:last-child) {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .top-news__link {
   position: relative;
   display: flex;
+  justify-content: center;
 }
 
 .top-news__link::before {

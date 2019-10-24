@@ -1,10 +1,9 @@
 .picture {
-  /* padding-top: 79px; */
-  /* padding-bottom: 58px; */
   margin: 0;
 }
 
 .picture__container {
-  display: flex;
-  justify-content: center;
+  display: block;
+  padding-left: 15px;
+  width: 100%;
 }

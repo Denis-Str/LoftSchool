@@ -1,5 +1,5 @@
-.content {
-  padding-bottom: 67px;
+.content_ppadding-bottom {
+  padding-bottom: 50px;
 
 }
 .content__container {
@@ -8,9 +8,10 @@
 }
 
 .content__column-left {
-  width: 275px;
+  /*width: 275px;*/
+  width: 23.7%;
 }
 
 .content__column-right {
-  max-width: 865px;
+  width: 74.6%;
 }

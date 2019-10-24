@@ -52,6 +52,7 @@
   color: #f89513;
   text-transform: uppercase;
   letter-spacing: 1.8px;
+  display: inline-flex;
 }
 
 .nav__link {
@@ -91,7 +92,7 @@
   font-family: OpenSans, Arial, sans-serif;
   font-size: 49px;
   text-transform: uppercase;
-  text-align: center;
+  /*text-align: center;*/
   letter-spacing: 1px;
 }
 
@@ -175,5 +176,4 @@
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-
 }

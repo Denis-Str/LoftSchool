@@ -1,6 +1,6 @@
 .features {
-  padding-top: 23px;
-  padding-bottom: 27px;
+  padding-top: 21px;
+  padding-bottom: 30px;
   border: solid 1px #000000;
 }
 
@@ -15,9 +15,10 @@
 }
 
 .features__title {
-  margin-bottom: 28px;
+  margin-bottom: 22px;
   font-size: 18px;
-  letter-spacing: 0.54px;
+  text-align: center;
+  letter-spacing: 0.5px;
 }
 
 .features__list {
@@ -33,46 +34,19 @@
   align-self: center;
 }
 
-/* .features__item::before {
-  content: "";
-  width: 66px;
-  height: 66px;
-  align-self: center;
-  background-color: #f89513;
-  border-radius: 50%;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-bottom: 42px;
-} */
-
-/* .features__item_bg-flower::before {
-  background-image: url(../../img/flower.png);
-}
-
-.features__item_bg-star::before {
-  background-image: url(../../img/star.png);
-}
-
-.features__item_palette::before {
-  background-image: url(../../img/palette.png);
-} */
-
 .features__subtitle {
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   text-align: center;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2.7px;
 }
 
 .features__text {
   margin-bottom: 8px;
   font-size: 18px;
   line-height: 1.67;
-}
-
-.features__subtitle {
-  font-size: 11px;
-  font-weight: bold;
-  letter-spacing: 2.7px;
 }
 
 .features__checklist {

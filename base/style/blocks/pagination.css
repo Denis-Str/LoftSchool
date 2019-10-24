@@ -1,8 +1,12 @@
 .pagination {
   display: flex;
-  justify-content: center;
+  /*justify-content: center;*/
   align-items: center;
-  /* padding-left: 360px; */
+  padding-left: 24%;
+}
+
+.pagination_padding-left {
+  padding-left: 13%;
 }
 
 .pagination__list {
@@ -60,7 +64,6 @@
 .pagination__link_disabled::after {
   border-color: #bebdbd;
 }
-
 
 .pagination__item:not(.pagination__item_active):hover .pagination__link {
   color: #f89513;

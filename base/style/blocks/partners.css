@@ -1,10 +1,11 @@
 .partners {
-  padding: 30px 0;
+  padding-top: 23px;
+  padding-bottom: 30px;
   border: solid 1px #000000;
 }
 
 .partners_mb {
-  margin-bottom: 30px;
+  margin-bottom: 26px;
 }
 
 .partners__title {
@@ -15,8 +16,6 @@
 
 .partners__list {
   display: flex;
-  /* justify-content: space-between;
-  flex-wrap: wrap; */
   flex-direction: column;
 }
 
@@ -24,11 +23,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* width: 29%; */
 }
 
 .partners__item:not(:last-child) {
-  margin-bottom: 51px;
+  margin-bottom: 63px;
 }
 
 .partners__link {

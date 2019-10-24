@@ -56,29 +56,6 @@ address {
   padding-left: 20px;
 }
 
-/* .container_resize-920 {
-  max-width: 920px;
-} */
-
-/* .header,
-.footer {
-  background-color: #131415;
-  color: #fff;
-  padding-top: 22px;
-  padding-bottom: 17px;
-}
-
-.header__container,
-.footer__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footer {
-  padding: 10px 0;
-} */
-
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
