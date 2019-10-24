@@ -3,7 +3,9 @@
   padding-bottom: 30px;
   background-image: url(../../img/promo-bg.jpg);
   background-position: center;
-  margin-top: 83px;
+}
+
+.promo_mb {
   margin-bottom: 27px;
 }
 

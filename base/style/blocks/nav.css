@@ -3,10 +3,21 @@
   justify-content: center;
 }
 
+.nav_main-mb {
+  margin-bottom: 25px;
+}
+
+.nav_comments-mb {
+  margin-bottom: 83px;
+}
+
+.nav_services-mb {
+  margin-bottom: 70px;
+}
+
 .nav__list {
   display: inline-flex;
   flex-direction: column;
-  /* padding-bottom: 20px; */
 }
 
 .nav__item:not(:last-child) {
