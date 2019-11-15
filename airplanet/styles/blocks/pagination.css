@@ -71,7 +71,7 @@
   opacity: .3;
 }
 
-.pagination__item:hover .pagination__link {
+.pagination__item:not(.pagination__item_active):hover .pagination__link {
   color: #1c5bc3;
   transition: .7s;
 }
