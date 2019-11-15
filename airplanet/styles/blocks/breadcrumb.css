@@ -1,0 +1,26 @@
+.breadcrumb {
+  padding-top: 42px;
+  padding-bottom: 25px;
+}
+
+.breadcrumb__list {
+  display: flex;
+}
+
+.breadcrumb__link {
+  display: inline-flex;
+}
+
+.breadcrumb__item:not(:last-child) .breadcrumb__link {
+  text-decoration: underline;
+}
+
+.breadcrumb__item:not(:last-child):after {
+  content: "/";
+}
+
+.breadcrumb__item:last-child .breadcrumb__link {
+  color: #221f1f;
+  cursor: default;
+  pointer-events: none;
+}

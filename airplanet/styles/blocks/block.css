@@ -1,0 +1,31 @@
+.block__item {
+  padding-top: 20px;
+  padding-bottom: 25px;
+  display: flex;
+  align-items: center;
+  /*flex-wrap: wrap;*/
+}
+
+.block__item:not(:last-child) {
+  border-bottom: 2px #f5f5f5 solid;
+}
+
+.block__img-block {
+  max-width: 160px;
+  margin-right: 20px;
+  flex-shrink: 1;
+}
+
+.block__img {
+  border-radius: 50%;
+}
+
+.block__text-block {
+  max-width: 700px;
+  flex-shrink: 10;
+}
+
+.block__desc_max-width-comments {
+  max-width: 650px;
+
+}

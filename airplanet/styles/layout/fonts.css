@@ -1,0 +1,165 @@
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("../../fonts/Roboto-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto-Light";
+  src: url("../../fonts/Roboto-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+.header {
+  font-family: Roboto-Bold, Arial, Helvetica, sans-serif;
+}
+
+.contacts__phone {
+  font-size: 22px;
+}
+
+.dropdown {
+  font-size: 14px;
+}
+
+.dropdown__link-font-style {
+  text-decoration: underline;
+}
+
+.header,
+.dropdown__link,
+.contacts__phone {
+  color: #ffffff;
+}
+
+.dropdown__list {
+  color: #221f1f;
+}
+
+.dropdown__item_font-color {
+  color: #1c5bc3;
+}
+
+.menu__link {
+  font-family: Roboto-Bold, Arial, Helvetica, sans-serif;
+  color: #4b73b5;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  transition: .7s;
+}
+
+.title {
+  font-family: Roboto-Bold, Arial, Helvetica, sans-serif;
+  font-size: 49px;
+  margin-bottom: 20px;
+  line-height: normal;
+}
+
+.tariffs__name {
+  font-family: Roboto-Bold, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 25px;
+}
+
+.tariffs__disc,
+.tariffs__checklist {
+  font-size: 18px;
+}
+
+.tariffs__price {
+  font-size: 54px;
+}
+
+.tariffs__price_fs {
+  font-size: 32px;
+}
+
+.block__date {
+  font-size: 14px;
+  color: #656464;
+  margin-bottom: 10px;
+}
+
+.block__title {
+  font-family: Roboto-Bold, Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.block__desc {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.pagination__counter {
+  font-size: 14px;
+}
+
+.pagination__link {
+  font-family: Roboto-Bold, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #221f1f;
+}
+
+.breadcrumb__link {
+  font-size: 14px;
+  font-style: italic;
+  color: #1c5bc3;
+}
+
+.promo__text {
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.promo_text-bold {
+  font-family: Roboto-Bold, Arial, Helvetica, sans-serif;
+}
+
+.promo__phone {
+  color: #ffffff;
+}
+
+.btn {
+  font-family: Roboto-Bold, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.footer {
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.team__full-name {
+  font-family: Roboto-Bold, Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+.team__profession {
+  font-family: Roboto-Bold, Arial, Helvetica, sans-serif;
+  color: #4b73b5;
+}
+
+.team__name {
+  font-family: Roboto-Bold, Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.intro__link {
+  font-family: Roboto-Bold, Arial, Helvetica, sans-serif;
+  color: #4b73b5;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+

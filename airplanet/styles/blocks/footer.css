@@ -1,0 +1,12 @@
+.footer {
+  background-color: #4b73b5;
+  font-family: Roboto-Light, Arial, Helvetica, sans-serif;
+  flex: 0 0 auto;
+  padding: 10px 0;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,19 @@
+.header {
+    background-color: #4b73b5;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contacts {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+

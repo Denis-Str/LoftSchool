@@ -1,0 +1,77 @@
+.menu__item {
+  display: inline-flex;
+}
+
+.menu__item:not(:last-child) {
+  margin-bottom: 35px;
+}
+
+.menu__link {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.menu__link:before {
+  content: "";
+  margin-right: 17px;
+  opacity: 1;
+  transition: opacity .7s;
+}
+
+.menu__link:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity .7s;
+}
+
+.menu__link_bg-main:before {
+  width: 17px; height: 18px;
+  background: url("../../img/css_sprites.png") -96px -48px;
+}
+
+.menu__link_bg-team:before {
+  width: 23px; height: 18px;
+  background: url("../../img/css_sprites.png") -53px -10px;
+}
+
+.menu__link_bg-feed:before {
+  width: 20px; height: 18px;
+  background: url("../../img/css_sprites.png") -50px -48px;
+}
+
+.menu__link_bg-main:after {
+  width: 17px; height: 18px;
+  background: url("../../img/css_sprites.png") -96px -10px;
+}
+
+.menu__link_bg-feed:after {
+  width: 20px; height: 18px;
+  background: url("../../img/css_sprites.png") -10px -48px;
+}
+
+.menu__link_bg-team:after {
+  width: 23px; height: 18px;
+  background: url("../../img/css_sprites.png") -10px -10px;
+}
+
+.menu__link:hover:before,
+.menu__item_active .menu__link:before {
+  opacity: 0;
+  transition: .7s;
+}
+
+.menu__link:hover:after,
+.menu__item_active .menu__link:after {
+  opacity: 1;
+  transition: .7s;
+}
+
+.menu__item:hover .menu__link,
+.menu__item_active .menu__link {
+  color: #221f1f;
+  transition: color .7s;
+}
