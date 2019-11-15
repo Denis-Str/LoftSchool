@@ -11,6 +11,8 @@ ___
 ###### *30.09.2019 - 01.11.2019*
 [выпускной проект](https://denis-str.github.io/LoftSchool/base/index.html)
 
+[доп. проект](https://denis-str.github.io/LoftSchool/airplanet/main.html)
+
 [димлом](https://loftschool.com/diploma/VB1562312794/ru/pdf)
 
 ___
