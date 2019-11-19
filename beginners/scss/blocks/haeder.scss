@@ -1,0 +1,17 @@
+.header {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 13px;
+  &__container {
+    flex-basis: 940px;
+  }
+  &__block {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

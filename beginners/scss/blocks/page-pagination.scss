@@ -1,0 +1,28 @@
+.page-pagination {
+  position: absolute;
+  top: 90px;
+  right: -40px;
+  &__item {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: solid 1px transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+    &_active {
+      border-color: #ffffff;
+    }
+  }
+  &__link {
+    display: flex;
+    border-radius: 50%;
+    width: 6px;
+    height: 6px;
+    background-color: #fff;
+  }
+}
+

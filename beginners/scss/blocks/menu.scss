@@ -1,0 +1,52 @@
+@import "../layout/mixins";
+@import "../layout/fonts";
+
+.menu {
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item:not(:last-child):after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    margin: 0 15px;
+  }
+
+  &__link {
+    @include font-family(UbuntuRegular);
+    font-size: 13px;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+
+}
+
+.order {
+
+  &__link {
+    @include font-family(UbuntuRegular);
+    font-size: 13px;
+    line-height: 2px;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 13px 16px;
+    transition: background-color .7s;
+  }
+
+  &__link:hover {
+    background-color: #c1401e;
+    transition: background-color .7s;
+
+  }
+}
+

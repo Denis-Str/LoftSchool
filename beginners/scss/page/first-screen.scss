@@ -1,0 +1,49 @@
+@import "../layout/mixins";
+
+.left-column,
+.right-column {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.left-column:hover  {
+  background-image: url("../../img/icons/drops.svg");
+  background-repeat: no-repeat;
+  background-position: 40px 75px;
+}
+
+.intro {
+  background-image: url("../../img/into-bg.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  &__page {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+}
+
+.slogan {
+
+  &__top {
+    @include font-family(GagalinRegular);
+    color: #f9b43b;
+    font-size: 72px;
+    line-height: 85px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+  &__bottom {
+    @include font-family(LifehackMedium);
+    color: #ffffff;
+    font-size: 65px;
+    text-transform: lowercase;
+  }
+}
