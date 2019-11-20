@@ -1,8 +1,14 @@
 .page-pagination {
   position: absolute;
   top: 90px;
-  right: -40px;
+  right: -10px;
   &__item {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__link {
     width: 16px;
     height: 16px;
     border-radius: 50%;
@@ -10,19 +16,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    &:not(:last-child) {
-      margin-bottom: 15px;
-    }
     &_active {
       border-color: #ffffff;
     }
-  }
-  &__link {
-    display: flex;
-    border-radius: 50%;
-    width: 6px;
-    height: 6px;
-    background-color: #fff;
+
+    &:before {
+      content: "";
+      display: block;
+      border-radius: 50%;
+      width: 6px;
+      height: 6px;
+      background-color: #fff;
+    }
   }
 }
 

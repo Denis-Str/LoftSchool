@@ -2,9 +2,11 @@
 @import "fonts";
 @import "variables";
 @import "../blocks/haeder";
-@import "../page/first-screen";
-@import "../blocks/page-pagination";
 @import "../blocks/menu";
+@import "../blocks/page-pagination";
+@import "../blocks/page-pagination";
+@import "../page/first-screen";
+@import "../page/we";
 
 * {
   box-sizing: border-box;
@@ -56,10 +58,7 @@ ul li {
 }
 
 .container {
-  max-width: $container-width;
-  margin: 0 auto;
-  padding-right: 20px;
-  padding-left: 20px;
+  @include container($container-width, 20px)
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -95,6 +94,12 @@ input[type="radio"].visually-hidden {
       padding-bottom: 40px;
     }
   }
+}
+
+.title {
+  @include font-family(GagalinRegular);
+  font-size: 72px;
+  text-transform: uppercase;
 }
 
 
