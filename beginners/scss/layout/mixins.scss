@@ -1,7 +1,7 @@
 @mixin font-face($font-family, $path ,$weight: normal, $style: normal) {
   @font-face {
     font-family: $font-family;
-    src: url("../../fonts/#{$path}/#{$font-family}.woff2") format("woff2");
+    src: url("../fonts/#{$path}/#{$font-family}.woff2") format("woff2");
     font-weight: $weight;
     font-style: $style;
   }
@@ -10,17 +10,20 @@
 @mixin font-family($font-family, $style: sans-serif) {
   @if $style == sans-serif {
     font-family: "#{$font-family}", Arial, Helvetica, sans-serif
-  } @else if $style == serif{
+  } @else if $style == serif {
     font-family: "#{$font-family}", "Times New Roman", Times, serif
   }
 }
 
 @mixin section-bg($bg) {
-  background-image: url("../../img/#{$bg}-bg.jpg");
+  background-image: url("../img/#{$bg}-bg.jpg");
   background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  //background-attachment: fixed;
   background-size: cover;
+}
+
+@mixin section-size() {
   width: 100%;
   height: 100vh;
 }

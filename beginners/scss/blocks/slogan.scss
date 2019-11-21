@@ -1,0 +1,14 @@
+//@import "../layout/mixins";
+
+.slogan {
+  color: #f9b43b;
+  &__top {
+    margin-bottom: 40px;
+  }
+  &__bottom {
+    @include font-family(LifehackMedium);
+    color: #ffffff;
+    font-size: 65px;
+    text-transform: lowercase;
+  }
+}

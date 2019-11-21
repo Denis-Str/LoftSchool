@@ -1,12 +1,6 @@
-@import "mixins";
-@import "fonts";
-@import "variables";
-@import "../blocks/haeder";
-@import "../blocks/menu";
-@import "../blocks/page-pagination";
-@import "../blocks/page-pagination";
-@import "../page/first-screen";
-@import "../page/we";
+//@import "vars";
+//@import "mixins";
+//@import "fonts";
 
 * {
   box-sizing: border-box;
@@ -15,6 +9,7 @@
 html,
 body {
   height: 100%;
+  background-color: #000000;
 }
 
 img {
@@ -58,7 +53,7 @@ ul li {
 }
 
 .container {
-  @include container($container-width, 20px)
+  @include container($container-width, $container-padding)
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -81,20 +76,6 @@ input[type="radio"].visually-hidden {
   color: #ffffff;
 }
 
-.arrow-down {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  &__block {
-    cursor: pointer;
-    &_pb {
-      padding-bottom: 40px;
-    }
-  }
-}
 
 .title {
   @include font-family(GagalinRegular);

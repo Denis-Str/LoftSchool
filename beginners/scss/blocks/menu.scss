@@ -1,5 +1,5 @@
-@import "../layout/mixins";
-@import "../layout/fonts";
+//@import "../layout/mixins";
+//@import "../layout/fonts";
 
 .menu {
   &__list {
@@ -28,25 +28,7 @@
     color: #ffffff;
     text-transform: uppercase;
   }
-
 }
 
-.order {
 
-  &__link {
-    @include font-family(UbuntuRegular);
-    font-size: 13px;
-    line-height: 2px;
-    color: #ffffff;
-    text-transform: uppercase;
-    padding: 13px 16px;
-    transition: background-color .7s;
-  }
-
-  &__link:hover {
-    background-color: #c1401e;
-    transition: background-color .7s;
-
-  }
-}
 

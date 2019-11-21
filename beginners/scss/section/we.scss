@@ -1,13 +1,15 @@
-@import "../layout/mixins";
+//@import "../layout/mixins";
 
 .we {
   padding-top: 135px;
   @include section-bg(we);
+  @include section-size;
   &__title {
     text-align: center;
     margin-bottom: 55px;
   }
 }
+
 
 .advantage {
   width: 100%;
@@ -35,7 +37,7 @@
 
     @each $bg in (meat, hand, natural) {
       &-#{$bg}:before {
-        background: url("../../img/icons/#{$bg}.svg") center center no-repeat;
+        background: url("../img/icons/#{$bg}.svg") center center no-repeat;
       }
     }
   }
