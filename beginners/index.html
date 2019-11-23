@@ -50,14 +50,14 @@
     <div class="page-pagination">
       <ul class="page-pagination__list">
         <li class="page-pagination__item">
-          <a class="page-pagination__link page-pagination__link_active" href="#" aria-label="link1">
+          <a class="page-pagination__link page-pagination__link_active" href="#intro" aria-label="link1">
           </a>
         </li>
         <li class="page-pagination__item">
-          <a class="page-pagination__link" href="#" aria-label="link1"></a>
+          <a class="page-pagination__link" href="#we" aria-label="link1"></a>
         </li>
         <li class="page-pagination__item">
-          <a class="page-pagination__link" href="#" aria-label="link2"></a>
+          <a class="page-pagination__link" href="#reviews" aria-label="link2"></a>
         </li>
         <li class="page-pagination__item">
           <a class="page-pagination__link" href="#" aria-label="link3"></a>
@@ -80,29 +80,31 @@
       </ul>
     </div>
 
-    <section class="intro">
+    <section class="intro" id="intro">
       <div class="container intro__container">
         <div class="intro__left">
           <img alt="burger" class="intro__img" src="./img/intro-burger.png">
         </div>
         <div class="intro__right">
           <h1 class="title slogan">
-            <div class="slogan__top">
+            <span class="slogan__top">
               Мы делаем
-            </div>
-            <div class="slogan__bottom">
+            </span>
+            <span class="slogan__bottom">
               натуральные бургеры
-            </div>
+            </span>
           </h1>
         </div>
-
-<!--        <div class="intro__inner">-->
-<!--        </div>-->
+      </div>
+      <div class="arrow-down">
+        <a href="#we" class="arrow-down__block arrow-down__block_pb" aria-label="скрол вниз">
+          <img alt="pagedown" class="arrow-down__img" src="./img/icons/arrow-scroll.svg" >
+        </a>
       </div>
     </section>
 
-    <section class="we">
-      <div class="container">
+    <section class="we" id="we">
+      <div class="container we_container">
         <h2 class="title we__title">Мы лучшие</h2>
         <div class="advantage">
           <ul class="advantage__list">
@@ -139,10 +141,11 @@
       </div>
     </section>
 
-    <div class="reviews">
+    <div class="reviews" id="reviews">
       <div class="reviews__block">
         <ul class="reviews__list">
-          <li class="reviews__item reviews__item-bg-1">
+          <li class="reviews__item ">
+            <img src="./img/reviews/bg-1.png" class="reviews__img" alt="Аватар пользователя">
             <div class="reviews__drop">
               <h3 class="reviews__title">Константин Спилберг</h3>
               <div class="reviews__desc">
@@ -151,12 +154,13 @@
                   булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                 </p>
               </div>
-              <a href="#" class="reviews__link">
+              <button class="btn reviews__btn" type="button">
                 Подробнее
-              </a>
+              </button>
             </div>
           </li>
-          <li class="reviews__item reviews__item-bg-2">
+          <li class="reviews__item">
+            <img src="./img/reviews/bg-2.png" class="reviews__img" alt="Аватар пользователя">
             <div class="reviews__drop">
               <h3 class="reviews__title">Константин Спилберг</h3>
               <div class="reviews__desc">
@@ -165,12 +169,13 @@
                   булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                 </p>
               </div>
-              <a href="#" class="reviews__link">
+              <button class="btn reviews__btn" type="button">
                 Подробнее
-              </a>
+              </button>
             </div>
           </li>
-          <li class="reviews__item reviews__item-bg-3">
+          <li class="reviews__item">
+            <img src="./img/reviews/bg-3.png" class="reviews__img" alt="Аватар пользователя">
             <div class="reviews__drop">
               <h3 class="reviews__title">Константин Спилберг</h3>
               <div class="reviews__desc">
@@ -179,12 +184,13 @@
                   булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                 </p>
               </div>
-              <a href="#" class="reviews__link">
+              <button class="btn reviews__btn" type="button">
                 Подробнее
-              </a>
+              </button>
             </div>
           </li>
-          <li class="reviews__item reviews__item-bg-4">
+          <li class="reviews__item">
+            <img src="./img/reviews/bg-4.png" class="reviews__img" alt="Аватар пользователя">
             <div class="reviews__drop">
               <h3 class="reviews__title">Константин Спилберг</h3>
               <div class="reviews__desc">
@@ -193,12 +199,13 @@
                   булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                 </p>
               </div>
-              <a href="#" class="reviews__link">
+              <button class="btn reviews__btn" type="button">
                 Подробнее
-              </a>
+              </button>
             </div>
           </li>
-          <li class="reviews__item reviews__item-bg-5">
+          <li class="reviews__item">
+            <img src="./img/reviews/bg-5.png" class="reviews__img" alt="Аватар пользователя">
             <div class="reviews__drop">
               <h3 class="reviews__title">Константин Спилберг</h3>
               <div class="reviews__desc">
@@ -207,13 +214,13 @@
                   булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                 </p>
               </div>
-              <a href="#" class="reviews__link">
+              <button class="btn reviews__btn" type="button">
                 Подробнее
-              </a>
+              </button>
             </div>
           </li>
-          <li class="reviews__item reviews__item-bg-6">
-<!--       фото img   задать обжек фит ковер обчек позишин центр  -->
+          <li class="reviews__item">
+            <img src="./img/reviews/bg-6.png" class="reviews__img" alt="Аватар пользователя">
             <div class="reviews__drop">
               <h3 class="reviews__title">Константин Спилберг</h3>
               <div class="reviews__desc">
@@ -222,13 +229,13 @@
                   булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                 </p>
               </div>
-              <a href="#" class="reviews__link">
-<!--              тип кнопка-->
+              <button class="btn reviews__btn" type="button">
                 Подробнее
-              </a>
+              </button>
             </div>
           </li>
-          <li class="reviews__item reviews__item-bg-7">
+          <li class="reviews__item">
+            <img src="./img/reviews/bg-7.png" class="reviews__img" alt="Аватар пользователя">
             <div class="reviews__drop">
               <h3 class="reviews__title">Константин Спилберг</h3>
               <div class="reviews__desc">
@@ -237,12 +244,13 @@
                   булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                 </p>
               </div>
-              <a href="#" class="reviews__link">
+              <button class="btn reviews__btn" type="button">
                 Подробнее
-              </a>
+              </button>
             </div>
           </li>
-          <li class="reviews__item reviews__item-bg-8">
+          <li class="reviews__item">
+            <img src="./img/reviews/bg-8.png" class="reviews__img" alt="Аватар пользователя">
             <div class="reviews__drop">
               <h3 class="reviews__title">Константин Спилберг</h3>
               <div class="reviews__desc">
@@ -251,22 +259,16 @@
                   булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                 </p>
               </div>
-              <a href="#" class="reviews__link">
+              <button class="btn reviews__btn" type="button">
                 Подробнее
-              </a>
+              </button>
             </div>
           </li>
         </ul>
       </div>
     </div>
+    </div>
 
-    <div class="arrow-down">
-      <div class="arrow-down__block arrow-down__block_pb">
-<!--        не картинка я ссылка атрибут ариа лейбел-->
-        <img alt="pagedown" class="arrow-down__img" src="./img/icons/arrow-scroll.svg">
-      </div>
-    </div>
-    </div>
   <footer class="footer">
 
   </footer>

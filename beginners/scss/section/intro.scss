@@ -1,37 +1,27 @@
-//@import "../layout/mixins";
-
 .intro {
   @include section-bg(intro);
-  @include section-size;
+  @include section-size();
+  position: relative;
   &__container {
-    border: 1px solid green;
     height: 100vh;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-  &__inner {
-    border: 1px solid red;
-  }
+
   &__left,
   &__right {
-    border: 1px solid blue;
-    align-items: center;
-    display: flex;
+    flex-basis: 460px;
   }
 
   &__left {
-    flex-grow: 1;
-  }
-
-  &__right {
-    max-width: 406px;
+    background-image: url("../img/icons/drops.svg");
+    background-repeat: no-repeat;
+    background-position: center 90px;
   }
 
   &__img {
     width: 100%;
-    height: auto;
-    background-image: url("../img/icons/drops.svg");
-    background-repeat: no-repeat;
-    background-position: center center;
    }
 }
 

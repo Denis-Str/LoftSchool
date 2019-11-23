@@ -1,9 +1,9 @@
-//@import "../layout/mixins";
-//@import "../layout/fonts";
-
 .menu {
   &__list {
+    margin-right: 10px;
+    margin-left: 10px;
     display: flex;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   }
@@ -18,14 +18,14 @@
     width: 5px;
     height: 5px;
     border-radius: 50%;
-    background-color: #ffffff;
+    background-color: $white;
     margin: 0 15px;
   }
 
   &__link {
-    @include font-family(UbuntuRegular);
+    @include font-family($UbuntuRegular);
     font-size: 13px;
-    color: #ffffff;
+    color: $white;
     text-transform: uppercase;
   }
 }

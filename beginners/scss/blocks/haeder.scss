@@ -1,9 +1,10 @@
 .header {
-  position: fixed;
+  position: absolute;
   width: 100%;
   display: flex;
   justify-content: center;
   padding-top: 13px;
+  z-index: 1;
   &__container {
     flex-basis: 940px;
     margin-right: 20px;

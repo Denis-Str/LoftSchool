@@ -1,14 +1,12 @@
 .arrow-down {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  &__block {
-    cursor: pointer;
-    &_pb {
-      padding-bottom: 40px;
-    }
+  z-index: 3;
+  &__block_pb {
+    padding-bottom: 40px;
   }
 }

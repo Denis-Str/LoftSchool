@@ -1,13 +1,14 @@
-//@import "../layout/mixins";
-
 .slogan {
-  color: #f9b43b;
+  color: $orangeYellow;
   &__top {
+    display: block;
+    padding-top: 120px;
     margin-bottom: 40px;
   }
   &__bottom {
-    @include font-family(LifehackMedium);
-    color: #ffffff;
+    @include font-family($LifehackMedium);
+    display: block;
+    color: $white;
     font-size: 65px;
     text-transform: lowercase;
   }

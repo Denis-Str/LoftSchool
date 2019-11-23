@@ -2,6 +2,7 @@
   position: fixed;
   top: 140px;
   right: 45px;
+  z-index: 2;
   &__item {
     &:not(:last-child) {
       margin-bottom: 15px;
@@ -17,7 +18,7 @@
     justify-content: center;
     align-items: center;
     &_active {
-      border-color: #ffffff;
+      border-color: $white;
     }
 
     &:before {
@@ -26,7 +27,7 @@
       border-radius: 50%;
       width: 6px;
       height: 6px;
-      background-color: #fff;
+      background-color: $white;
     }
   }
 }

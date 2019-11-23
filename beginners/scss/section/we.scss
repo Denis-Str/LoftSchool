@@ -1,58 +1,10 @@
-//@import "../layout/mixins";
-
 .we {
-  padding-top: 135px;
   @include section-bg(we);
-  @include section-size;
+  @include section-size();
+  display: flex;
+  align-items: center;
   &__title {
     text-align: center;
     margin-bottom: 55px;
-  }
-}
-
-
-.advantage {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  &__list {
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    max-width: 910px;
-  }
-
-  &__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-basis: 280px;
-    &:before {
-      content: "";
-      display: flex;
-      width: 100%;
-      height: 90px;
-      margin-bottom: 40px;
-    }
-
-    @each $bg in (meat, hand, natural) {
-      &-#{$bg}:before {
-        background: url("../img/icons/#{$bg}.svg") center center no-repeat;
-      }
-    }
-  }
-
-  &__title {
-    @include font-family(LifehackMedium);
-    font-size: 24px;
-    color: #2f3234;
-    margin-bottom: 19px;
-  }
-
-  &__desc p {
-    @include font-family(UbuntuLight);
-    font-size: 14px;
-    line-height: 2;
-    color: rgba(47, 50, 52, 0.8);
   }
 }
