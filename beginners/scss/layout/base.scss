@@ -43,6 +43,7 @@ ul li {
   @include font-family ($default-font);
   font-size: $default-size;
   min-height: 100%;
+  width: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -74,6 +75,7 @@ input[type="radio"].visually-hidden {
   border-radius: 5px;
   background-color: #e45028;
   color: #ffffff;
+  padding: 12px 15px;
 }
 
 

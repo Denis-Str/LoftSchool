@@ -16,7 +16,7 @@
       <div class="header__container">
         <div class="header__block">
           <div class="logo-block">
-            <img alt="logo" src="./img/icons/logo.svg">
+            <img alt="логотип" src="./img/icons/logo.svg">
           </div>
           <nav class="menu">
             <ul class="menu__list">
@@ -43,74 +43,61 @@
           <div class="order">
             <a class="btn order__link" href="#">Заказать</a>
           </div>
-          <div class="page-pagination">
-            <ul class="page-pagination__list">
-              <li class="page-pagination__item">
-                <a class="page-pagination__link page-pagination__link_active" href="#">
-                  <span class="visually-hidden">link 1</span>
-                </a>
-              </li>
-              <li class="page-pagination__item">
-                <a class="page-pagination__link" href="#">
-                  <span class="visually-hidden">link 2</span>
-                </a>
-              </li>
-              <li class="page-pagination__item">
-                <a class="page-pagination__link" href="#">
-                  <span class="visually-hidden">link 3</span>
-                </a>
-              </li>
-              <li class="page-pagination__item">
-                <a class="page-pagination__link" href="#">
-                  <span class="visually-hidden">link 4</span>
-                </a>
-              </li>
-              <li class="page-pagination__item">
-                <a class="page-pagination__link" href="#">
-                  <span class="visually-hidden">link 5</span>
-                </a>
-              </li>
-              <li class="page-pagination__item">
-                <a class="page-pagination__link" href="#">
-                  <span class="visually-hidden">link 6</span>
-                </a>
-              </li>
-              <li class="page-pagination__item">
-                <a class="page-pagination__link" href="#">
-                  <span class="visually-hidden">link 7</span>
-                </a>
-              </li>
-              <li class="page-pagination__item">
-                <a class="page-pagination__link" href="#">
-                  <span class="visually-hidden">link 8</span>
-                </a>
-              </li>
-              <li class="page-pagination__item">
-                <a class="page-pagination__link" href="#">
-                  <span class="visually-hidden">link 9</span>
-                </a>
-              </li>
-            </ul>
-          </div>
         </div>
       </div>
     </header>
 
+    <div class="page-pagination">
+      <ul class="page-pagination__list">
+        <li class="page-pagination__item">
+          <a class="page-pagination__link page-pagination__link_active" href="#" aria-label="link1">
+          </a>
+        </li>
+        <li class="page-pagination__item">
+          <a class="page-pagination__link" href="#" aria-label="link1"></a>
+        </li>
+        <li class="page-pagination__item">
+          <a class="page-pagination__link" href="#" aria-label="link2"></a>
+        </li>
+        <li class="page-pagination__item">
+          <a class="page-pagination__link" href="#" aria-label="link3"></a>
+        </li>
+        <li class="page-pagination__item">
+          <a class="page-pagination__link" href="#" aria-label="link4"></a>
+        </li>
+        <li class="page-pagination__item">
+          <a class="page-pagination__link" href="#" aria-label="link5"></a>
+        </li>
+        <li class="page-pagination__item">
+          <a class="page-pagination__link" href="#" aria-label="link6"></a>
+        </li>
+        <li class="page-pagination__item">
+          <a class="page-pagination__link" href="#" aria-label="link7"></a>
+        </li>
+        <li class="page-pagination__item">
+          <a class="page-pagination__link" href="#" aria-label="link8"></a>
+        </li>
+      </ul>
+    </div>
+
     <section class="intro">
-      <div class="container intro__page">
+      <div class="container intro__container">
         <div class="intro__left">
-          <img alt="burger" class="burger-img" src="./img/intro-burger.png">
+          <img alt="burger" class="intro__img" src="./img/intro-burger.png">
         </div>
         <div class="intro__right">
-          <h2 class="title slogan">
+          <h1 class="title slogan">
             <div class="slogan__top">
               Мы делаем
             </div>
             <div class="slogan__bottom">
               натуральные бургеры
             </div>
-          </h2>
+          </h1>
         </div>
+
+<!--        <div class="intro__inner">-->
+<!--        </div>-->
       </div>
     </section>
 
@@ -150,10 +137,9 @@
           </ul>
         </div>
       </div>
-
     </section>
 
-    <section class="reviews">
+    <div class="reviews">
       <div class="reviews__block">
         <ul class="reviews__list">
           <li class="reviews__item reviews__item-bg-1">
@@ -227,6 +213,7 @@
             </div>
           </li>
           <li class="reviews__item reviews__item-bg-6">
+<!--       фото img   задать обжек фит ковер обчек позишин центр  -->
             <div class="reviews__drop">
               <h3 class="reviews__title">Константин Спилберг</h3>
               <div class="reviews__desc">
@@ -236,6 +223,7 @@
                 </p>
               </div>
               <a href="#" class="reviews__link">
+<!--              тип кнопка-->
                 Подробнее
               </a>
             </div>
@@ -270,14 +258,15 @@
           </li>
         </ul>
       </div>
-    </section>
+    </div>
 
     <div class="arrow-down">
       <div class="arrow-down__block arrow-down__block_pb">
+<!--        не картинка я ссылка атрибут ариа лейбел-->
         <img alt="pagedown" class="arrow-down__img" src="./img/icons/arrow-scroll.svg">
       </div>
     </div>
-  </div>
+    </div>
   <footer class="footer">
 
   </footer>

@@ -1,7 +1,7 @@
 .page-pagination {
-  position: absolute;
-  top: 90px;
-  right: -10px;
+  position: fixed;
+  top: 140px;
+  right: 45px;
   &__item {
     &:not(:last-child) {
       margin-bottom: 15px;
