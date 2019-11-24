@@ -42,14 +42,14 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    padding: 0 8%;
+    padding: 0 17%;
     opacity: 0;
     background-color: rgba(81, 81, 79, .7);
   }
 
   &__title {
-    @include font-family($UbuntuMedium);
-    font-size: 13px;
+    @include font-family($GagalinRegular);
+    font-size: 14px;
     color: #ffffff;
     text-transform: uppercase;
     margin-bottom: 30px;

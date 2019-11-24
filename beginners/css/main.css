@@ -111,7 +111,7 @@ input[type="radio"].visually-hidden {
   font-size: 13px;
   border-radius: 5px;
   background-color: #e45028;
-  color: #ffffff;
+  color: #fff;
   padding: 12px 15px;
   border: none;
   text-transform: uppercase; }
@@ -124,21 +124,10 @@ input[type="radio"].visually-hidden {
 .header {
   position: absolute;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding-top: 13px;
   z-index: 1; }
-  .header__container {
-    -ms-flex-preferred-size: 940px;
-    flex-basis: 940px;
-    margin-right: 20px;
-    margin-left: 20px; }
   .header__block {
     position: relative;
+    padding-top: 10px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -151,14 +140,9 @@ input[type="radio"].visually-hidden {
     align-items: center; }
 
 .menu__list {
-  margin-right: 10px;
-  margin-left: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -179,7 +163,7 @@ input[type="radio"].visually-hidden {
   height: 5px;
   border-radius: 50%;
   background-color: #fff;
-  margin: 0 15px; }
+  margin: 0 12px; }
 
 .menu__link {
   font-family: "UbuntuRegular", Arial, Helvetica, sans-serif;
@@ -189,11 +173,9 @@ input[type="radio"].visually-hidden {
 
 .order__link {
   font-family: "UbuntuRegular", Arial, Helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 2px;
-  color: #ffffff;
-  text-transform: uppercase;
-  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-transition: background-color .7s;
   -o-transition: background-color .7s;
   transition: background-color .7s; }
@@ -223,11 +205,13 @@ input[type="radio"].visually-hidden {
 
 .page-pagination {
   position: fixed;
-  top: 140px;
-  right: 45px;
+  top: 90px;
+  right: 50px;
   z-index: 2; }
   .page-pagination__item:not(:last-child) {
-    margin-bottom: 15px; }
+    margin-bottom: 5px; }
+  .page-pagination__item_active .page-pagination__link {
+    border-color: #fff; }
   .page-pagination__link {
     width: 16px;
     height: 16px;
@@ -242,8 +226,6 @@ input[type="radio"].visually-hidden {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
-    .page-pagination__link_active {
-      border-color: #fff; }
     .page-pagination__link:before {
       content: "";
       display: block;
@@ -285,9 +267,7 @@ input[type="radio"].visually-hidden {
 .slogan {
   color: #f9b43b; }
   .slogan__top {
-    display: block;
-    padding-top: 120px;
-    margin-bottom: 40px; }
+    display: block; }
   .slogan__bottom {
     font-family: "LifehackMedium", Arial, Helvetica, sans-serif;
     display: block;
@@ -330,31 +310,23 @@ input[type="radio"].visually-hidden {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   -ms-flex-preferred-size: 300px;
   flex-basis: 300px; }
-  .advantage__item:before {
-    content: "";
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
-    height: 90px;
-    margin-bottom: 40px; }
-  .advantage__item-meat:before {
-    background: url("../img/icons/meat.svg") center center no-repeat; }
-  .advantage__item-hand:before {
-    background: url("../img/icons/hand.svg") center center no-repeat; }
-  .advantage__item-natural:before {
-    background: url("../img/icons/natural.svg") center center no-repeat; }
+
+.advantage__img {
+  margin-bottom: 33px; }
 
 .advantage__title {
   font-family: "LifehackMedium", Arial, Helvetica, sans-serif;
   font-size: 24px;
   color: #2f3234;
-  margin-bottom: 19px; }
+  margin-bottom: 25px; }
 
 .advantage__desc p {
   font-family: "UbuntuLight", Arial, Helvetica, sans-serif;
@@ -414,12 +386,12 @@ input[type="radio"].visually-hidden {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    padding: 0 8%;
+    padding: 0 17%;
     opacity: 0;
     background-color: rgba(81, 81, 79, 0.7); }
   .reviews__title {
-    font-family: "UbuntuMedium", Arial, Helvetica, sans-serif;
-    font-size: 13px;
+    font-family: "GagalinRegular", Arial, Helvetica, sans-serif;
+    font-size: 14px;
     color: #ffffff;
     text-transform: uppercase;
     margin-bottom: 30px; }

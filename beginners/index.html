@@ -6,6 +6,7 @@
   <meta content="width=device-width" name="viewport"/>
   <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
   <title>Burgers</title>
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
   <link href="./css/normalize.css" rel="stylesheet">
   <link href="./css/main.css" rel="stylesheet"/>
 </head>
@@ -13,7 +14,7 @@
 <div class="wrapper">
   <div class="wrapper__content">
     <header class="header">
-      <div class="header__container">
+      <div class="container header__container">
         <div class="header__block">
           <div class="logo-block">
             <img alt="логотип" src="./img/icons/logo.svg">
@@ -33,7 +34,10 @@
                 <a class="menu__link" href="#">Меню</a>
               </li>
               <li class="menu__item">
-                <a class="menu__link" href="#">Отзывы как мы работаем</a>
+                <a class="menu__link" href="#">Отзывы</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Kак мы работаем</a>
               </li>
               <li class="menu__item">
                 <a class="menu__link" href="#">Контакты</a>
@@ -49,8 +53,8 @@
 
     <div class="page-pagination">
       <ul class="page-pagination__list">
-        <li class="page-pagination__item">
-          <a class="page-pagination__link page-pagination__link_active" href="#intro" aria-label="link1">
+        <li class="page-pagination__item page-pagination__item_active">
+          <a class="page-pagination__link" href="#intro" aria-label="link1">
           </a>
         </li>
         <li class="page-pagination__item">
@@ -109,31 +113,40 @@
         <div class="advantage">
           <ul class="advantage__list">
             <li class="advantage__item advantage__item-meat">
-              <h3 class="advantage__title">100% свежее мясо</h3>
-              <div class="advantage__desc">
-                <p>
-                  Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб
-                  неравномерен.
-                </p>
+              <img class="advantage__img" src="./img/icons/meat.svg" alt="100% свежее мясо">
+              <div class="advantage__inner">
+                <h3 class="advantage__title">100% свежее мясо</h3>
+                <div class="advantage__desc">
+                  <p>
+                    Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб
+                    неравномерен.
+                  </p>
+                </div>
               </div>
             </li>
             <li class="advantage__item advantage__item-hand">
-              <h3 class="advantage__title">Ручная сборка</h3>
-              <div class="advantage__desc">
-                <p>
-                  Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.
-                  Первое полустишие притягивает сюжетный реформаторский пафос.
-                </p>
+              <img class="advantage__img" src="./img/icons/hand.svg" alt="100% свежее мясо">
+              <div class="advantage__inner">
+                <h3 class="advantage__title">Ручная сборка</h3>
+                <div class="advantage__desc">
+                  <p>
+                    Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.
+                    Первое полустишие притягивает сюжетный реформаторский пафос.
+                  </p>
+                </div>
               </div>
             </li>
             <li class="advantage__item advantage__item-natural">
-              <h3 class="title advantage__title">
-                Натуральные ингредиенты
-              </h3>
-              <div class="advantage__desc">
-                <p>
-                  Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.
-                </p>
+              <img class="advantage__img" src="./img/icons/natural.svg" alt="100% свежее мясо">
+              <div class="advantage__inner">
+                <h3 class="advantage__title">
+                  Натуральные ингредиенты
+                </h3>
+                <div class="advantage__desc">
+                  <p>
+                    Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.
+                  </p>
+                </div>
               </div>
             </li>
           </ul>

@@ -1,17 +1,10 @@
 .header {
   position: absolute;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  padding-top: 13px;
   z-index: 1;
-  &__container {
-    flex-basis: 940px;
-    margin-right: 20px;
-    margin-left: 20px;
-  }
   &__block {
     position: relative;
+    padding-top: 10px;
     display: flex;
     width: 100%;
     justify-content: space-between;

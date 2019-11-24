@@ -1,11 +1,14 @@
 .page-pagination {
   position: fixed;
-  top: 140px;
-  right: 45px;
+  top: 90px;
+  right: 50px;
   z-index: 2;
   &__item {
     &:not(:last-child) {
-      margin-bottom: 15px;
+      margin-bottom: 5px;
+    }
+    &_active .page-pagination__link {
+      border-color: $white;
     }
   }
 
@@ -17,9 +20,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    &_active {
-      border-color: $white;
-    }
 
     &:before {
       content: "";

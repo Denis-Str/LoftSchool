@@ -2,11 +2,7 @@
 
   &__link {
     @include font-family($UbuntuRegular);
-    font-size: 13px;
-    line-height: 2px;
-    color: #ffffff;
-    text-transform: uppercase;
-    border-radius: 5px;
+    display: flex;
     transition: background-color .7s;
   }
 

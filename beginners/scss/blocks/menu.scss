@@ -1,9 +1,6 @@
 .menu {
   &__list {
-    margin-right: 10px;
-    margin-left: 10px;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   }
@@ -19,7 +16,7 @@
     height: 5px;
     border-radius: 50%;
     background-color: $white;
-    margin: 0 15px;
+    margin: 0 12px;
   }
 
   &__link {
