@@ -1,0 +1,24 @@
+.team {
+  @include section-bg(team);
+  @include section-size();
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &__block {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: rgba(47, 50, 52, .9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__title {
+    margin-bottom: 45px;
+  }
+}

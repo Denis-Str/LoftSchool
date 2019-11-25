@@ -78,4 +78,5 @@ input[type="radio"].visually-hidden {
   @include font-family($GagalinRegular);
   font-size: 72px;
   text-transform: uppercase;
+  color: $orangeYellow;
 }
