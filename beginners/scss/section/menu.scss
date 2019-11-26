@@ -1,0 +1,92 @@
+.menu {
+  @include section-bg(menu);
+  @include section-size();
+  position: relative;
+
+  &__block {
+    width: 100%;
+  }
+
+  &__title {
+    color: $white;
+    text-align: left;
+    padding-top: 110px;
+  }
+
+  &__list {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+    &:hover .menu {
+      &__name {
+        color: $orangeYellow;
+      }
+      &__content {
+        width: 100%;
+        max-width: 540px;
+        p {
+          padding-left: 6%;
+          padding-right: 7%;
+          padding-top: 11%;
+        }
+      }
+    }
+    &_active .menu {
+      &__name {
+        color: $orangeYellow;
+      }
+      &__content {
+        width: 100%;
+        max-width: 540px;
+        p {
+          padding-left: 6%;
+          padding-right: 7%;
+          padding-top: 11%;
+        }
+      }
+    }
+
+  }
+
+  &__name {
+    @include font-family($GagalinRegular);
+    font-size: 40px;
+    color: $white;
+    max-width: 80px;
+    display: flex;
+    align-items: flex-end;
+    @each  $bg in (meat, vegan, diet) {
+      &_#{$bg}-bg {
+        background-image: url("../img/menu-#{$bg}-bg.jpg");
+      }
+    }
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &-rotate {
+      transform: rotate(-90deg) translateY(90%);
+      transform-origin: 0 50%;
+
+      white-space: nowrap;
+    }
+  }
+  &__content {
+    width: 0;
+    //max-width: 620px;
+    //height: 100%;
+    background-color: rgba(47, 50, 52, .9);
+
+    p {
+      @include font-family($UbuntuLight);
+      line-height: 24px;
+      color: $white;
+      overflow: hidden;
+    }
+  }
+}

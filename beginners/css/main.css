@@ -144,7 +144,7 @@ input[type="radio"].visually-hidden {
     -ms-flex-align: center;
     align-items: center; }
 
-.menu__list {
+.nav__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -154,7 +154,7 @@ input[type="radio"].visually-hidden {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
 
-.menu__item {
+.nav__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -162,7 +162,7 @@ input[type="radio"].visually-hidden {
   -ms-flex-align: center;
   align-items: center; }
 
-.menu__item:not(:last-child):after {
+.nav__item:not(:last-child):after {
   content: "";
   width: 5px;
   height: 5px;
@@ -170,7 +170,7 @@ input[type="radio"].visually-hidden {
   background-color: #fff;
   margin: 0 12px; }
 
-.menu__link {
+.nav__link {
   font-family: "UbuntuRegular", Arial, Helvetica, sans-serif;
   font-size: 13px;
   color: #fff;
@@ -391,11 +391,21 @@ input[type="radio"].visually-hidden {
   flex-direction: column;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px; }
 
 .accordion__item {
   width: 100%;
   max-width: 330px; }
+  .accordion__item:hover .accordion__drop-block {
+    height: auto; }
+  .accordion__item:hover .accordion__subtitle {
+    color: #f9b43b; }
+    .accordion__item:hover .accordion__subtitle:before {
+      -webkit-transform: scaleY(-1);
+      -ms-transform: scaleY(-1);
+      transform: scaleY(-1); }
   .accordion__item_active .accordion__drop-block {
     height: auto; }
   .accordion__item_active .accordion__subtitle {
@@ -456,6 +466,88 @@ input[type="radio"].visually-hidden {
   font-family: "UbuntuLight", Arial, Helvetica, sans-serif;
   max-width: 208px;
   color: #fff; }
+
+.menu {
+  background-image: url("../img/menu-bg.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  min-height: 650px;
+  position: relative; }
+  .menu__block {
+    width: 100%; }
+  .menu__title {
+    color: #fff;
+    text-align: left;
+    padding-top: 110px; }
+  .menu__list {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .menu__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .menu__item:hover .menu__name {
+      color: #f9b43b; }
+    .menu__item:hover .menu__content {
+      width: 100%;
+      max-width: 540px; }
+      .menu__item:hover .menu__content p {
+        padding-left: 6%;
+        padding-right: 7%;
+        padding-top: 11%; }
+    .menu__item_active .menu__name {
+      color: #f9b43b; }
+    .menu__item_active .menu__content {
+      width: 100%;
+      max-width: 540px; }
+      .menu__item_active .menu__content p {
+        padding-left: 6%;
+        padding-right: 7%;
+        padding-top: 11%; }
+  .menu__name {
+    font-family: "GagalinRegular", Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    color: #fff;
+    max-width: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+    .menu__name_meat-bg {
+      background-image: url("../img/menu-meat-bg.jpg"); }
+    .menu__name_vegan-bg {
+      background-image: url("../img/menu-vegan-bg.jpg"); }
+    .menu__name_diet-bg {
+      background-image: url("../img/menu-diet-bg.jpg"); }
+    .menu__name-rotate {
+      -webkit-transform: rotate(-90deg) translateY(90%);
+      -ms-transform: rotate(-90deg) translateY(90%);
+      transform: rotate(-90deg) translateY(90%);
+      -webkit-transform-origin: 0 50%;
+      -ms-transform-origin: 0 50%;
+      transform-origin: 0 50%;
+      white-space: nowrap; }
+  .menu__content {
+    width: 0;
+    background-color: rgba(47, 50, 52, 0.9); }
+    .menu__content p {
+      font-family: "UbuntuLight", Arial, Helvetica, sans-serif;
+      line-height: 24px;
+      color: #fff;
+      overflow: hidden; }
 
 .reviews {
   width: 100%;

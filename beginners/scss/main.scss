@@ -3,7 +3,7 @@
 @import "./layout/fonts";
 @import "./layout/base";
 @import "./blocks/haeder";
-@import "./blocks/menu";
+@import "blocks/nav";
 @import "./blocks/order";
 @import "./blocks/arrow-down";
 @import "./blocks/page-pagination";
@@ -13,4 +13,5 @@
 @import "./blocks/advantage";
 @import "./section/team";
 @import "./blocks/accordion";
+@import "./section/menu";
 @import "./section/reviews";
