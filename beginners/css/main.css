@@ -122,6 +122,10 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase;
   color: #f9b43b; }
 
+.logo__icon {
+  max-width: 98px;
+  max-height: 74px; }
+
 .header {
   position: absolute;
   width: 100%;
@@ -203,6 +207,8 @@ input[type="radio"].visually-hidden {
   z-index: 3; }
   .arrow-down__block_pb {
     padding-bottom: 40px; }
+  .arrow-down__img {
+    fill: #fff; }
 
 .page-pagination {
   position: fixed;
