@@ -71,6 +71,14 @@ input[type="radio"].visually-hidden {
   padding: 12px 15px;
   border: none;
   text-transform: uppercase;
+  display: flex;
+  &:hover {
+    background-color: $redOrange;
+    transition: background-color .7s;
+  }
+  &_mr {
+    margin-right: 20px;
+  }
 }
 
 

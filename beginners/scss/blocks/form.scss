@@ -1,0 +1,154 @@
+.form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+&_checkbox-img path {
+  fill: $coral;
+}
+  &__label {
+    @include font-family($UbuntuLight);
+    color: $white;
+    margin-bottom: 7px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  &__input {
+    border: solid 2px transparent;
+    border-radius: 5px;
+    outline: none;
+    height: 36px;
+    @include font-family($UbuntuLight);
+    color: $darkGrey;
+    padding-left: 20px;
+    &:focus {
+      border-color: $orangeYellow;
+    }
+  }
+
+  &__column {
+    width: 100%;
+    max-width: 460px;
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    &_jc {
+      justify-content: space-between;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    &-house-info {
+      max-width: 100px;
+      input {
+        padding-left: 0;
+        text-align: center;
+      }
+    }
+    &_mr:not(:last-child) {
+      margin-right: 20px;
+    }
+    &-pay, &-call {
+      flex-direction: row;
+      align-items: center;
+      label {
+        margin-bottom: 0;
+        position: relative;
+      }
+    }
+    &-pay {
+      flex: none;
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+      label:before {
+        content: "";
+        display: flex;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: $white;
+        margin-right: 10px;
+      }
+      label:after {
+        position: absolute;
+        content: "";
+        display: flex;
+        width: 8px;
+        height: 8px;
+        left: 4px;
+        top: 4px;
+        border-radius: 50%;
+        background-color: $coral;
+        opacity: 0;
+        transition: opacity .7s;
+      }
+    }
+
+    &-call {
+      label:before {
+        content: "";
+        display: flex;
+        width: 15px;
+        height: 15px;
+        margin-right: 10px;
+        background-color: $white;
+      }
+      label:after {
+        position: absolute;
+        content: "";
+        width: 3px;
+        height: 7px;
+        border: solid $coral;
+        border-width: 0 3px 3px 0;
+        transform: rotate(45deg);
+        opacity: 0;
+        bottom: 3px;
+        left: 4px;
+      }
+    }
+  }
+
+  &__radio:checked + .form__label:after {
+    opacity: 1;
+    transition: opacity .7s;
+  }
+
+  &__checkbox:checked + .form__label:after {
+    opacity: 1;
+    transition: opacity .7s;
+  }
+
+  &__comment {
+    resize: none;
+    border: solid 2px transparent;
+    border-radius: 5px;
+    outline: none;
+    height: 110px;
+    @include font-family($UbuntuLight);
+    color: $darkGrey;
+    padding-left: 20px;
+    padding-top: 10px;
+    &:focus {
+      border-color: $orangeYellow;
+    }
+  }
+
+  &__reset {
+    @include font-family($UbuntuLight);
+    background-color: transparent;
+    text-transform: none;
+  }
+}

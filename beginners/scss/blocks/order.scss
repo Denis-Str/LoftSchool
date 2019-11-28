@@ -5,9 +5,4 @@
     display: flex;
     transition: background-color .7s;
   }
-
-  &__link:hover {
-    background-color: $redOrange;
-    transition: background-color .7s;
-  }
 }

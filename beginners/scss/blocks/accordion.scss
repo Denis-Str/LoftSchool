@@ -3,6 +3,7 @@
   &__list {
     width: 100%;
     display: flex;
+    height: 100%;
     flex-direction: column;
     align-items: center;
     padding-left: 10px;
@@ -14,11 +15,14 @@
     max-width: 330px;
     &:hover .accordion {
       &__drop-block {
-        height: auto;
+        height: 100%;
+        opacity: 1;
+        transition: opacity 1s;
       }
       &__subtitle {
         color: $orangeYellow;
         &:before {
+          transition: .5s;
           transform: scaleY(-1);
         }
       }
@@ -27,10 +31,13 @@
     &_active .accordion {
       &__drop-block {
         height: auto;
+        transition: height .5s;
       }
       &__subtitle {
         color: $orangeYellow;
+        transition: .5s;
         &:before {
+          transition: .5s;
           transform: scaleY(-1);
         }
       }
@@ -55,9 +62,9 @@
       border-right: 7px solid transparent;
       border-top: 9px solid $orangeYellow;
       margin-right: 10px;
+      transition: .5s;
     }
   }
-
 
   &__drop {
 
@@ -66,15 +73,15 @@
       justify-content: space-between;
       overflow: hidden;
       height: 0;
+      opacity: 0;
+      transition: opacity 1s;
 
     }
-    &-img {
-      max-width: 100px;
-      max-height: 100px;
-    }
+
     &-pic{
       border-radius: 50%;
-      height: 100%;
+      height: 100px;
+      max-width: 100px;
       object-fit: cover;
     }
 

@@ -188,7 +188,8 @@
               </div>
             </div>
           </li>
-          <li class="accordion__item accordion__item_active">
+<!--          accordion__item_active-->
+          <li class="accordion__item">
             <div class="accordion__subtitle">
               Ричард Джеймс
             </div>
@@ -256,8 +257,9 @@
       <div class="container menu__block">
         <h2 class=" title menu__title">Меню</h2>
         <ul class="menu__list">
-          <li class="menu__item menu__item_active">
-            <div class="menu__name menu__name_meat-bg">
+<!--          menu__item_active-->
+          <li class="menu__item">
+            <div class="menu__name" style="background-image: url(./img/menu-meat.jpg)">
               <div class="menu__name-rotate">Для мясоедов</div>
             </div>
             <div class="menu__content">
@@ -273,7 +275,7 @@
             </div>
           </li>
           <li class="menu__item">
-            <div class="menu__name menu__name_vegan-bg">
+            <div class="menu__name" style="background-image: url(./img/menu-vegan.jpg)">
               <div class="menu__name-rotate">
                 Вегетарианское
               </div>
@@ -291,7 +293,7 @@
             </div>
           </li>
           <li class="menu__item">
-            <div class="menu__name menu__name_diet-bg">
+            <div class="menu__name" style="background-image: url(./img/menu-diet.jpg)">
               <div class="menu__name-rotate">
                 Диетическое
               </div>
@@ -439,6 +441,78 @@
       </div>
     </div>
   </div>
+  
+  <section class="delivery" id="delivery">
+    <div class="container delivery__container">
+      <h2 class="title delivery__title">Закажите доставку</h2>
+      <form action="#" class="form" enctype="multipart/form-data" method="post">
+        <div class="form__column">
+          <div class="form__row">
+            <div class="form__field form__field_mr">
+              <label for="name" class="form__label">Имя</label>
+              <input type="text" id="name" class="form__input" required aria-label="Имя">
+            </div>
+            <div class="form__field">
+              <label for="phone" class="form__label">Телефон</label>
+              <input type="text" id="phone" class="form__input" required aria-label="Телефон">
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="form__field">
+              <label for="street" class="form__label">Улица</label>
+              <input type="text" id="street" class="form__input" required aria-label="Улица">
+            </div>
+          </div>
+          <div class="form__row form__row_jc">
+            <div class="form__field form__field-house-info">
+              <label for="house" class="form__label">Дом</label>
+              <input type="text" id="house" class="form__input" required aria-label="Дом">
+            </div>
+            <div class="form__field form__field-house-info">
+              <label for="entrance" class="form__label">Корпус</label>
+              <input type="text" id="entrance" class="form__input" required aria-label="Корпус">
+            </div>
+            <div class="form__field form__field-house-info">
+              <label for="flat" class="form__label">Квартира</label>
+              <input type="text" id="flat" class="form__input" required aria-label="Квартира">
+            </div>
+            <div class="form__field form__field-house-info">
+              <label for="floor" class="form__label">Этаж</label>
+              <input type="text" id="floor" class="form__input" required aria-label="Этаж">
+            </div>
+          </div>
+        </div>
+        <div class="form__column">
+          <div class="form__row">
+            <div class="form__field">
+              <label for="comment" class="form__label">Комментарий</label>
+              <textarea id="comment" class="form__comment" aria-label="Комментарий"></textarea>
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="form__field form__field-pay">
+              <input type="radio" id="cash" name="payment" class="form__radio visually-hidden" required aria-label="Потребуется сдача">
+              <label for="cash" class="form__label">Потребуется сдача</label>
+            </div>
+            <div class="form__field form__field-pay">
+              <input type="radio" id="card" name="payment" class="form__radio visually-hidden" checked required aria-label="Оплата по карте">
+              <label for="card" class="form__label">Потребуется сдача</label>
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="form__field form__field-call">
+              <input type="checkbox" id="call" class="form__checkbox visually-hidden" checked required aria-label="Не перезванивать">
+              <label for="call" class="form__label">Не перезванивать</label>
+            </div>
+          </div>
+          <div class="form__row">
+            <button type="submit" class="btn btn_mr">Заказать</button>
+            <button type="reset" class="btn form__reset">Очистить</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
 
   <footer class="footer">
 

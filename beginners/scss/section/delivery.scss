@@ -1,0 +1,15 @@
+.delivery {
+  @include section-bg(delivery);
+  @include section-size();
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  &__title {
+    margin-bottom: 40px;
+  }
+}
