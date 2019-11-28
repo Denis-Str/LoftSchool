@@ -1,0 +1,18 @@
+.address {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  &__info {
+    @include font-family($UbuntuLight);
+    color: $white;
+    font-style: normal;
+    margin-bottom: 7px;
+  }
+  &__link {
+    @include font-family($UbuntuBold);
+    color: $coral;
+    font-style: normal;
+  }
+}

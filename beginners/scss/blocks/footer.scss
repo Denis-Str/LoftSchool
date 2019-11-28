@@ -1,0 +1,11 @@
+.footer {
+  @include section-bg(footer);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  max-height: 60px;
+  &__container {
+    display: flex;
+    padding: 11px 0;
+  }
+}
