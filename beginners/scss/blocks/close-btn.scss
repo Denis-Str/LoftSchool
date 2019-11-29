@@ -8,7 +8,7 @@
   background-color: transparent;
   cursor: pointer;
   outline: none;
-  margin-left: 30px;
+  margin-left: rem(30px);
   &__line1, &__line2, &__line3 {
     width: 24px;
     height: 4px;

@@ -6,8 +6,8 @@
   //max-height: 4.29rem;
   &__container {
     display: flex;
-    padding-top: 0.79rem;
-    padding-bottom: 0.79rem;
+    padding-top: rem(11px);
+    padding-bottom: rem(11px);
     @include media($mobile) {
       flex-direction: column;
     }

@@ -14,7 +14,7 @@
     }
   }
   &__title {
-    margin-bottom: 40px;
+    margin-bottom: rem(40px);
     @include media($mobile) {
       text-align: center;
     }

@@ -13,7 +13,7 @@
   &__label {
     @include font-family($UbuntuLight);
     color: $white;
-    margin-bottom: 0.5rem;
+    margin-bottom: rem(7px);
     display: flex;
     align-items: center;
     position: relative;
@@ -25,7 +25,7 @@
     height: 2.14rem;
     @include font-family($UbuntuLight);
     color: $darkGrey;
-    padding-left: 1.43rem;
+    padding-left: rem(20px);
     &:focus {
       border-color: $orangeYellow;
     }
@@ -33,12 +33,12 @@
 
   &__column {
     width: 100%;
-    max-width: 460px;
+    max-width: rem(460px);
     &:not(:last-child) {
-      margin-right: 1.43rem;
+      margin-right: rem(20px);
       @include media($laptop) {
         margin-right: 0;
-        margin-bottom: 24px;
+        margin-bottom: rem(24px);
       }
     }
   }
@@ -51,7 +51,7 @@
     }
 
     &:not(:last-child) {
-      margin-bottom: 1.43rem;
+      margin-bottom: rem(20px);
     }
   }
 
@@ -60,14 +60,24 @@
     flex-direction: column;
     flex: 1;
     &-house-info {
-      max-width: 100px;
+      max-width: rem(100px);
       input {
         padding-left: 0;
         text-align: center;
       }
     }
+    &_mob-size {
+      @include media(414px) {
+        flex: none;
+        width: 100%;
+      }
+    }
     &_mr:not(:last-child) {
-      margin-right: 1.43rem;
+      margin-right: rem(20px);
+      @include media(414px) {
+        margin-right: 0;
+        margin-bottom: rem(20px);
+      }
     }
     &-pay, &-call {
       flex-direction: row;
@@ -80,7 +90,7 @@
     &-pay {
       flex: none;
       &:not(:last-child) {
-        margin-right: 1.43rem;
+        margin-right: rem(20px);
       }
       label:before {
         content: "";
@@ -145,11 +155,11 @@
     border: solid 2px transparent;
     border-radius: 5px;
     outline: none;
-    height: 7.86rem;
+    height: rem(110px);
     @include font-family($UbuntuLight);
     color: $darkGrey;
-    padding-left: 1.43rem;
-    padding-top: 0.71rem;
+    padding-left: rem(20px);
+    padding-top: rem(10px);
     &:focus {
       border-color: $orangeYellow;
     }

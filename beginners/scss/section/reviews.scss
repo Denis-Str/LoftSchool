@@ -58,24 +58,24 @@
 
   &__title {
     @include font-family($GagalinRegular);
-    font-size: 1rem;
+    font-size: rem(14px);
     color: #ffffff;
     text-transform: uppercase;
-    margin-bottom: 2.14rem;
+    margin-bottom: rem(30px);
     @include media($laptop) {
-      margin-bottom: 1.43rem;
+      margin-bottom: rem(20px);
     }
     @include media($mobile) {
-      font-size: 1.72rem;
+      font-size: rem(24px);
       text-align: center;
     }
   }
   &__desc p {
     @include font-family($UbuntuLight);
-    font-size: 1rem;
-    line-height: 24px;
+    font-size: rem(14px);
+    line-height: rem(24px);
     color: #ffffff;
-    margin-bottom: 1.21rem;
+    margin-bottom: rem(17px);
     @include media($mobile) {
       display: none;
     }

@@ -34,7 +34,7 @@ ul li {
 }
 
 .wrapper {
-  min-width: 320px;
+  min-width: rem(320px);
   position: relative;
   @include font-family ($GagalinRegular);
   min-height: 100%;
@@ -52,14 +52,14 @@ ul li {
   @include container($container-width, $container-padding);
 
   @include media($laptop) {
-    max-width: 770px;
-    padding-left: 25px;
-    padding-right: 25px;
+    max-width: rem(770px);
+    padding-left: rem(25px);
+    padding-right: rem(25px);
   }
   @include media($mobile) {
-    max-width: 480px;
-    padding-left: 10px;
-    padding-right: 10px;
+    max-width: rem(480px);
+    padding-left: rem(10px);
+    padding-right: rem(10px);
   }
 }
 
@@ -79,11 +79,11 @@ input[type="radio"].visually-hidden {
 
 .btn {
   @include font-family($UbuntuMedium);
-  font-size: 0.93rem;
+  font-size: rem(13px);
   border-radius: 5px;
   background-color: $coral;
   color: $white;
-  padding: 0.86rem 1.07rem;
+  padding: rem(13px) rem(15px);
   border: none;
   text-transform: uppercase;
   display: flex;
@@ -92,21 +92,22 @@ input[type="radio"].visually-hidden {
     transition: background-color .7s;
   }
   &_mr {
-    margin-right: 1.43rem;
+    margin-right: rem(20px);
   }
   @include media($mobile) {
-    font-size: 0.93rem;
+    font-size: rem(13px);
   }
 }
-
 
 .title {
   @include font-family($GagalinRegular);
-  font-size: 5.15rem;
+  font-size: rem(72px);
   text-transform: uppercase;
   color: $orangeYellow;
   @include media($mobile) {
-    font-size: 3.57rem;
+    font-size: rem(50px);
   }
 }
+
+
 

@@ -2,19 +2,18 @@
   color: $orangeYellow;
   &__top {
     display: block;
-    //margin-bottom: 40px;
     @include media($mobile) {
-      font-size: 4.5rem;
+      font-size: rem(40px);
     }
   }
   &__bottom {
     @include font-family($LifehackMedium);
     display: block;
     color: $white;
-    font-size: 4.64rem;
+    font-size: rem(64px);
     text-transform: lowercase;
     @include media($mobile) {
-      font-size: 3.86rem;
+      font-size: rem(53px);
     }
   }
 }

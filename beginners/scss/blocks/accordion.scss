@@ -6,13 +6,13 @@
     height: 100%;
     flex-direction: column;
     align-items: center;
-    padding-left: 0.71rem;
-    padding-right: 0.71rem;
+    padding-left: rem(10px);
+    padding-right: rem(10px);
   }
 
   &__item {
     width: 100%;
-    max-width: 330px;
+    max-width: rem(330px);
     @include media(920px) {
       text-align: center;
     }
@@ -49,18 +49,18 @@
   }
 
   &__item:not(:last-child) {
-    margin-bottom: 2.5rem;
+    margin-bottom: rem(35px);
   }
 
   &__subtitle {
     color: $white;
-    margin-bottom: 1.07rem;
+    margin-bottom: rem(15px);
     display: inline-flex;
     align-items: center;
     cursor: pointer;
     font-size: 1rem;
     @include media(920px) {
-      font-size: 1.72rem;
+      font-size: rem(24px);
     }
     &:before {
       content: "";
@@ -69,7 +69,7 @@
       border-left: 7px solid transparent;
       border-right: 7px solid transparent;
       border-top: 9px solid $orangeYellow;
-      margin-right: 10px;
+      margin-right: rem(10px);
       transition: .5s;
     }
   }
@@ -93,22 +93,22 @@
 
     &-pic{
       border-radius: 50%;
-      height: 100px;
-      max-width: 100px;
+      height: rem(100px);
+      max-width: rem(100px);
       object-fit: cover;
     }
 
     &-post {
       @include font-family($UbuntuBold);
       color: $white;
-      margin-bottom: 1.79rem;
+      margin-bottom: rem(25px);
     }
     &-text p {
       @include font-family($UbuntuLight);
-      max-width: 208px;
+      max-width: rem(208px);
       color: $white;
       @include media($laptop) {
-        max-width: 348px;
+        max-width: rem(348px);
       }
     }
   }

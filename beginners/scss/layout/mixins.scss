@@ -45,3 +45,7 @@
     @content
   }
 }
+
+@function rem($px) {
+  @return ($px/$default-font-size)+rem;
+}

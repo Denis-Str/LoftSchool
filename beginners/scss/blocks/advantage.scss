@@ -14,16 +14,16 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    flex-basis: 300px;
+    flex-basis: rem(300px);
     @include media($mobile) {
       flex-basis: 100%;
       flex-direction: row;
-      margin-bottom: 4.28rem;
+      margin-bottom: rem(60px);
     }
   }
 
   &__img {
-    margin-bottom: 2.36rem;
+    margin-bottom: rem(33px);
     @include media($mobile) {
       flex: 1;
       margin-bottom: 0;
@@ -34,21 +34,21 @@
     @include media($mobile) {
       flex: 3;
       text-align: start;
-      max-width: 318px;
+      max-width: rem(318px);
     }
   }
 
   &__title {
     @include font-family($LifehackMedium);
-    font-size: 1.72rem;
+    font-size: rem(24px);
     color: $darkGrey;
-    margin-bottom: 1.79rem;
+    margin-bottom: rem(24px);
   }
 
   &__desc p {
     @include font-family($UbuntuLight);
-    font-size: 1rem;
-    line-height: 1.72rem;
+    font-size: rem(14px);
+    line-height: rem(24px);
     color: rgba(47, 50, 52, 0.8);
   }
 }

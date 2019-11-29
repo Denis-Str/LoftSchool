@@ -10,7 +10,7 @@
   &__title {
     color: $white;
     text-align: left;
-    padding-top: 7.86rem;
+    padding-top: rem(110px);
   }
 
   &__list {
@@ -30,7 +30,7 @@
       }
       &__content {
         height: 100%;
-        width: 540px;
+        width: rem(540px);
         transition: width .4s;
       }
     }
@@ -41,9 +41,9 @@
       }
       &__content {
         width: 100%;
-        max-width: 540px;
+        max-width: rem(540px);
         @include media($laptop){
-          max-width: 530px;
+          max-width: rem(530px);
         }
       }
     }
@@ -51,9 +51,9 @@
 
   &__name {
     @include font-family($GagalinRegular);
-    font-size: 2.86rem;
+    font-size: rem(40px);
     color: $white;
-    max-width: 80px;
+    max-width: rem(80px);
     display: flex;
     align-items: flex-end;
     background-repeat: no-repeat;
@@ -70,7 +70,7 @@
     &-rotate {
       transform: rotate(-90deg);
       transform-origin: 0 0;
-      height: 80px;
+      height: rem(80px);
       white-space: nowrap;
       display: flex;
       align-items: center;
@@ -84,15 +84,15 @@
     position: relative;
     p {
       @include font-family($UbuntuLight);
-      line-height: 1.72rem;
+      line-height: rem(24px);
       color: $white;
       padding-left: 6%;
       padding-right: 7%;
       padding-top: 11%;
       //padding: 60px 33px;
-      min-width: 540px;
+      //min-width: 540px;
       @include media($laptop){
-        min-width: 530px;
+        //min-width: 530px;
       }
     }
   }

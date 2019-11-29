@@ -14,23 +14,23 @@
     @include media($laptop) {
       flex-wrap: wrap;
       justify-content: center;
-      max-height: 830px;
+      max-height: rem(830px);
     }
     @include media($laptop) {
-      max-height: 600px;
+      max-height: rem(600px);
     }
   }
 
   &__left,
   &__right {
-    flex-basis: 460px;
+    flex-basis: rem(460px);
     @include media($mobile) {
-      flex-basis: 366px;
+      flex-basis: rem(366px);
     }
   }
 
   &__right {
-    flex-basis: 460px;
+    flex-basis: rem(460px);
     @include media($laptop) {
       text-align: center;
     }
@@ -39,12 +39,12 @@
   &__left {
     background-image: url("../img/icons/drops.svg");
     background-repeat: no-repeat;
-    background-position: center 90px;
+    background-position: center rem(90px);
     background-size: contain;
 
     @include media($laptop) {
     background-size: contain;
-    background-position: 0 60px;
+    background-position: 0 rem(60px);
     }
   }
 

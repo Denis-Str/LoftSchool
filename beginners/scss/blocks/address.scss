@@ -11,14 +11,14 @@
     @include font-family($UbuntuLight);
     color: $white;
     font-style: normal;
-    margin-bottom: 0.5rem;
+    margin-bottom: rem(7px);
   }
   &__link {
     @include font-family($UbuntuBold);
     color: $coral;
     font-style: normal;
     @include media($mobile) {
-      margin-bottom: 20px;
+      margin-bottom: rem(20px);
       display: flex;
     }
   }
