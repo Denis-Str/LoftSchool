@@ -913,6 +913,9 @@ input[type="radio"].visually-hidden {
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center; } }
+    @media screen and (max-width: 768px) {
+      .reviews__drop {
+        padding: 0; } }
   .reviews__title {
     font-family: "GagalinRegular", Arial, Helvetica, sans-serif;
     font-size: 1rem;
@@ -937,8 +940,15 @@ input[type="radio"].visually-hidden {
         display: none; } }
   .reviews__btn {
     background-color: #2f3234; }
+    .reviews__btn_show {
+      display: none; }
     .reviews__btn:hover {
       background-color: #1f2122; }
+    @media screen and (max-width: 768px) {
+      .reviews__btn_hidden {
+        display: none; }
+      .reviews__btn_show {
+        display: block; } }
 
 .delivery {
   background-image: url("../img/delivery-bg.jpg");
