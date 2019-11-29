@@ -1,11 +1,11 @@
 .page-pagination {
   position: fixed;
-  top: 90px;
-  right: 50px;
+  top: 6.43rem;
+  right: 3.57rem;
   z-index: 2;
   &__item {
     &:not(:last-child) {
-      margin-bottom: 5px;
+      margin-bottom: 0.76rem;
     }
     &_active .page-pagination__link {
       border-color: $white;

@@ -15,20 +15,20 @@
   }
 
   &__img {
-    margin-bottom: 33px;
+    margin-bottom: 2.36rem;
   }
 
   &__title {
     @include font-family($LifehackMedium);
-    font-size: 24px;
+    font-size: 1.72rem;
     color: $darkGrey;
-    margin-bottom: 25px;
+    margin-bottom: 1.79rem;
   }
 
   &__desc p {
     @include font-family($UbuntuLight);
-    font-size: 14px;
-    line-height: 2;
+    font-size: 1rem;
+    line-height: 1.72rem;
     color: rgba(47, 50, 52, 0.8);
   }
 }

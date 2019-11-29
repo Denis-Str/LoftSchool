@@ -16,12 +16,12 @@
     height: 5px;
     border-radius: 50%;
     background-color: $white;
-    margin: 0 12px;
+    margin: 0 0.86rem;
   }
 
   &__link {
     @include font-family($UbuntuRegular);
-    font-size: 13px;
+    font-size: 0.93rem;
     color: $white;
     text-transform: uppercase;
   }

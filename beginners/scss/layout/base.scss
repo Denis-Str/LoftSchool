@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: $default-font-size;
+}
+
 html,
 body {
   height: 100%;
@@ -30,9 +34,9 @@ ul li {
 }
 
 .wrapper {
+  min-width: 320px;
   position: relative;
   @include font-family ($GagalinRegular);
-  font-size: $default-font-size;
   min-height: 100%;
   width: 100%;
   overflow: hidden;
@@ -64,11 +68,11 @@ input[type="radio"].visually-hidden {
 
 .btn {
   @include font-family($UbuntuMedium);
-  font-size: 13px;
+  font-size: 0.93rem;
   border-radius: 5px;
   background-color: $coral;
   color: $white;
-  padding: 12px 15px;
+  padding: 0.86rem 1.07rem;
   border: none;
   text-transform: uppercase;
   display: flex;
@@ -77,14 +81,14 @@ input[type="radio"].visually-hidden {
     transition: background-color .7s;
   }
   &_mr {
-    margin-right: 20px;
+    margin-right: 1.43rem;
   }
 }
 
 
 .title {
   @include font-family($GagalinRegular);
-  font-size: 72px;
+  font-size: 5.15rem;
   text-transform: uppercase;
   color: $orangeYellow;
 }

@@ -44,6 +44,9 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+html {
+  font-size: 14px; }
+
 html,
 body {
   height: 100%;
@@ -69,9 +72,9 @@ ul li {
   list-style: none; }
 
 .wrapper {
+  min-width: 320px;
   position: relative;
   font-family: "GagalinRegular", Arial, Helvetica, sans-serif;
-  font-size: 14px;
   min-height: 100%;
   width: 100%;
   overflow: hidden;
@@ -108,11 +111,11 @@ input[type="radio"].visually-hidden {
 
 .btn {
   font-family: "UbuntuMedium", Arial, Helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 0.93rem;
   border-radius: 5px;
   background-color: #e45028;
   color: #fff;
-  padding: 12px 15px;
+  padding: 0.86rem 1.07rem;
   border: none;
   text-transform: uppercase;
   display: -webkit-box;
@@ -124,11 +127,11 @@ input[type="radio"].visually-hidden {
     -o-transition: background-color .7s;
     transition: background-color .7s; }
   .btn_mr {
-    margin-right: 20px; }
+    margin-right: 1.43rem; }
 
 .title {
   font-family: "GagalinRegular", Arial, Helvetica, sans-serif;
-  font-size: 72px;
+  font-size: 5.15rem;
   text-transform: uppercase;
   color: #f9b43b; }
 
@@ -178,11 +181,11 @@ input[type="radio"].visually-hidden {
   height: 5px;
   border-radius: 50%;
   background-color: #fff;
-  margin: 0 12px; }
+  margin: 0 0.86rem; }
 
 .nav__link {
   font-family: "UbuntuRegular", Arial, Helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 0.93rem;
   color: #fff;
   text-transform: uppercase; }
 
@@ -210,17 +213,17 @@ input[type="radio"].visually-hidden {
   justify-content: center;
   z-index: 3; }
   .arrow-down__block_pb {
-    padding-bottom: 40px; }
+    padding-bottom: 2.86rem; }
   .arrow-down__img {
     fill: #fff; }
 
 .page-pagination {
   position: fixed;
-  top: 90px;
-  right: 50px;
+  top: 6.43rem;
+  right: 3.57rem;
   z-index: 2; }
   .page-pagination__item:not(:last-child) {
-    margin-bottom: 5px; }
+    margin-bottom: 0.76rem; }
   .page-pagination__item_active .page-pagination__link {
     border-color: #fff; }
   .page-pagination__link {
@@ -283,7 +286,7 @@ input[type="radio"].visually-hidden {
     font-family: "LifehackMedium", Arial, Helvetica, sans-serif;
     display: block;
     color: #fff;
-    font-size: 65px;
+    font-size: 4.64rem;
     text-transform: lowercase; }
 
 .we {
@@ -332,18 +335,18 @@ input[type="radio"].visually-hidden {
   flex-basis: 300px; }
 
 .advantage__img {
-  margin-bottom: 33px; }
+  margin-bottom: 2.36rem; }
 
 .advantage__title {
   font-family: "LifehackMedium", Arial, Helvetica, sans-serif;
-  font-size: 24px;
+  font-size: 1.72rem;
   color: #2f3234;
-  margin-bottom: 25px; }
+  margin-bottom: 1.79rem; }
 
 .advantage__desc p {
   font-family: "UbuntuLight", Arial, Helvetica, sans-serif;
-  font-size: 14px;
-  line-height: 2;
+  font-size: 1rem;
+  line-height: 1.72rem;
   color: rgba(47, 50, 52, 0.8); }
 
 .team {
@@ -383,7 +386,7 @@ input[type="radio"].visually-hidden {
     justify-content: center; }
   .team__title {
     padding-top: 22%;
-    margin-bottom: 45px; }
+    margin-bottom: 3.22rem; }
 
 .accordion__list {
   width: 100%;
@@ -398,8 +401,8 @@ input[type="radio"].visually-hidden {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-left: 10px;
-  padding-right: 10px; }
+  padding-left: 0.71rem;
+  padding-right: 0.71rem; }
 
 .accordion__item {
   width: 100%;
@@ -438,18 +441,19 @@ input[type="radio"].visually-hidden {
       transform: scaleY(-1); }
 
 .accordion__item:not(:last-child) {
-  margin-bottom: 35px; }
+  margin-bottom: 2.5rem; }
 
 .accordion__subtitle {
   color: #fff;
-  margin-bottom: 15px;
+  margin-bottom: 1.07rem;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  cursor: pointer; }
+  cursor: pointer;
+  font-size: 1rem; }
   .accordion__subtitle:before {
     content: "";
     width: 0;
@@ -486,7 +490,7 @@ input[type="radio"].visually-hidden {
 .accordion__drop-post {
   font-family: "UbuntuBold", Arial, Helvetica, sans-serif;
   color: #fff;
-  margin-bottom: 25px; }
+  margin-bottom: 1.79rem; }
 
 .accordion__drop-text p {
   font-family: "UbuntuLight", Arial, Helvetica, sans-serif;
@@ -507,7 +511,7 @@ input[type="radio"].visually-hidden {
   .menu__title {
     color: #fff;
     text-align: left;
-    padding-top: 110px; }
+    padding-top: 7.86rem; }
   .menu__list {
     position: absolute;
     height: 100%;
@@ -536,7 +540,7 @@ input[type="radio"].visually-hidden {
       max-width: 540px; }
   .menu__name {
     font-family: "GagalinRegular", Arial, Helvetica, sans-serif;
-    font-size: 40px;
+    font-size: 2.86rem;
     color: #fff;
     max-width: 80px;
     display: -webkit-box;
@@ -580,7 +584,7 @@ input[type="radio"].visually-hidden {
     position: relative; }
     .menu__content p {
       font-family: "UbuntuLight", Arial, Helvetica, sans-serif;
-      line-height: 24px;
+      line-height: 1.72rem;
       color: #fff;
       padding-left: 6%;
       padding-right: 7%;
@@ -644,16 +648,16 @@ input[type="radio"].visually-hidden {
     background-color: rgba(81, 81, 79, 0.7); }
   .reviews__title {
     font-family: "GagalinRegular", Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 1rem;
     color: #ffffff;
     text-transform: uppercase;
-    margin-bottom: 30px; }
+    margin-bottom: 2.14rem; }
   .reviews__desc {
     font-family: "UbuntuLight", Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 1rem;
     line-height: 2;
     color: #ffffff;
-    margin-bottom: 17px; }
+    margin-bottom: 1.21rem; }
   .reviews__btn {
     background-color: #2f3234; }
     .reviews__btn:hover {
@@ -698,7 +702,7 @@ input[type="radio"].visually-hidden {
   .form__label {
     font-family: "UbuntuLight", Arial, Helvetica, sans-serif;
     color: #fff;
-    margin-bottom: 7px;
+    margin-bottom: 0.5rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -710,17 +714,17 @@ input[type="radio"].visually-hidden {
     border: solid 2px transparent;
     border-radius: 5px;
     outline: none;
-    height: 36px;
+    height: 2.14rem;
     font-family: "UbuntuLight", Arial, Helvetica, sans-serif;
     color: #2f3234;
-    padding-left: 20px; }
+    padding-left: 1.43rem; }
     .form__input:focus {
       border-color: #f9b43b; }
   .form__column {
     width: 100%;
     max-width: 460px; }
     .form__column:not(:last-child) {
-      margin-right: 20px; }
+      margin-right: 1.43rem; }
   .form__row {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -732,7 +736,7 @@ input[type="radio"].visually-hidden {
       -ms-flex-pack: justify;
       justify-content: space-between; }
     .form__row:not(:last-child) {
-      margin-bottom: 20px; }
+      margin-bottom: 1.43rem; }
   .form__field {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -750,7 +754,7 @@ input[type="radio"].visually-hidden {
         padding-left: 0;
         text-align: center; }
     .form__field_mr:not(:last-child) {
-      margin-right: 20px; }
+      margin-right: 1.43rem; }
     .form__field-pay, .form__field-call {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
@@ -767,7 +771,7 @@ input[type="radio"].visually-hidden {
       -ms-flex: none;
       flex: none; }
       .form__field-pay:not(:last-child) {
-        margin-right: 20px; }
+        margin-right: 1.43rem; }
       .form__field-pay label:before {
         content: "";
         display: -webkit-box;
@@ -777,7 +781,7 @@ input[type="radio"].visually-hidden {
         height: 16px;
         border-radius: 50%;
         background-color: #fff;
-        margin-right: 10px; }
+        margin-right: 0.71rem; }
       .form__field-pay label:after {
         position: absolute;
         content: "";
@@ -801,7 +805,7 @@ input[type="radio"].visually-hidden {
       display: flex;
       width: 15px;
       height: 15px;
-      margin-right: 10px;
+      margin-right: 0.71rem;
       background-color: #fff; }
     .form__field-call label:after {
       position: absolute;
@@ -831,11 +835,11 @@ input[type="radio"].visually-hidden {
     border: solid 2px transparent;
     border-radius: 5px;
     outline: none;
-    height: 110px;
+    height: 7.86rem;
     font-family: "UbuntuLight", Arial, Helvetica, sans-serif;
     color: #2f3234;
-    padding-left: 20px;
-    padding-top: 10px; }
+    padding-left: 1.43rem;
+    padding-top: 0.71rem; }
     .form__comment:focus {
       border-color: #f9b43b; }
   .form__reset {
@@ -864,12 +868,12 @@ input[type="radio"].visually-hidden {
   position: absolute;
   bottom: 0;
   width: 100%;
-  max-height: 60px; }
+  max-height: 4.29rem; }
   .footer__container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 11px 0; }
+    padding: 0.79rem 0; }
 
 .address {
   -webkit-box-flex: 1;
@@ -892,7 +896,7 @@ input[type="radio"].visually-hidden {
     font-family: "UbuntuLight", Arial, Helvetica, sans-serif;
     color: #fff;
     font-style: normal;
-    margin-bottom: 7px; }
+    margin-bottom: 0.5rem; }
   .address__link {
     font-family: "UbuntuBold", Arial, Helvetica, sans-serif;
     color: #e45028;

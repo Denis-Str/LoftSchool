@@ -8,7 +8,7 @@
     @include font-family($UbuntuLight);
     color: $white;
     font-style: normal;
-    margin-bottom: 7px;
+    margin-bottom: 0.5rem;
   }
   &__link {
     @include font-family($UbuntuBold);
