@@ -62,13 +62,20 @@
     @include media($laptop) {
       margin-bottom: 1.43rem;
     }
+    @include media($mobile) {
+      font-size: 1.72rem;
+      text-align: center;
+    }
   }
-  &__desc {
+  &__desc p {
     @include font-family($UbuntuLight);
     font-size: 1rem;
     line-height: 24px;
     color: #ffffff;
     margin-bottom: 1.21rem;
+    @include media($mobile) {
+      display: none;
+    }
   }
   &__btn {
     background-color: $darkGrey;

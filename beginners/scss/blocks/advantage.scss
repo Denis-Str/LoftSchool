@@ -4,6 +4,9 @@
     display: flex;
     justify-content: space-between;
     text-align: center;
+    @include media($mobile) {
+      flex-direction: column;
+    }
   }
 
   &__item {
@@ -12,10 +15,27 @@
     justify-content: flex-start;
     align-items: center;
     flex-basis: 300px;
+    @include media($mobile) {
+      flex-basis: 100%;
+      flex-direction: row;
+      margin-bottom: 4.28rem;
+    }
   }
 
   &__img {
     margin-bottom: 2.36rem;
+    @include media($mobile) {
+      flex: 1;
+      margin-bottom: 0;
+    }
+  }
+
+  &__inner {
+    @include media($mobile) {
+      flex: 3;
+      text-align: start;
+      max-width: 318px;
+    }
   }
 
   &__title {

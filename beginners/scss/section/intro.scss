@@ -1,6 +1,10 @@
 .intro {
   @include section-bg(intro);
   @include section-size();
+  @include media($laptop) {
+    display: flex;
+    align-items: center;
+  }
   position: relative;
   &__container {
     height: 100vh;
@@ -10,13 +14,19 @@
     @include media($laptop) {
       flex-wrap: wrap;
       justify-content: center;
-      max-height: 770px;
+      max-height: 830px;
+    }
+    @include media($laptop) {
+      max-height: 600px;
     }
   }
 
   &__left,
   &__right {
     flex-basis: 460px;
+    @include media($mobile) {
+      flex-basis: 366px;
+    }
   }
 
   &__right {
@@ -30,6 +40,12 @@
     background-image: url("../img/icons/drops.svg");
     background-repeat: no-repeat;
     background-position: center 90px;
+    background-size: contain;
+
+    @include media($laptop) {
+    background-size: contain;
+    background-position: 0 60px;
+    }
   }
 
   &__img {

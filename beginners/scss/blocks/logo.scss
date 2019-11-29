@@ -1,3 +1,7 @@
 .logo-block {
   z-index: 4;
+  &__icon {
+    max-width: 98px;
+    max-height: 74px;
+  }
 }

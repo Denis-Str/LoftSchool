@@ -3,6 +3,9 @@
   &__top {
     display: block;
     //margin-bottom: 40px;
+    @include media($mobile) {
+      font-size: 4.5rem;
+    }
   }
   &__bottom {
     @include font-family($LifehackMedium);
@@ -10,5 +13,8 @@
     color: $white;
     font-size: 4.64rem;
     text-transform: lowercase;
+    @include media($mobile) {
+      font-size: 3.86rem;
+    }
   }
 }

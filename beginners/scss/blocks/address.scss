@@ -4,6 +4,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  @include media($mobile) {
+     align-items: center;
+   }
   &__info {
     @include font-family($UbuntuLight);
     color: $white;
@@ -14,5 +17,9 @@
     @include font-family($UbuntuBold);
     color: $coral;
     font-style: normal;
+    @include media($mobile) {
+      margin-bottom: 20px;
+      display: flex;
+    }
   }
 }
