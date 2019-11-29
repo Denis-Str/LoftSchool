@@ -49,7 +49,15 @@ ul li {
 }
 
 .container {
-  @include container($container-width, $container-padding)
+  @include container($container-width, $container-padding);
+  @include media($laptop) {
+    max-width: 768px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  @include media($mobile) {
+    max-width: 420px;
+  }
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -97,3 +105,4 @@ input[type="radio"].visually-hidden {
   max-width: 98px;
   max-height: 74px;
 }
+

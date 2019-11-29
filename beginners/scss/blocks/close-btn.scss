@@ -1,0 +1,49 @@
+.close-btn {
+  position: relative;
+  color: $white;
+  padding: 0;
+  border: none;
+  display: none;
+  z-index: 5;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  margin-left: 30px;
+  &__line1, &__line2, &__line3 {
+    width: 24px;
+    height: 4px;
+    background-color: $white;
+    margin: 5px 0;
+    transition: 0.3s;
+    border-radius: 7px;
+  }
+
+  &_active .close-btn {
+    &__line1 {
+      transform: rotate(-45deg) translate(-9px, 6px);
+    }
+    &__line2 {
+      opacity: 0
+    }
+    &__line3 {
+      transform: rotate(45deg) translate(-7px, -4px);
+    }
+  }
+
+  &:hover .close-btn {
+    &__line1 {
+      transform: rotate(-45deg) translate(-9px, 6px);
+    }
+    &__line2 {
+      opacity: 0
+    }
+    &__line3 {
+      transform: rotate(45deg) translate(-7px, -4px);
+    }
+  }
+
+
+  @include media($laptop) {
+    display: block;
+  }
+}

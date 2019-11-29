@@ -1,13 +1,35 @@
 .nav {
+  opacity: 0;
+  @include media($laptop) {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    max-width: none;
+    padding-left: 0;
+    padding-right: 0;
+    background-color: #282828;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   &__list {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    @include media($laptop) {
+      flex-direction: column;
+    }
   }
 
   &__item {
     display: flex;
     align-items: center;
+    @include media($laptop) {
+      flex-direction: column;
+    }
   }
 
   &__item:not(:last-child):after {
@@ -17,6 +39,9 @@
     border-radius: 50%;
     background-color: $white;
     margin: 0 0.86rem;
+    @include media($laptop) {
+      margin: 2.14rem 0;
+    }
   }
 
   &__link {
@@ -24,6 +49,9 @@
     font-size: 0.93rem;
     color: $white;
     text-transform: uppercase;
+    @include media($laptop) {
+      font-size: 1.72rem;
+    }
   }
 }
 

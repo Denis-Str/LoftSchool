@@ -7,11 +7,23 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include media($laptop) {
+      flex-wrap: wrap;
+      justify-content: center;
+      max-height: 770px;
+    }
   }
 
   &__left,
   &__right {
     flex-basis: 460px;
+  }
+
+  &__right {
+    flex-basis: 460px;
+    @include media($laptop) {
+      text-align: center;
+    }
   }
 
   &__left {

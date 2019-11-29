@@ -2,6 +2,10 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  @include media($laptop) {
+    flex-direction: column;
+    justify-content: center;
+  }
 &_checkbox-img path {
   fill: $coral;
 }
@@ -31,6 +35,10 @@
     max-width: 460px;
     &:not(:last-child) {
       margin-right: 1.43rem;
+      @include media($laptop) {
+        margin-right: 0;
+        margin-bottom: 24px;
+      }
     }
   }
 

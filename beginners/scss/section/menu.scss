@@ -42,6 +42,9 @@
       &__content {
         width: 100%;
         max-width: 540px;
+        @include media($laptop){
+          max-width: 530px;
+        }
       }
     }
   }
@@ -88,6 +91,9 @@
       padding-top: 11%;
       //padding: 60px 33px;
       min-width: 540px;
+      @include media($laptop){
+        min-width: 530px;
+      }
     }
   }
 }

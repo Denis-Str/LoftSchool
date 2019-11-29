@@ -3,6 +3,9 @@
   top: 6.43rem;
   right: 3.57rem;
   z-index: 2;
+  @include media(920px) {
+    display: none;
+  }
   &__item {
     &:not(:last-child) {
       margin-bottom: 0.76rem;

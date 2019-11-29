@@ -22,6 +22,10 @@
       opacity: 1;
       transition: opacity .6s;
     }
+    @include media($laptop) {
+      width: 50%;
+      height: 25%;
+    }
   }
 
   &__img {
@@ -44,6 +48,9 @@
     padding: 0 17%;
     opacity: 0;
     background-color: rgba(81, 81, 79, .7);
+    @include media($laptop) {
+      align-items: center;
+    }
   }
 
   &__title {
@@ -52,11 +59,14 @@
     color: #ffffff;
     text-transform: uppercase;
     margin-bottom: 2.14rem;
+    @include media($laptop) {
+      margin-bottom: 1.43rem;
+    }
   }
   &__desc {
     @include font-family($UbuntuLight);
     font-size: 1rem;
-    line-height: 2;
+    line-height: 24px;
     color: #ffffff;
     margin-bottom: 1.21rem;
   }
