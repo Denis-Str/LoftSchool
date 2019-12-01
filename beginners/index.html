@@ -21,28 +21,28 @@
                 <use href="./img/sprite.svg#logo"></use>
               </svg>
             </div>
-            <nav class="nav">
+            <nav class="nav nav_hidden">
               <ul class="nav__list">
                 <li class="nav__item">
-                  <a class="nav__link" href="#">O нас</a>
+                  <a class="nav__link" href="#we">O нас</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Бургеры</a>
+                  <a class="nav__link" href="#slider">Бургеры</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Команда</a>
+                  <a class="nav__link" href="#team">Команда</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Меню</a>
+                  <a class="nav__link" href="#menu">Меню</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Отзывы</a>
+                  <a class="nav__link" href="#reviews">Отзывы</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Kак мы работаем</a>
+                  <a class="nav__link" href="#work">Kак мы работаем</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Контакты</a>
+                  <a class="nav__link" href="#contacts">Контакты</a>
                 </li>
               </ul>
             </nav>
@@ -58,40 +58,64 @@
           </button>
         </div>
       </header>
-  
+<!--      nav_mobile-show-->
+      <nav class="nav nav_mobile">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="#we">O нас</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#slider">Бургеры</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#team">Команда</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#menu">Меню</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#reviews">Отзывы</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#work">Kак мы работаем</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#contacts">Контакты</a>
+          </li>
+        </ul>
+      </nav>
       <div class="page-pagination">
         <ul class="page-pagination__list">
           <li class="page-pagination__item page-pagination__item_active">
-            <a class="page-pagination__link" href="#intro" aria-label="Вступлене">
+            <a class="page-pagination__link" href="#" aria-label="Вступлене">
             </a>
           </li>
           <li class="page-pagination__item">
-            <a class="page-pagination__link" href="#we" aria-label="Мы лучшие"></a>
+            <a class="page-pagination__link" href="#" aria-label="Мы лучшие"></a>
           </li>
           <li class="page-pagination__item">
             <a class="page-pagination__link" href="#" aria-label="Слайдер"></a>
           </li>
           <li class="page-pagination__item">
-            <a class="page-pagination__link" href="#team" aria-label="Наша команда"></a>
+            <a class="page-pagination__link" href="#" aria-label="Наша команда"></a>
           </li>
           <li class="page-pagination__item">
-            <a class="page-pagination__link" href="#menu" aria-label="Меню"></a>
+            <a class="page-pagination__link" href="#" aria-label="Меню"></a>
           </li>
           <li class="page-pagination__item">
-            <a class="page-pagination__link" href="#reviews" aria-label="Отзывы"></a>
+            <a class="page-pagination__link" href="#" aria-label="Отзывы"></a>
           </li>
           <li class="page-pagination__item">
-            <a class="page-pagination__link" href="#work" aria-label="Как мы работаем"></a>
+            <a class="page-pagination__link" href="#" aria-label="Как мы работаем"></a>
           </li>
           <li class="page-pagination__item">
-            <a class="page-pagination__link" href="#delivery" aria-label="Доставка"></a>
+            <a class="page-pagination__link" href="#" aria-label="Доставка"></a>
           </li>
           <li class="page-pagination__item">
-            <a class="page-pagination__link" href="#contacts" aria-label="Контакты"></a>
+            <a class="page-pagination__link" href="#" aria-label="Контакты"></a>
           </li>
         </ul>
       </div>
-  
       <section class="intro" id="intro">
         <div class="container intro__container">
           <div class="intro__left">
@@ -494,19 +518,19 @@
                 </div>
               </div>
               <div class="form__row form__row_jc">
-                <div class="form__field form__field-house-info">
+                <div class="form__field form__field_house-info">
                   <label for="house" class="form__label">Дом</label>
                   <input type="text" id="house" class="form__input" required aria-label="Дом">
                 </div>
-                <div class="form__field form__field-house-info">
+                <div class="form__field form__field_house-info">
                   <label for="entrance" class="form__label">Корпус</label>
                   <input type="text" id="entrance" class="form__input" required aria-label="Корпус">
                 </div>
-                <div class="form__field form__field-house-info">
+                <div class="form__field form__field_house-info">
                   <label for="flat" class="form__label">Квартира</label>
                   <input type="text" id="flat" class="form__input" required aria-label="Квартира">
                 </div>
-                <div class="form__field form__field-house-info">
+                <div class="form__field form__field_house-info">
                   <label for="floor" class="form__label">Этаж</label>
                   <input type="text" id="floor" class="form__input" required aria-label="Этаж">
                 </div>
@@ -602,5 +626,6 @@
     </div>
     
   </div>
+<script src="script.js"></script>
 </body>
 </html>

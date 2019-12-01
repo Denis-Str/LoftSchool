@@ -30,19 +30,6 @@
     }
   }
 
-  &:hover .close-btn {
-    &__line1 {
-      transform: rotate(-45deg) translate(-9px, 6px);
-    }
-    &__line2 {
-      opacity: 0
-    }
-    &__line3 {
-      transform: rotate(45deg) translate(-7px, -4px);
-    }
-  }
-
-
   @include media($laptop) {
     display: block;
   }

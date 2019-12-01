@@ -1,5 +1,7 @@
 .nav {
-  opacity: 0;
+  &_mobile {
+    display: none;
+  }
   @include media($laptop) {
     position: absolute;
     width: 100vw;
@@ -14,6 +16,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @include media($laptop) {
+      &_hidden {
+        display: none;
+      }
+      &_mobile {
+        min-height: 1024px;
+        &-show {
+          z-index: 10;
+        }
+        @include media($mobile) {
+          min-height: 800px;
+        }
+      }
+    }
   }
   &__list {
     display: flex;
