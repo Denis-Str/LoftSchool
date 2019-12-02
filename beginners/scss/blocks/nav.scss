@@ -35,6 +35,7 @@
   &__list {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     @include media($mobile) {
       flex-direction: column;
