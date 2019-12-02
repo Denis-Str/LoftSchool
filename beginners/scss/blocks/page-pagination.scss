@@ -3,7 +3,7 @@
   top: rem(90px);
   right: rem(50px);
   z-index: 2;
-  @include media(920px) {
+  @include media($mobile) {
     display: none;
   }
   &__item {

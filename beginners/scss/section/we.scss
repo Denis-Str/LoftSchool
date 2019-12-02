@@ -9,8 +9,7 @@
     color: $darkGrey;
   }
   &__container {
-    @include media($mobile) {
-      width: 100%;
+    @include media($extrasmall) {
       height: 100%;
       display: flex;
       flex-direction: column;

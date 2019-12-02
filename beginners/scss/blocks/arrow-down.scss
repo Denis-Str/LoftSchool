@@ -1,4 +1,4 @@
-.arrow-down {
+.arrow {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -7,7 +7,7 @@
   justify-content: center;
   z-index: 3;
 
-  &__block_pb {
+  &__link_pb {
     padding-bottom: rem(37px);
   }
   &__img {

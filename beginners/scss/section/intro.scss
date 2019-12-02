@@ -1,7 +1,7 @@
 .intro {
   @include section-bg(intro);
   @include section-size();
-  @include media($laptop) {
+  @include media($mobile) {
     display: flex;
     align-items: center;
   }
@@ -11,12 +11,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @include media($laptop) {
+    @include media($mobile) {
       flex-wrap: wrap;
       justify-content: center;
       max-height: rem(830px);
     }
-    @include media($laptop) {
+    @include media($mobile) {
       max-height: rem(600px);
     }
   }
@@ -31,7 +31,7 @@
 
   &__right {
     flex-basis: rem(460px);
-    @include media($laptop) {
+    @include media($mobile) {
       text-align: center;
     }
   }
@@ -42,7 +42,7 @@
     background-position: center rem(90px);
     background-size: contain;
 
-    @include media($laptop) {
+    @include media($mobile) {
     background-size: contain;
     background-position: 0 rem(60px);
     }

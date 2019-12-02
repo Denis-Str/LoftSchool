@@ -22,7 +22,11 @@
       opacity: 1;
       transition: opacity .6s;
     }
-    @include media($laptop) {
+    @include media($mobile) {
+      width: 50%;
+      height: 25%;
+    }
+    @include media($extrasmall) {
       width: 50%;
       height: 25%;
     }
@@ -48,10 +52,11 @@
     padding: 0 17%;
     opacity: 0;
     background-color: rgba(81, 81, 79, .7);
-    @include media($laptop) {
-      align-items: center;
-    }
     @include media($mobile) {
+      align-items: center;
+      padding: 0 12%;
+    }
+    @include media($extrasmall) {
       padding: 0;
     }
   }
@@ -62,10 +67,10 @@
     color: #ffffff;
     text-transform: uppercase;
     margin-bottom: rem(30px);
-    @include media($laptop) {
+    @include media($mobile) {
       margin-bottom: rem(20px);
     }
-    @include media($mobile) {
+    @include media($extrasmall) {
       font-size: rem(24px);
       text-align: center;
     }
@@ -77,6 +82,9 @@
     color: #ffffff;
     margin-bottom: rem(17px);
     @include media($mobile) {
+      text-align: center;
+    }
+    @include media($extrasmall) {
       display: none;
     }
   }
@@ -88,7 +96,7 @@
     &:hover {
       background-color: $graphiteBlack;
     }
-    @include media($mobile) {
+    @include media($extrasmall) {
       &_hidden {
         display: none;
       }

@@ -30,7 +30,7 @@
     }
   }
 
-  @include media($laptop) {
+  @include media($mobile) {
     display: block;
   }
 }

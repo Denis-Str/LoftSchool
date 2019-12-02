@@ -2,7 +2,7 @@
   &_mobile {
     display: none;
   }
-  @include media($laptop) {
+  @include media($mobile) {
     position: absolute;
     width: 100vw;
     height: 100vh;
@@ -17,7 +17,7 @@
     justify-content: center;
     align-items: center;
 
-    @include media($laptop) {
+    @include media($mobile) {
       &_hidden {
         display: none;
       }
@@ -36,7 +36,7 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    @include media($laptop) {
+    @include media($mobile) {
       flex-direction: column;
     }
   }
@@ -44,7 +44,7 @@
   &__item {
     display: flex;
     align-items: center;
-    @include media($laptop) {
+    @include media($mobile) {
       flex-direction: column;
     }
   }
@@ -56,7 +56,7 @@
     border-radius: 50%;
     background-color: $white;
     margin: 0 rem(12px);
-    @include media($laptop) {
+    @include media($mobile) {
       margin: rem(30px) 0;
     }
   }
@@ -66,7 +66,7 @@
     font-size: rem(13px);
     color: $white;
     text-transform: uppercase;
-    @include media($laptop) {
+    @include media($mobile) {
       font-size: rem(24px);
     }
   }

@@ -16,7 +16,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    @include media($laptop) {
+    @include media($mobile) {
       width: 100%;
     }
   }

@@ -49,18 +49,18 @@ ul li {
 }
 
 .container {
-  @include container($container-width, $container-padding);
+  @include container($container-width);
 
-  @include media($laptop) {
-    max-width: rem(770px);
-    padding-left: rem(25px);
-    padding-right: rem(25px);
-  }
-  @include media($mobile) {
-    max-width: rem(480px);
-    padding-left: rem(10px);
-    padding-right: rem(10px);
-  }
+  //@include media($laptop) {
+  //  max-width: rem(770px);
+  //  padding-left: rem(25px);
+  //  padding-right: rem(25px);
+  //}
+  //@include media($mobile) {
+  //  max-width: rem(480px);
+  //  padding-left: rem(10px);
+  //  padding-right: rem(10px);
+  //}
 }
 
 .visually-hidden:not(:focus):not(:active),

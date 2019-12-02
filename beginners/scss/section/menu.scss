@@ -62,10 +62,10 @@
           height: 100%;
           width: rem(540px);
           transition: width .4s;
-          @include media($laptop){
+          @include media($mobile){
             width: rem(520px);
           }
-          @include media($mobile){
+          @include media($extrasmall){
             width: 100%;
           }
         }
@@ -87,7 +87,7 @@
           height: 100%;
           width: rem(540px);
           transition: width .4s;
-          @include media($laptop){
+          @include media($mobile){
             width: rem(520px);
           }
           @include media($mobile){
@@ -140,7 +140,7 @@
       padding-right: rem(37px);
       padding-top: rem(60px);
       min-width: 540px;
-      @include media($laptop){
+      @include media($mobile){
         min-width: rem(530px);
       }
       @include media($mobile){
