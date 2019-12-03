@@ -1,0 +1,48 @@
+.consist {
+  color: #fff;
+  &__container {
+    max-height: rem(470px);
+    height: 100%;
+    margin-left: rem(15px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    position: absolute;
+      @include media($mobile) {
+        flex-direction: row;
+        height: auto;
+        width: 100%;
+        max-width: rem(472px);
+        margin-left: 0;
+        top: rem(-70px);
+    }
+    @include media($extrasmall) {
+      top: rem(-90px);
+    }
+  }
+
+  &__burger {
+    max-width: rem(90px);
+    padding: rem(9px) 0;
+    background-color: rgba($coral, .4);
+    border-radius: 5px;
+    svg {
+      margin-bottom: rem(9px);
+    }
+  }
+
+  &__calories {
+    max-width: rem(60px);
+    opacity: .5;
+    position: relative;
+  }
+
+  &_calories-count {
+    font-size: rem(20px);
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 35%;
+  }
+}

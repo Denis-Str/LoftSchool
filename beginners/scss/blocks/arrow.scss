@@ -1,0 +1,14 @@
+.arrow {
+  cursor: pointer;
+
+  &_rotate-left {
+    transform: rotate(90deg);
+  }
+  &_rotate-right {
+    transform: rotate(-90deg);
+  }
+
+  &__img {
+    fill: $white;
+  }
+}

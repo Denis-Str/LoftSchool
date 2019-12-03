@@ -1,0 +1,112 @@
+.slider {
+  @include section-size();
+  position: relative;
+  background-image: linear-gradient(to top, $orangeYellow 0%, $mango 48%, $orangeYellow 74%, $orangeYellow 100%);
+  &_flex {
+    display: flex;
+    justify-content: center;
+  }
+  &__container {
+    //height: 100vh;
+    display: flex;
+    position: relative;
+  }
+  &__arrow {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    max-width: rem(1010px);
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    //flex: 1;
+    //margin: 0 rem(20px);
+  }
+  &_arrow-left {
+    left: 0;
+  }
+  &__arrow-right {
+    right: 0;
+  }
+  &__list {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+  &__item {
+    display: flex;
+    position: relative;
+    @include media($mobile) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+  }
+  &__left-column, &__right-column {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    @include media($mobile) {
+      flex: 0;
+    }
+  }
+
+  &__left-column {
+    position: relative;
+    @include media($mobile) {
+      margin-bottom: 40px;
+      align-items: center;
+    }
+    @include media($extrasmall) {
+      margin-bottom: 10px;
+      width: 100%;
+    }
+  }
+  &__right-column {
+    @include media($mobile) {
+      align-items: center;
+    }
+  }
+
+  &__title {
+    color: $white;
+    margin-bottom: rem(20px);
+    @include media($mobile) {
+      max-width: rem(348px);
+      text-align: center;
+    }
+    @include media($extrasmall) {
+      font-size: rem(50px);
+    }
+  }
+
+  &__pic {
+    @include media($extrasmall) {
+      max-width: rem(370px);
+    }
+  }
+  &__price {
+    display: flex;
+    align-items: flex-end;
+  }
+  &__content p {
+    @include font-family($UbuntuRegular);
+    color: $white;
+    line-height: rem(24px);
+    margin-bottom: rem(30px);
+    @include media($mobile) {
+      align-items: center;
+      max-width: rem(590px);
+      text-align: center;
+    }
+    @include media($extrasmall) {
+      margin-bottom: rem(10px);
+    }
+  }
+}

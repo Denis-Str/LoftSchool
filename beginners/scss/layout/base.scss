@@ -37,6 +37,7 @@ ul li {
   min-width: rem(320px);
   position: relative;
   @include font-family ($GagalinRegular);
+  font-size: rem($default-font-size);
   min-height: 100%;
   width: 100%;
   overflow: hidden;
@@ -50,17 +51,6 @@ ul li {
 
 .container {
   @include container($container-width);
-
-  //@include media($laptop) {
-  //  max-width: rem(770px);
-  //  padding-left: rem(25px);
-  //  padding-right: rem(25px);
-  //}
-  //@include media($mobile) {
-  //  max-width: rem(480px);
-  //  padding-left: rem(10px);
-  //  padding-right: rem(10px);
-  //}
 }
 
 .visually-hidden:not(:focus):not(:active),

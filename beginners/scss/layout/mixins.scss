@@ -29,16 +29,10 @@
   @include media($mobile) {
     min-height: rem(1024px);
   }
-  @include media($mobile) {
+  @include media($extrasmall) {
     min-height: rem(800px);
   }
 }
-
-//@mixin container($width, $padding) {
-//  max-width: $width;
-//  margin: 0 auto;
-//  padding: 0 $padding;
-//}
 
 @mixin container($width) {
   max-width: $width;

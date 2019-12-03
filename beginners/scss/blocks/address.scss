@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  @include media($mobile) {
+  @include media($extrasmall) {
      align-items: center;
    }
   &__info {
@@ -17,7 +17,7 @@
     @include font-family($UbuntuBold);
     color: $coral;
     font-style: normal;
-    @include media($mobile) {
+    @include media($extrasmall) {
       margin-bottom: rem(20px);
       display: flex;
     }
