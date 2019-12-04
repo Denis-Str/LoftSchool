@@ -31,7 +31,9 @@
     //width: 2820px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    @include media($mobile) {
+      align-items: center;
+    }
   }
   &__item {
     width: 940px;
