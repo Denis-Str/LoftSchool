@@ -502,7 +502,10 @@ input[type="radio"].visually-hidden {
     display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center; }
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
   .slider__container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -836,26 +839,13 @@ input[type="radio"].visually-hidden {
   @media screen and (max-width: 768px) {
     .accordion__item {
       text-align: center; } }
-  .accordion__item:hover .accordion__drop-block {
+  .accordion__item_active .accordion__drop-block {
     height: 100%;
     opacity: 1;
     -webkit-transition: opacity 1s;
     transition: opacity 1s; }
-  .accordion__item:hover .accordion__subtitle {
-    color: #f9b43b; }
-    .accordion__item:hover .accordion__subtitle:before {
-      -webkit-transition: .5s;
-      transition: .5s;
-      -webkit-transform: scaleY(-1);
-      transform: scaleY(-1); }
-  .accordion__item_active .accordion__drop-block {
-    height: auto;
-    -webkit-transition: height .5s;
-    transition: height .5s; }
   .accordion__item_active .accordion__subtitle {
-    color: #f9b43b;
-    -webkit-transition: .5s;
-    transition: .5s; }
+    color: #f9b43b; }
     .accordion__item_active .accordion__subtitle:before {
       -webkit-transition: .5s;
       transition: .5s;

@@ -17,7 +17,22 @@
       text-align: center;
     }
 
-    &:hover .accordion {
+    //&:hover .accordion {
+    //  &__drop-block {
+    //    height: 100%;
+    //    opacity: 1;
+    //    transition: opacity 1s;
+    //  }
+    //  &__subtitle {
+    //    color: $orangeYellow;
+    //    &:before {
+    //      transition: .5s;
+    //      transform: scaleY(-1);
+    //    }
+    //  }
+    //}
+
+    &_active .accordion {
       &__drop-block {
         height: 100%;
         opacity: 1;
@@ -25,21 +40,6 @@
       }
       &__subtitle {
         color: $orangeYellow;
-        &:before {
-          transition: .5s;
-          transform: scaleY(-1);
-        }
-      }
-    }
-
-    &_active .accordion {
-      &__drop-block {
-        height: auto;
-        transition: height .5s;
-      }
-      &__subtitle {
-        color: $orangeYellow;
-        transition: .5s;
         &:before {
           transition: .5s;
           transform: scaleY(-1);
