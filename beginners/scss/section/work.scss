@@ -1,0 +1,14 @@
+.work {
+  @include section-bg(work);
+  @include section-size();
+  position: relative;
+  &__title {
+    color: $darkGrey;
+    margin-bottom: 45px;
+  }
+  &__video {
+    width: 660px;
+    height: 370px;
+    background-image: url("../img/work-video.jpg");
+  }
+}

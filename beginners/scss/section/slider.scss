@@ -28,7 +28,6 @@
   }
   &__list {
     width: 100%;
-    //width: 2820px;
     display: flex;
     justify-content: center;
     @include media($mobile) {
@@ -36,7 +35,7 @@
     }
   }
   &__item {
-    width: 940px;
+    max-width: rem(940px);
     display: flex;
     position: relative;
     @include media($mobile) {
