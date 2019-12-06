@@ -3,6 +3,7 @@
   &__container {
     max-height: rem(470px);
     height: 100%;
+    width: 100%;
     margin-left: rem(15px);
     display: flex;
     flex-direction: column;
@@ -44,5 +45,64 @@
     width: 100%;
     text-align: center;
     top: 35%;
+  }
+
+  &__drop {
+    position: absolute;
+    top: 0;
+    left: rem(90px);
+    background-color: rgba($white, .9);
+    border-radius: 5px;
+    width: 100%;
+    max-width: rem(270px);
+    padding: rem(18px) rem(22px);
+    @include media($mobile) {
+      padding-right: rem(60px);
+      max-width: rem(320px);
+    }
+    @include media($extrasmall) {
+      padding-right: rem(115px);
+      max-width: rem(370px);
+
+    }
+    &-list {
+      display: flex;
+      flex-direction: column;
+    }
+    &-item {
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      &:not(:last-child) {
+        margin-bottom: rem(15px);
+      }
+    }
+    &-svg {
+      width: 100%;
+      flex: 1;
+    }
+    &-subtitle {
+      flex: 2;
+      display: flex;
+      padding-left: 25px;
+    }
+    &-subtitle, &-wt {
+      @include font-family($UbuntuRegular);
+      color: $darkGrey;
+    }
+    &-wt {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+    }
+    &_close {
+      @include media($mobile) {
+        position: absolute;
+        z-index: 70;
+        right: rem(10px);
+        top: rem(10px);
+        display: block;
+      }
+    }
   }
 }

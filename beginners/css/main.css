@@ -29,12 +29,6 @@
   font-style: normal; }
 
 @font-face {
-  font-family: UbuntuRegular;
-  src: url("../fonts/Ubuntu/UbuntuRegular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
   font-family: LifehackMedium;
   src: url("../fonts/Lifehack/LifehackMedium.woff2") format("woff2");
   font-weight: normal;
@@ -291,6 +285,8 @@ input[type="radio"].visually-hidden {
     -webkit-transition: 0.3s;
     transition: 0.3s;
     border-radius: 7px; }
+  .close-btn__line_red {
+    background-color: #e45028; }
   .close-btn_active .close-btn__line1 {
     -webkit-transform: rotate(-45deg) translate(-9px, 6px);
     transform: rotate(-45deg) translate(-9px, 6px); }
@@ -299,7 +295,7 @@ input[type="radio"].visually-hidden {
   .close-btn_active .close-btn__line3 {
     -webkit-transform: rotate(45deg) translate(-7px, -4px);
     transform: rotate(45deg) translate(-7px, -4px); }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 480px) {
     .close-btn {
       display: block; } }
 
@@ -507,6 +503,7 @@ input[type="radio"].visually-hidden {
     -ms-flex-align: center;
     align-items: center; }
   .slider__container {
+    height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -534,9 +531,9 @@ input[type="radio"].visually-hidden {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center; }
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start; }
     @media screen and (max-width: 768px) {
       .slider__list {
         -webkit-box-align: center;
@@ -547,6 +544,9 @@ input[type="radio"].visually-hidden {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
     position: relative; }
     @media screen and (max-width: 768px) {
       .slider__item {
@@ -655,6 +655,7 @@ input[type="radio"].visually-hidden {
   .consist__container {
     max-height: 33.57143rem;
     height: 100%;
+    width: 100%;
     margin-left: 1.07143rem;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -699,6 +700,74 @@ input[type="radio"].visually-hidden {
     width: 100%;
     text-align: center;
     top: 35%; }
+  .consist__drop {
+    position: absolute;
+    top: 0;
+    left: 6.42857rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    width: 100%;
+    max-width: 19.28571rem;
+    padding: 1.28571rem 1.57143rem; }
+    @media screen and (max-width: 768px) {
+      .consist__drop {
+        padding-right: 4.28571rem;
+        max-width: 22.85714rem; } }
+    @media screen and (max-width: 480px) {
+      .consist__drop {
+        padding-right: 8.21429rem;
+        max-width: 26.42857rem; } }
+    .consist__drop-list {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+    .consist__drop-item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      white-space: nowrap; }
+      .consist__drop-item:not(:last-child) {
+        margin-bottom: 1.07143rem; }
+    .consist__drop-svg {
+      width: 100%;
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1; }
+    .consist__drop-subtitle {
+      -webkit-box-flex: 2;
+      -ms-flex: 2;
+      flex: 2;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      padding-left: 25px; }
+    .consist__drop-subtitle, .consist__drop-wt {
+      font-family: "UbuntuRegular", Arial, Helvetica, sans-serif;
+      color: #2f3234; }
+    .consist__drop-wt {
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end; }
+    @media screen and (max-width: 768px) {
+      .consist__drop_close {
+        position: absolute;
+        z-index: 70;
+        right: 0.71429rem;
+        top: 0.71429rem;
+        display: block; } }
 
 .advantage__list {
   display: -webkit-box;
@@ -982,7 +1051,7 @@ input[type="radio"].visually-hidden {
         width: 100%;
         height: 100%;
         z-index: 50; } }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 480px) {
       .menu__item:hover .menu__item_close {
         display: block; } }
     .menu__item:hover .menu__name {

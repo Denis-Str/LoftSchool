@@ -8,7 +8,7 @@
     align-items: center;
   }
   &__container {
-    //height: 100vh;
+    height: 100%;
     display: flex;
     position: relative;
     overflow: hidden;
@@ -30,7 +30,7 @@
   &__list {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     @include media($mobile) {
       align-items: center;
     }
@@ -38,6 +38,7 @@
   &__item {
     max-width: rem(940px);
     display: flex;
+    flex: 0 0 100%;
     position: relative;
     @include media($mobile) {
       flex-direction: column;

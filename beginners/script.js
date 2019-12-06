@@ -30,11 +30,10 @@ const sliderList = document.querySelector('.slider__list');
 
 arrowLeft.addEventListener('click', (e) => {
     e.preventDefault();
-    sliderList.style.transform = 'translate(-940px, 0)';
+    // sliderList.style.transform = 'translate(-940px, 0)';
 });
 arrowRight.addEventListener('click', (e) => {
     e.preventDefault();
-    sliderList.style.transform = 'translate(940px, 0)';
+    // sliderList.style.transform = 'translate(940px, 0)';
 });
-
 

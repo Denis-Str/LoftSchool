@@ -51,7 +51,7 @@
 
       & .menu {
         &__item_close {
-          @include media($mobile) {
+          @include media($extrasmall) {
             display: block;
           }
         }
