@@ -27,13 +27,21 @@ accordItems.forEach((item, index, list) => {
 const arrowLeft = document.querySelector('.slider__arrow-left');
 const arrowRight = document.querySelector('.slider__arrow-right');
 const sliderList = document.querySelector('.slider__list');
+const sliderItem = document.querySelector('.slider__item');
+let current = 0;
+let count = 0;
 
 arrowLeft.addEventListener('click', (e) => {
     e.preventDefault();
-    // sliderList.style.transform = 'translate(-940px, 0)';
+    current = sliderItem.offsetWidth;
+    count += current;
+    sliderItem.style.transform = `translateX(${count}px)`;
+    // (count >= -current) ? sliderItem.style.transform = `translateX(${count}px)` :  count = -(itemsWidth - sliderWidth);
 });
 arrowRight.addEventListener('click', (e) => {
     e.preventDefault();
-    // sliderList.style.transform = 'translate(940px, 0)';
+    current = sliderItem.offsetWidth;
+    count += current;
+    sliderItem.style.transform = `translateX(-${count}px)`;
 });
 

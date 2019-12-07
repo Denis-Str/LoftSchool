@@ -28,8 +28,12 @@
     padding: rem(9px) 0;
     background-color: rgba($coral, .4);
     border-radius: 5px;
+    cursor: pointer;
     svg {
       margin-bottom: rem(9px);
+    }
+    &:hover + .consist__drop {
+      display: block;
     }
   }
 
@@ -48,6 +52,7 @@
   }
 
   &__drop {
+    display: none;
     position: absolute;
     top: 0;
     left: rem(90px);
@@ -55,15 +60,10 @@
     border-radius: 5px;
     width: 100%;
     max-width: rem(270px);
-    padding: rem(18px) rem(22px);
-    @include media($mobile) {
-      padding-right: rem(60px);
-      max-width: rem(320px);
-    }
+    padding: 5% 4%;
     @include media($extrasmall) {
-      padding-right: rem(115px);
-      max-width: rem(370px);
-
+      max-width: rem(200px);
+      padding: 7% 6%;
     }
     &-list {
       display: flex;
@@ -78,13 +78,12 @@
       }
     }
     &-svg {
-      width: 100%;
       flex: 1;
     }
     &-subtitle {
       flex: 2;
       display: flex;
-      padding-left: 25px;
+      padding-left: 5%;
     }
     &-subtitle, &-wt {
       @include font-family($UbuntuRegular);
@@ -99,8 +98,8 @@
       @include media($mobile) {
         position: absolute;
         z-index: 70;
-        right: rem(10px);
-        top: rem(10px);
+        right: 0;
+        top: 0;
         display: block;
       }
     }

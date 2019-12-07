@@ -687,9 +687,12 @@ input[type="radio"].visually-hidden {
     max-width: 6.42857rem;
     padding: 0.64286rem 0;
     background-color: rgba(228, 80, 40, 0.4);
-    border-radius: 5px; }
+    border-radius: 5px;
+    cursor: pointer; }
     .consist__burger svg {
       margin-bottom: 0.64286rem; }
+    .consist__burger:hover + .consist__drop {
+      display: block; }
   .consist__calories {
     max-width: 4.28571rem;
     opacity: .5;
@@ -701,6 +704,7 @@ input[type="radio"].visually-hidden {
     text-align: center;
     top: 35%; }
   .consist__drop {
+    display: none;
     position: absolute;
     top: 0;
     left: 6.42857rem;
@@ -708,15 +712,11 @@ input[type="radio"].visually-hidden {
     border-radius: 5px;
     width: 100%;
     max-width: 19.28571rem;
-    padding: 1.28571rem 1.57143rem; }
-    @media screen and (max-width: 768px) {
-      .consist__drop {
-        padding-right: 4.28571rem;
-        max-width: 22.85714rem; } }
+    padding: 5% 4%; }
     @media screen and (max-width: 480px) {
       .consist__drop {
-        padding-right: 8.21429rem;
-        max-width: 26.42857rem; } }
+        max-width: 14.28571rem;
+        padding: 7% 6%; } }
     .consist__drop-list {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -736,7 +736,6 @@ input[type="radio"].visually-hidden {
       .consist__drop-item:not(:last-child) {
         margin-bottom: 1.07143rem; }
     .consist__drop-svg {
-      width: 100%;
       -webkit-box-flex: 1;
       -ms-flex: 1;
       flex: 1; }
@@ -747,7 +746,7 @@ input[type="radio"].visually-hidden {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      padding-left: 25px; }
+      padding-left: 5%; }
     .consist__drop-subtitle, .consist__drop-wt {
       font-family: "UbuntuRegular", Arial, Helvetica, sans-serif;
       color: #2f3234; }
@@ -765,8 +764,8 @@ input[type="radio"].visually-hidden {
       .consist__drop_close {
         position: absolute;
         z-index: 70;
-        right: 0.71429rem;
-        top: 0.71429rem;
+        right: 0;
+        top: 0;
         display: block; } }
 
 .advantage__list {
