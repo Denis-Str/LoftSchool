@@ -32,7 +32,7 @@
     svg {
       margin-bottom: rem(9px);
     }
-    &:hover + .consist__drop {
+    &:hover .consist__drop {
       display: block;
     }
   }

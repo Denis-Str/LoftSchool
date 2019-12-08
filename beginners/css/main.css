@@ -691,7 +691,7 @@ input[type="radio"].visually-hidden {
     cursor: pointer; }
     .consist__burger svg {
       margin-bottom: 0.64286rem; }
-    .consist__burger:hover + .consist__drop {
+    .consist__burger:hover .consist__drop {
       display: block; }
   .consist__calories {
     max-width: 4.28571rem;
