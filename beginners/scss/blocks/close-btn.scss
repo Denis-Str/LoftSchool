@@ -3,7 +3,6 @@
   color: $white;
   padding: 0;
   border: none;
-  display: none;
   z-index: 5;
   background-color: transparent;
   cursor: pointer;
@@ -36,7 +35,7 @@
     }
   }
 
-  @include media($extrasmall) {
-    display: block;
-  }
+  //@include media($extrasmall) {
+  //  display: block;
+  //}
 }

@@ -62,7 +62,7 @@
     max-width: rem(270px);
     padding: 5% 4%;
     @include media($extrasmall) {
-      max-width: rem(200px);
+      max-width: rem(220px);
       padding: 7% 6%;
     }
     &-list {
@@ -95,6 +95,7 @@
       justify-content: flex-end;
     }
     &_close {
+      display: none;
       @include media($mobile) {
         position: absolute;
         z-index: 70;

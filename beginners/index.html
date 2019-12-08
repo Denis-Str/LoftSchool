@@ -50,9 +50,9 @@
               <a class="btn order__link" href="#">Заказать</a>
             </div>
           </div>
-          <!--            close-btn_active-->
-          <div class="menu-close">
-            <button class="close-btn" type="button">
+          <!--           menu-close close-btn_active-->
+          <div class="close">
+            <button class="close-btn nav__close" type="button">
               <div class="close-btn__line1"></div>
               <div class="close-btn__line2"></div>
               <div class="close-btn__line3"></div>
@@ -123,7 +123,14 @@
       <section class="intro" id="intro">
         <div class="container intro__container">
           <div class="intro__left">
-            <img alt="burger" class="intro__img" src="./img/intro-burger.png">
+            <div class="intro__drop">
+              <svg class="intro__drop-svg">
+                <use href="./img/sprite.svg#drop"></use>
+              </svg>
+            </div>
+            <div class="intro__pic">
+              <img alt="burger" class="intro__img" src="./img/burger.png">
+            </div>
           </div>
           <div class="intro__right">
             <h1 class="title slogan">
