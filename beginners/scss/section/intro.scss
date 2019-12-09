@@ -84,10 +84,11 @@
     position: relative;;
     display: flex;
     justify-content: center;
-
+    margin-right: rem(20px);
     @include media($mobile) {
     background-size: contain;
     background-position: 0 rem(60px);
+      margin-right: 0;
     }
   }
   &__drop {
@@ -96,7 +97,7 @@
     width: 100%;
     height: 100%;
     left: 0;
-    top: -5%;
+    top: -7%;
     display: flex;
     justify-content: center;
     align-items: flex-start;

@@ -11,16 +11,17 @@ btn.addEventListener('click', (evt) => {
 //переключение в секции команда
 const accordItems = document.querySelectorAll('.accordion__item');
 
-accordItems.forEach((item, index, list) => {
-    item.addEventListener('click', (event) => {
-        list.forEach(classItem => {
-            classItem.classList.remove('accordion__item_active');
-            item.classList.add('accordion__item_active');
-        });
-        item.addEventListener('click', ()=> {
+accordItems.forEach(item => {
+    item.addEventListener('click', () => {
+        if (item.classList.contains('accordion__item_active')) {
+            item.classList.remove('accordion__item_active');
+        } else {
+            accordItems.forEach(item => {
+                item.classList.remove('accordion__item_active');
+            });
             item.classList.toggle('accordion__item_active');
-        })
-    });
+        }
+    })
 });
 
 // слайдер
@@ -39,8 +40,8 @@ arrowLeft.addEventListener('click', (e) => {
         sliderList.style.transform = `translateX(${count}px)`;
     }
     else {
-        count = 0;
-        // sliderList.style.transform = `translateX(${-current * 2}px)`;
+        count = -current * 2;
+        sliderList.style.transform = `translateX(${-current * 2}px)`;
     }
 });
 arrowRight.addEventListener('click', (e) => {
@@ -52,8 +53,27 @@ arrowRight.addEventListener('click', (e) => {
         sliderList.style.transform = `translateX(${count}px)`;
     }
     else {
-        count = current * (sliderList.childElementCount - 1);
-        // sliderList.style.transform = 'translateX(0px)';
+        // count = current * (sliderList.childElementCount - 1);
+        count = 0;
+        sliderList.style.transform = 'translateX(0px)';
     }
 });
 
+// карта
+
+// const map = document.querySelector('.contacts__map-block');
+
+// ymaps.ready(init);
+// function init(){
+//     // Создание карты.
+//     var myMap = new ymaps.Map("map", {
+//         // Координаты центра карты.
+//         // Порядок по умолчанию: «широта, долгота».
+//         // Чтобы не определять координаты центра карты вручную,
+//         // воспользуйтесь инструментом Определение координат.
+//         center: [55.76, 37.64],
+//         // Уровень масштабирования. Допустимые значения:
+//         // от 0 (весь мир) до 19.
+//         zoom: 7
+//     });
+// }

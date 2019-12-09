@@ -453,18 +453,20 @@ input[type="radio"].visually-hidden {
     display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center; }
+    justify-content: center;
+    margin-right: 1.42857rem; }
     @media screen and (max-width: 768px) {
       .intro__left {
         background-size: contain;
-        background-position: 0 4.28571rem; } }
+        background-position: 0 4.28571rem;
+        margin-right: 0; } }
   .intro__drop {
     position: absolute;
     max-width: 32.14286rem;
     width: 100%;
     height: 100%;
     left: 0;
-    top: -5%;
+    top: -7%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1602,6 +1604,9 @@ input[type="radio"].visually-hidden {
       height: 100%;
       -o-object-fit: cover;
       object-fit: cover; }
+    .contacts__map-block iframe {
+      width: 100%;
+      height: 100%; }
 
 .footer {
   background-image: url("../img/footer-bg.jpg");
