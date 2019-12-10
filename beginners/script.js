@@ -71,12 +71,10 @@ arrowRight.addEventListener('click', (e) => {
 
 
 // форма
-
 const form = document.querySelector('.form');
 const sendBtn = document.querySelector('.form__send');
 const modal = document.querySelector('.send-modal');
 const modalClose = document.querySelector('.send-modal_close');
-// const checkboxValue = value => value ? console.log('Не перезванивать') : console.log('Перезванивать');
 
 // перебор элементов формы
 const formElements = (form) => {
@@ -109,37 +107,38 @@ const fieldValidate = (elem) => {
 };
 
 // получение значений полей из формы
-const formDate = (form) => {
-    let date = {};
-    formElements(form).forEach(item => {
-        let nameElem = item.name;
-        if (item.type === 'text' || item.type === 'textarea') {
-            date[nameElem] = item.value;
-        }
-        if (item.type === 'checkbox') {
-            item.checked ? date.call = ('Не перезванивать') : date.call = 'Перезванивать';
-        }
-    });
-    (form.elements.payment.value === 'cash') ?
-        date.payment = 'Потребуется сдача' :
-        date.payment =  'Оплата по карте';
-    date.to = 'test@test.ru';
-    return date;
-};
+// const formDate = (form) => {
+//     let date = {};
+//     formElements(form).forEach(item => {
+//         let nameElem = item.name;
+//         if (item.type === 'text' || item.type === 'textarea') {
+//             date[nameElem] = item.value;
+//         }
+//         if (item.type === 'checkbox') {
+//             item.checked ? date.call = ('Не перезванивать') : date.call = 'Перезванивать';
+//         }
+//     });
+//     (form.elements.payment.value === 'cash') ?
+//         date.payment = 'Потребуется сдача' :
+//         date.payment =  'Оплата по карте';
+//
+//     date.to = 'test@test.ru';
+//     return date;
+// };
 
 // отправка формы
 sendBtn.addEventListener('click', (evt) => {
     evt.preventDefault();
+    // if (formValidate(form)) {
+    //     modal.classList.add('send-modal_show');
+    // }
     if (formValidate(form)) {
-        modal.classList.add('send-modal_show');
-    }
-    if (formValidate(form)) {
-        const data = formDate(form);
-
+        let formData = new FormData(form);
+        formData.append('to', 'exp@mail.com');
         const xhr = new XMLHttpRequest();
         xhr.responseType = 'json';
         xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
-        xhr.send(JSON.stringify(data));
+        xhr.send(formData);
         xhr.addEventListener('load', ()=> {
             if (console.log(xhr.response.status === true)) {
                 console.log(xhr.response.status);
