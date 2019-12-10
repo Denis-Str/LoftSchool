@@ -58,6 +58,7 @@
   }
 
   &__field {
+    position: relative;
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -174,5 +175,13 @@
     @include font-family($UbuntuLight);
     background-color: transparent;
     text-transform: none;
+  }
+
+  &__error {
+    @include font-family($UbuntuLight);
+    position: absolute;
+    color: $coral;
+    top: rem(52px);
+    left: rem(3px);
   }
 }

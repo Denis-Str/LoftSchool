@@ -40,10 +40,17 @@
     display: flex;
     flex: 0 0 100%;
     position: relative;
+    align-items: center;
     @include media($mobile) {
       flex-direction: column;
-      justify-content: center;
+      //justify-content: center;
       align-items: center;
+      max-height: rem(680px);
+      height: 100%;
+    }
+
+    @include media($extrasmall) {
+      max-height: rem(580px);
     }
 
   }
@@ -58,8 +65,10 @@
 
   &__left-column {
     position: relative;
+    margin-right: rem(20px);
     @include media($mobile) {
       margin-bottom: 40px;
+      margin-right: 0;
       align-items: center;
     }
     @include media($extrasmall) {
@@ -81,10 +90,12 @@
       text-align: center;
     }
     @include media($extrasmall) {
+      max-width: rem(250px);
       font-size: rem(50px);
     }
   }
   &__pic {
+    max-width: rem(460px);
     @include media($extrasmall) {
       max-width: rem(370px);
     }
