@@ -68,8 +68,6 @@ arrowRight.addEventListener('click', (e) => {
     }
 });
 
-
-
 // форма
 const form = document.querySelector('.form');
 const sendBtn = document.querySelector('.form__send');
@@ -129,9 +127,7 @@ const fieldValidate = (elem) => {
 // отправка формы
 sendBtn.addEventListener('click', (evt) => {
     evt.preventDefault();
-    // if (formValidate(form)) {
-    //     modal.classList.add('send-modal_show');
-    // }
+
     if (formValidate(form)) {
         let formData = new FormData(form);
         formData.append('to', 'exp@mail.com');
@@ -140,8 +136,8 @@ sendBtn.addEventListener('click', (evt) => {
         xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
         xhr.send(formData);
         xhr.addEventListener('load', ()=> {
-            if (console.log(xhr.response.status === true)) {
-                console.log(xhr.response.status);
+            if (xhr.response.status === 1) {
+                modal.classList.add('send-modal_show');
             }
         });
     }
