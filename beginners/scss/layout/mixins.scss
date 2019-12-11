@@ -40,7 +40,6 @@
   width: 95%;
 }
 
-
 @mixin media($width) {
   @media screen and (max-width: $width) {
     @content

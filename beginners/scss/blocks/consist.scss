@@ -32,6 +32,7 @@
     background-color: rgba($coral, .4);
     border-radius: 5px;
     cursor: pointer;
+    z-index: 90;
     svg {
       margin-bottom: rem(9px);
     }

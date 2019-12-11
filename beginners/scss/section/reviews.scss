@@ -89,6 +89,7 @@
     }
   }
   &__btn {
+    cursor: pointer;
     background-color: $darkGrey;
     &_show {
       display: none;

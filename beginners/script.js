@@ -1,35 +1,29 @@
-const btn = document.querySelector('.close-btn');
-
-// закрытие нав меню
-const navMenu = document.querySelector('.nav_mobile');
-btn.addEventListener('click', (evt) => {
-    evt.preventDefault();
-    btn.classList.toggle('close-btn_active');
-    navMenu.classList.toggle('nav_mobile-show');
-});
-
 //переключение аккордиона
 const accordItems = document.querySelectorAll('.accordion__item');
-const menuItems = document.querySelectorAll('.menu__item');
+const accordLinks = document.querySelectorAll('.accordion__subtitle');
 
-const accordToggle = (arrList, activeClass) => {
-    arrList.forEach(item => {
-        item.addEventListener('click', () => {
+const menuItems = document.querySelectorAll('.menu__item');
+const menuLinks = document.querySelectorAll('.menu__name');
+
+const accordToggle = (items, links, activeClass) => {
+    links.forEach(clickItem => {
+        clickItem.addEventListener('click', (evt) => {
+            evt.preventDefault();
+            let item = clickItem.parentNode;
             if (item.classList.contains(activeClass)) {
                 item.classList.remove(activeClass);
             } else {
-                arrList.forEach(item => {
+                items.forEach(item => {
                     item.classList.remove(activeClass);
                 });
                 item.classList.toggle(activeClass);
             }
-        })
-    });
+        });
+    })
 };
 
-accordToggle(accordItems, 'accordion__item_active');
-accordToggle(menuItems, 'menu__item_active');
-
+accordToggle(accordItems, accordLinks, 'accordion__item_active');
+accordToggle(menuItems, menuLinks, 'menu__item_active');
 
 // слайдер
 const arrowLeft = document.querySelector('.slider__arrow-left');
@@ -40,8 +34,20 @@ const sliderEnd = sliderList.childElementCount - 1;
 let current = sliderList.offsetWidth;
 let count = 0;
 
-
 const sliderMove = (number) => {sliderList.style.transform = `translateX(${number}px)`};
+
+const autoMoveSliders = () => {
+    if (count >  -current * sliderEnd) {
+        count -= current;
+        sliderMove(count);
+    }
+    else {
+        count = 0;
+        sliderMove(count);
+    }
+};
+
+setInterval(autoMoveSliders, 4000);
 
 arrowLeft.addEventListener('click', (e) => {
     e.preventDefault();
@@ -71,8 +77,8 @@ arrowRight.addEventListener('click', (e) => {
 // форма
 const form = document.querySelector('.form');
 const sendBtn = document.querySelector('.form__send');
-const modal = document.querySelector('.send-modal');
-const modalClose = document.querySelector('.send-modal_close');
+const modalForm = document.querySelector('.modal__send');
+const formClose = document.querySelector('.modal__send_close');
 
 // перебор элементов формы
 const formElements = (form) => {
@@ -137,18 +143,60 @@ sendBtn.addEventListener('click', (evt) => {
         xhr.send(formData);
         xhr.addEventListener('load', ()=> {
             if (xhr.response.status === 1) {
-                modal.classList.add('send-modal_show');
+                modalForm.classList.add('modal_show');
             }
         });
     }
 });
 
-// закрытие модольного окна формы
+// закрытие нав меню
+const btn = document.querySelector('.close-btn');
+const navMenu = document.querySelector('.nav_mobile');
 
-modalClose.addEventListener('click', (evt) => {
+btn.addEventListener('click', (evt) => {
     evt.preventDefault();
-    modal.classList.remove('send-modal_show');
+    btn.classList.toggle('close-btn_active');
+    navMenu.classList.toggle('nav_mobile-show');
 });
+
+// закрытие меню на мобильной версии
+const menuBtn = document.querySelectorAll('.menu__item_close');
+
+menuBtn.forEach(btn => {
+    btn.addEventListener('click', () => {
+        let parent = btn.parentNode;
+        parent.classList.remove('menu__item_active')
+    });
+});
+
+// закрытие модольнык окна
+const reviewsModal = document.querySelector('.modal__reviews');
+const reviewsBtn = document.querySelectorAll('.reviews__btn');
+const reviewsClose = document.querySelector('.modal__reviews_close');
+
+console.log(reviewsBtn);
+
+formClose.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    modalForm.classList.remove('modal_show');
+});
+
+reviewsBtn.forEach(btn => {
+    btn.addEventListener('click', () => {
+        reviewsModal.classList.add('modal_show');
+    });
+});
+
+reviewsClose.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    reviewsModal.classList.remove('modal_show');
+});
+
+
+
+
+
+
 
 // карта
 

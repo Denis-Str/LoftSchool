@@ -101,6 +101,7 @@
     }
   }
   &__price {
+    position: relative;
     display: flex;
     align-items: flex-end;
   }

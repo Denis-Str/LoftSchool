@@ -706,6 +706,7 @@ input[type="radio"].visually-hidden {
       .slider__pic {
         max-width: 26.42857rem; } }
   .slider__price {
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -790,7 +791,8 @@ input[type="radio"].visually-hidden {
     padding: 0.64286rem 0;
     background-color: rgba(228, 80, 40, 0.4);
     border-radius: 5px;
-    cursor: pointer; }
+    cursor: pointer;
+    z-index: 90; }
     .consist__burger svg {
       margin-bottom: 0.64286rem; }
     .consist__burger:hover .consist__drop {
@@ -1192,7 +1194,7 @@ input[type="radio"].visually-hidden {
       top: 0;
       left: 0;
       background-color: rgba(20, 20, 20, 0.7); }
-    .menu__name-rotate {
+    .menu__name_rotate {
       -webkit-transform: rotate(-90deg);
       transform: rotate(-90deg);
       -webkit-transform-origin: 0 0;
@@ -1330,6 +1332,7 @@ input[type="radio"].visually-hidden {
       .reviews__desc p {
         display: none; } }
   .reviews__btn {
+    cursor: pointer;
     background-color: #2f3234; }
     .reviews__btn_show {
       display: none; }
@@ -1722,20 +1725,21 @@ input[type="radio"].visually-hidden {
     -webkit-transition: .5s;
     transition: .5s; }
 
-.send-modal {
+.modal {
   display: none;
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background-color: #282828;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  overflow: hidden; }
-  .send-modal__message {
+  overflow: hidden;
+  z-index: 100; }
+  .modal__message {
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1749,15 +1753,42 @@ input[type="radio"].visually-hidden {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    width: 14.28571rem;
-    height: 7.14286rem;
     border-radius: 5px;
     background-color: #fff; }
-  .send-modal__text {
+  .modal__title {
+    margin-bottom: 2.14286rem;
+    color: #2f3234; }
+  .modal__text {
     font-family: "UbuntuLight", Arial, Helvetica, sans-serif;
     color: #2f3234;
     margin-bottom: 1.07143rem; }
-  .send-modal_show {
+    .modal__text p {
+      color: #2f3234;
+      line-height: 1.71429rem;
+      margin-bottom: 0; }
+  .modal_show {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
+  .modal__send {
+    background-color: #282828; }
+    .modal__send_size {
+      width: 14.28571rem;
+      height: 7.14286rem; }
+  .modal__reviews {
+    background-color: rgba(47, 50, 52, 0.9); }
+    .modal__reviews_size {
+      max-width: 33rem;
+      padding: 2% 1.5%;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start; }
+      @media screen and (max-width: 480px) {
+        .modal__reviews_size {
+          margin-right: 0.35714rem;
+          margin-left: 0.35714rem; } }
+    .modal__reviews_close {
+      position: absolute;
+      top: 1.42857rem;
+      right: 1.42857rem;
+      margin-left: 0; }

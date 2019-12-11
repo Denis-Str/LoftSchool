@@ -1,0 +1,64 @@
+.modal {
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 100;
+
+  &__message {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: $white;
+  }
+  &__title {
+    margin-bottom: 2.14286rem;
+    color: $darkGrey;
+  }
+  &__text {
+    @include font-family($UbuntuLight);
+    color: $darkGrey;
+    margin-bottom: rem(15px);
+    p {
+      color: $darkGrey;
+      line-height: rem(24px);
+      margin-bottom: 0;
+    }
+  }
+
+  &_show {
+    display: flex;
+  }
+  &__send {
+    background-color: #282828;
+    &_size {
+      width: rem(200px);
+      height: rem(100px);
+    }
+  }
+  &__reviews{
+    background-color: rgba(#2f3234, .9);
+
+    &_size {
+      max-width: rem(462px);
+      padding: 2% 1.5%;
+      align-items: flex-start;
+      @include media($extrasmall) {
+        margin-right: rem(5px);
+        margin-left: rem(5px);
+      }
+    }
+    &_close {
+      position: absolute;
+      top: rem(20px);
+      right: rem(20px);
+      margin-left: 0;
+    }
+  }
+}
