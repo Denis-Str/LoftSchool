@@ -2,13 +2,33 @@
   @include section-bg(work);
   @include section-size();
   position: relative;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
   &__title {
     color: $darkGrey;
     margin-bottom: 45px;
   }
+
+  &__wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
   &__video {
-    width: 660px;
-    height: 370px;
-    background-image: url("../img/work-video.jpg");
+    max-width: rem(660px);
+    height: rem(370px);
+    @include media($mobile) {
+      max-width: rem(720px);
+      height: rem(450px);
+    }
+    @include media($extrasmall) {
+      max-width: rem(720px);
+      height: rem(280px);
+    }
   }
 }

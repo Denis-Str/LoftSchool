@@ -1,7 +1,10 @@
+// отключение скрола
+const scroll = (value) => {document.body.style = `overflow-y: ${value}`};
+
+
 //переключение аккордиона
 const accordItems = document.querySelectorAll('.accordion__item');
 const accordLinks = document.querySelectorAll('.accordion__subtitle');
-
 const menuItems = document.querySelectorAll('.menu__item');
 const menuLinks = document.querySelectorAll('.menu__name');
 
@@ -31,19 +34,19 @@ const arrowRight = document.querySelector('.slider__arrow-right');
 const sliderList = document.querySelector('.slider__list');
 const sliderEnd = sliderList.childElementCount - 1;
 
-let current = sliderList.offsetWidth;
+const sliderMove = (number) => {sliderList.style.transform = `translateX(${number * 100}%)`};
 let count = 0;
 
-const sliderMove = (number) => {sliderList.style.transform = `translateX(${number}px)`};
-
 const autoMoveSliders = () => {
-    if (count >  -current * sliderEnd) {
-        count -= current;
+    if (count >  -sliderEnd) {
+        count -= 1;
         sliderMove(count);
+        sliderList.style.transition = '.7s'
     }
     else {
         count = 0;
         sliderMove(count);
+        sliderList.style.transition = '.7s'
     }
 };
 
@@ -51,24 +54,21 @@ setInterval(autoMoveSliders, 4000);
 
 arrowLeft.addEventListener('click', (e) => {
     e.preventDefault();
-
     if (count < 0) {
-        count += current;
+        count += 1;
         sliderMove(count);
-    }
-    else {
-        count = -current * 2;
+    } else {
+        count = -sliderEnd;
         sliderMove(count);
     }
 });
 
 arrowRight.addEventListener('click', (e) => {
     e.preventDefault();
-    if (count >  -current * sliderEnd) {
-        count -= current;
-        sliderMove(count);
-    }
-    else {
+    if (count >  -sliderEnd) {
+        count -= 1;
+    sliderMove(count);
+    } else {
         count = 0;
         sliderMove(count);
     }
@@ -144,6 +144,7 @@ sendBtn.addEventListener('click', (evt) => {
         xhr.addEventListener('load', ()=> {
             if (xhr.response.status === 1) {
                 modalForm.classList.add('modal_show');
+                scroll('hidden');
             }
         });
     }
@@ -165,7 +166,7 @@ const menuBtn = document.querySelectorAll('.menu__item_close');
 menuBtn.forEach(btn => {
     btn.addEventListener('click', () => {
         let parent = btn.parentNode;
-        parent.classList.remove('menu__item_active')
+        parent.classList.remove('menu__item_active');
     });
 });
 
@@ -174,45 +175,127 @@ const reviewsModal = document.querySelector('.modal__reviews');
 const reviewsBtn = document.querySelectorAll('.reviews__btn');
 const reviewsClose = document.querySelector('.modal__reviews_close');
 
-console.log(reviewsBtn);
-
 formClose.addEventListener('click', (evt) => {
     evt.preventDefault();
     modalForm.classList.remove('modal_show');
+    scroll('auto');
+
 });
 
 reviewsBtn.forEach(btn => {
     btn.addEventListener('click', () => {
         reviewsModal.classList.add('modal_show');
+        scroll('hidden');
     });
 });
 
 reviewsClose.addEventListener('click', (evt) => {
     evt.preventDefault();
     reviewsModal.classList.remove('modal_show');
+    scroll('auto');
+
 });
 
 
+// пагинация
+const content = document.querySelector('.wrapper__content');
+const sliderMoveY = (number) => {content.style.transform = `translateY(${-number * 100}%)`};
+let length = content.children.length -1;
+let countPage = 0;
 
+// const OnePageScroll =
+window.addEventListener('keydown', (evt) => {
+    if (evt.key === 'ArrowDown') {
+        if (countPage < length) {
+            countPage += 1;
+            sliderMoveY(countPage);
+        } else {
+            countPage = length;
+        }
+    }
+});
+window.addEventListener('keydown', (evt) => {
+    if (evt.key === 'ArrowUp') {
+       if (countPage > 0) {
+           countPage -= 1;
+           sliderMoveY(countPage);
+       } else {
+           countPage = 0;
+       }
+    }
+});
 
+window.addEventListener('wheel', (evt) => {
+    let delta = evt.deltaY;
 
-
+    if (delta >= 0) {
+        if (countPage < length) {
+            countPage += 1;
+            sliderMoveY(countPage);
+        } else {
+            countPage = length;
+        }
+    }
+    if (delta < 0) {
+        if (countPage > 0) {
+            countPage -= 1;
+            sliderMoveY(countPage);
+        } else {
+            countPage = 0;
+        }
+    }
+});
 
 // карта
 
-// const map = document.querySelector('.contacts__map-block');
+let marksArr = [
+    [59.95251655256589, 30.305354801650306],
+    [59.940115955176864, 30.3625180401757],
+    [59.9198688719761, 30.361831394667888],
+    [59.913318225357315, 30.299861637587817]
+];
+// Функция ymaps.ready() будет вызвана, когда
+// загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+ymaps.ready(init);
+function init(){
+    // Создание карты.
+    let myMap = new ymaps.Map("map", {
+        // Координаты центра карты.
+        // Порядок по умолчанию: «широта, долгота».
+        // Чтобы не определять координаты центра карты вручную,
+        // воспользуйтесь инструментом Определение координат.
+        center: [59.9332247231502, 30.336768833632735],
+        // Уровень масштабирования. Допустимые значения:
+        // от 0 (весь мир) до 19.
+        zoom: 12,
+        controls: []
+    });
 
-// ymaps.ready(init);
-// function init(){
-//     // Создание карты.
-//     var myMap = new ymaps.Map("map", {
-//         // Координаты центра карты.
-//         // Порядок по умолчанию: «широта, долгота».
-//         // Чтобы не определять координаты центра карты вручную,
-//         // воспользуйтесь инструментом Определение координат.
-//         center: [55.76, 37.64],
-//         // Уровень масштабирования. Допустимые значения:
-//         // от 0 (весь мир) до 19.
-//         zoom: 7
-//     });
-// }
+    // myMap.events.add('click', function (e) {
+    //     // Получение координат щелчка
+    //     let coords = e.get('coords');
+    //     createPoint(coords);
+    // });
+    marksArr.forEach(coords => {
+        createPoint(coords)
+    });
+
+    function createPoint(coords) {
+        let myPlacemark = new ymaps.Placemark(coords, {
+            hintContent: 'Собственный значок метки',
+            balloonContent: 'Это красивая метка'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: './img/icons/map-marker.svg',
+            // Размеры метки.
+            iconImageSize: [46, 57],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-5, -38]
+        });
+        myMap.geoObjects.add(myPlacemark);
+    }
+}
