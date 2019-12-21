@@ -197,57 +197,65 @@ reviewsClose.addEventListener('click', (evt) => {
 });
 
 
-// пагинация
+// скорол страницы
 const content = document.querySelector('.wrapper__content');
-const sliderMoveY = (number) => {content.style.transform = `translateY(${-number * 100}%)`};
+const section = content.querySelectorAll('.section');
+const dots = document.querySelectorAll('.page-pagination__item');
+
 let length = content.children.length -1;
 let countPage = 0;
+let scrollFlag = false;
 
-// const OnePageScroll =
-window.addEventListener('keydown', (evt) => {
-    if (evt.key === 'ArrowDown') {
-        if (countPage < length) {
+dots[0].classList.add('page-pagination__item_active');
+
+const sliderMoveY = countPage => content.style.transform = `translateY(${countPage * -100}%)`;
+
+const scrollSection = direction => {
+    if (scrollFlag === false) {
+        scrollFlag = true;
+        if (direction === 'next' && countPage < length) {
             countPage += 1;
-            sliderMoveY(countPage);
-        } else {
-            countPage = length;
         }
+        if (direction === 'prev' && countPage > 0) {
+            countPage -= 1;
+        }
+        dots.forEach(item => {
+            item.classList.remove('page-pagination__item_active');
+        });
+        dots[countPage].classList.add('page-pagination__item_active');
+        sliderMoveY(countPage);
     }
-});
-window.addEventListener('keydown', (evt) => {
-    if (evt.key === 'ArrowUp') {
-       if (countPage > 0) {
-           countPage -= 1;
-           sliderMoveY(countPage);
-       } else {
-           countPage = 0;
-       }
-    }
-});
+    setTimeout(() => {
+        scrollFlag = false;
+    }, 1300)
+};
 
 window.addEventListener('wheel', (evt) => {
     let delta = evt.deltaY;
-
-    if (delta >= 0) {
-        if (countPage < length) {
-            countPage += 1;
-            sliderMoveY(countPage);
-        } else {
-            countPage = length;
-        }
+    if (delta > 0) {
+        scrollSection('next');
     }
     if (delta < 0) {
-        if (countPage > 0) {
-            countPage -= 1;
-            sliderMoveY(countPage);
-        } else {
-            countPage = 0;
-        }
+        scrollSection('prev');
     }
 });
 
-// карта
+// переключение секций стрелками
+window.addEventListener('keydown', (evt) => {
+    if (evt.key === 'ArrowDown' && countPage < length) {
+        countPage += 1;
+    }
+    if (evt.key === 'ArrowUp' && countPage > 0) {
+        countPage -= 1;
+    }
+    dots.forEach(item => {
+        item.classList.remove('page-pagination__item_active');
+    });
+    dots[countPage].classList.add('page-pagination__item_active');
+    sliderMoveY(countPage);
+});
 
+// карта
 let marksArr = [
     [59.95251655256589, 30.305354801650306],
     [59.940115955176864, 30.3625180401757],
@@ -299,3 +307,48 @@ function init(){
         myMap.geoObjects.add(myPlacemark);
     }
 }
+
+
+// плеер
+function secondsToTime(time) {
+    const roundTime = Math.round(time);
+    const min = Math.floor(roundTime / 60);
+    const sec = roundTime - min * 60;
+    const formattedSec = sec < 10 ? `0${sec}` : `${sec}`;
+
+    return `${min}:${formattedSec}`;
+}
+const video = document.querySelector('.work__video');
+const play = document.querySelector('.player__start');
+const time = document.querySelector('.player__duration-completed');
+const estimate = document.querySelector('.player__duration-estimate');
+const pointVideo = document.querySelector('.player__playback-button');
+
+play.addEventListener('click', () => {
+    if (play.classList.contains('paused') === false) {
+        video.play();
+        play.classList.add('paused');
+    } else {
+        video.pause();
+        play.classList.remove('paused');
+    }
+});
+
+video.addEventListener('timeupdate', function () {
+    let interval;
+    let countTime = Math.round(video.currentTime);
+    let fullTime = Math.round(video.duration);
+    let end = (countTime / fullTime) * 100;
+
+    time.innerHTML = secondsToTime(countTime);
+    estimate.innerHTML = secondsToTime(fullTime);
+    if (typeof interval !== 'undefined') {
+        clearTimeout(interval);
+    }
+    interval = setInterval(() => {
+
+        pointVideo.style.left = `${end}%`;
+    }, 1000);
+
+});
+

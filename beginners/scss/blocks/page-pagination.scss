@@ -11,7 +11,7 @@
       margin-bottom: rem(10px);
     }
     &_active .page-pagination__link {
-      border-color: $white;
+      border-color: $coral;
     }
   }
 
@@ -23,6 +23,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: .4s;
 
     &:before {
       content: "";
@@ -30,7 +31,7 @@
       border-radius: 50%;
       width: 6px;
       height: 6px;
-      background-color: $white;
+      background-color: $coral;
     }
   }
 }
