@@ -410,24 +410,15 @@ arrowDown.addEventListener('click', evt => {
 });
 
 if (md.mobile()) {
-    $("#body").swipe( {
-        //Generic swipe handler for all directions
-        swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-            // $(this).text("You swiped " + direction );
-            const scroll = direction === 'up' ? 'prev' : 'next';
-            scrollSection(scroll);
-        }
-    });
+    $(function() {
+        $("#body").swipe( {
+            //Generic swipe handler for all directions
+            swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+                // $(this).text("You swiped " + direction );
+                const scroll = direction === 'up' ? 'prev' : 'next';
+                scrollSection(scroll);
+            }
+        });
 
+    });
 }
-// $(function() {
-//     $("#body").swipe( {
-//         //Generic swipe handler for all directions
-//         swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-//             // $(this).text("You swiped " + direction );
-//             const scroll = direction === 'up' ? 'prev' : 'next';
-//             scrollSection(scroll);
-//         }
-//     });
-//
-// });

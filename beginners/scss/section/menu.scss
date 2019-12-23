@@ -114,14 +114,14 @@
       padding-left: rem(33px);
       padding-right: rem(37px);
       padding-top: rem(60px);
-      //min-width: rem(540px);
+      min-width: rem(540px);
       @include media($mobile){
         min-width: rem(520px);
       }
       @include media($extrasmall){
         padding-left: rem(10px);
         padding-right: rem(30px);
-        //min-width: 100%;
+        min-width: 100%;
       }
     }
   }

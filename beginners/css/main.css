@@ -1223,14 +1223,16 @@ input[type="radio"].visually-hidden {
       color: #fff;
       padding-left: 2.35714rem;
       padding-right: 2.64286rem;
-      padding-top: 4.28571rem; }
+      padding-top: 4.28571rem;
+      min-width: 38.57143rem; }
       @media screen and (max-width: 768px) {
         .menu__content p {
           min-width: 37.14286rem; } }
       @media screen and (max-width: 480px) {
         .menu__content p {
           padding-left: 0.71429rem;
-          padding-right: 2.14286rem; } }
+          padding-right: 2.14286rem;
+          min-width: 100%; } }
 
 .reviews {
   width: 100%;
