@@ -14,78 +14,80 @@
 </head>
 <body>
   <div class="wrapper">
-    <header class="header">
-      <div class="container header__container">
-        <div class="header__block">
-          <div class="logo-block">
-            <svg class="logo-block__icon">
-              <use href="./img/sprite.svg#logo"></use>
-            </svg>
-          </div>
-          <nav class="nav nav_hidden">
-            <ul class="nav__list">
-              <li class="nav__item">
-                <a class="nav__link" href="#we">O нас</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link" href="#slider">Бургеры</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link" href="#team">Команда</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link" href="#menu">Меню</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link" href="#reviews">Отзывы</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link" href="#work">Kак мы работаем</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link" href="#contacts">Контакты</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="order">
-            <a class="btn order__link" href="#delivery">Заказать</a>
-          </div>
-        </div>
-        <div class="close">
-          <button class="close-btn nav__close" type="button">
-            <span class="close-btn__line1"></span>
-            <span class="close-btn__line2"></span>
-            <span class="close-btn__line3"></span>
-          </button>
-        </div>
-      </div>
-    </header>
-    <nav class="nav nav_mobile">
-      <ul class="nav__list">
-        <li class="nav__item">
-          <a class="nav__link" href="#we">O нас</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="#slider">Бургеры</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="#team">Команда</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="#menu">Меню</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="#reviews">Отзывы</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="#work">Kак мы работаем</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="#contacts">Контакты</a>
-        </li>
-      </ul>
-    </nav>
     <div class="wrapper__content">
+      <header class="header">
+        <div class="container header__container">
+          <div class="header__block">
+            <div class="logo-block">
+              <svg class="logo-block__icon">
+                <use href="./img/sprite.svg#logo"></use>
+              </svg>
+            </div>
+            <nav class="nav nav_hidden" id="desktopNav">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a class="nav__link" href="#" data-link="1">O нас</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#" data-link="2">Бургеры</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#" data-link="3">Команда</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#" data-link="4">Меню</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#" data-link="5">Отзывы</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#" data-link="7">Kак мы работаем</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#" data-link="8">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="order">
+              <a class="btn order__link" href="#" data-link="6">Заказать</a>
+            </div>
+          </div>
+          <div class="close">
+            <button class="close-btn nav__close" type="button">
+              <span class="close-btn__line1"></span>
+              <span class="close-btn__line2"></span>
+              <span class="close-btn__line3"></span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <nav class="nav nav_mobile">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="#" data-link="1">O нас</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#" data-link="2">Бургеры</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#" data-link="3">Команда</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#" data-link="4">Меню</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#" data-link="5">Отзывы</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#" data-link="7">Kак мы работаем</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#" data-link="8">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
       <section class="section intro" id="intro">
         <div class="intro__overlay-video">
           <!--            autoplay="autoplay"-->
@@ -118,8 +120,8 @@
         </div>
         <div class="intro__arrow">
           <div class="arrow">
-            <a href="#we" class="arrow__link" aria-label="скрол вниз">
-              <svg class="arrow__img" width="28" height="14">
+            <a href="#" class="arrow__link"  aria-label="скрол вниз">
+              <svg class="arrow__img" data-link="1" width="28" height="14">
                 <use href="./img/sprite.svg#arrow-down"></use>
               </svg>
             </a>
@@ -974,8 +976,7 @@
           <div class="work__wrap">
             <div class="player">
               <div class="player__wrapper">
-                <div id="yt-player"></div>
-                <video class="work__video" preload="auto" muted="muted">
+                <video class="player__video" preload="auto" muted="muted">
                   <source src="./img/burger_video.mp4" type="video/mp4">
                 </video>
                 <div class="player__splash"></div>
@@ -1048,36 +1049,35 @@
         </footer>
       </section>
     </div>
-    <!--page-pagination__item_active-->
     <div class="page-pagination">
       <ul class="page-pagination__list">
         <li class="page-pagination__item">
-          <a class="page-pagination__link" href="#" aria-label="Вступлене">
+          <a class="page-pagination__link" href="#" data-link="0" aria-label="Вступлене">
           </a>
         </li>
         <li class="page-pagination__item">
-          <a class="page-pagination__link" href="#" aria-label="Мы лучшие"></a>
+          <a class="page-pagination__link" href="#" data-link="1" aria-label="Мы лучшие"></a>
         </li>
         <li class="page-pagination__item">
-          <a class="page-pagination__link" href="#" aria-label="Слайдер"></a>
+          <a class="page-pagination__link" href="#" data-link="2" aria-label="Слайдер"></a>
         </li>
         <li class="page-pagination__item">
-          <a class="page-pagination__link" href="#" aria-label="Наша команда"></a>
+          <a class="page-pagination__link" href="#" data-link="3" aria-label="Наша команда"></a>
         </li>
         <li class="page-pagination__item">
-          <a class="page-pagination__link" href="#" aria-label="Меню"></a>
+          <a class="page-pagination__link" href="#" data-link="4" aria-label="Меню"></a>
         </li>
         <li class="page-pagination__item">
-          <a class="page-pagination__link" href="#" aria-label="Отзывы"></a>
+          <a class="page-pagination__link" href="#" data-link="5" aria-label="Отзывы"></a>
         </li>
         <li class="page-pagination__item">
-          <a class="page-pagination__link" href="#" aria-label="Как мы работаем"></a>
+          <a class="page-pagination__link" href="#" data-link="6" aria-label="Как мы работаем"></a>
         </li>
         <li class="page-pagination__item">
-          <a class="page-pagination__link" href="#" aria-label="Доставка"></a>
+          <a class="page-pagination__link" href="#" data-link="7" aria-label="Доставка"></a>
         </li>
         <li class="page-pagination__item">
-          <a class="page-pagination__link" href="#" aria-label="Контакты"></a>
+          <a class="page-pagination__link" href="#" data-link="8" aria-label="Контакты"></a>
         </li>
       </ul>
     </div>
@@ -1105,6 +1105,9 @@
       </div>
     </div>
   </div>
-<script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.4/mobile-detect.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

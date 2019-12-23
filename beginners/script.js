@@ -1,6 +1,7 @@
-// отключение скрола
-const scroll = (value) => {document.body.style = `overflow-y: ${value}`};
+const md = new MobileDetect(window.navigator.userAgent);
 
+// отключение скрола
+const scroll = value => document.body.style = `overflow-y: ${value}`;
 
 //переключение аккордиона
 const accordItems = document.querySelectorAll('.accordion__item');
@@ -198,6 +199,7 @@ reviewsClose.addEventListener('click', (evt) => {
 
 
 // скорол страницы
+
 const content = document.querySelector('.wrapper__content');
 const section = content.querySelectorAll('.section');
 const dots = document.querySelectorAll('.page-pagination__item');
@@ -208,30 +210,47 @@ let scrollFlag = false;
 
 dots[0].classList.add('page-pagination__item_active');
 
+const dotsMove = numLink => {
+    // if (numLink === '1' || numLink === '7' || numLink === '8') {
+    //     let elem = dots[numLink];
+    //     elem.style.borderColorolor = "#000";
+    // }
+    dots.forEach(item => {
+        item.classList.remove('page-pagination__item_active');
+    });
+    dots[numLink].classList.add('page-pagination__item_active');
+};
+
 const sliderMoveY = countPage => content.style.transform = `translateY(${countPage * -100}%)`;
 
 const scrollSection = direction => {
-    if (scrollFlag === false) {
-        scrollFlag = true;
-        if (direction === 'next' && countPage < length) {
-            countPage += 1;
-        }
-        if (direction === 'prev' && countPage > 0) {
-            countPage -= 1;
-        }
-        dots.forEach(item => {
-            item.classList.remove('page-pagination__item_active');
-        });
-        dots[countPage].classList.add('page-pagination__item_active');
-        sliderMoveY(countPage);
+    // if (scrollFlag === false) {
+    //
+    // }
+    scrollFlag = true;
+    if (direction === 'next' && countPage < length) {
+        countPage += 1;
     }
+    if (direction === 'prev' && countPage > 0) {
+        countPage -= 1;
+    }
+    // dotsMove(countPage);
+    dots.forEach(item => {
+        item.classList.remove('page-pagination__item_active');
+    });
+    dots[countPage].classList.add('page-pagination__item_active');
+    sliderMoveY(countPage);
     setTimeout(() => {
         scrollFlag = false;
     }, 1300)
 };
 
 window.addEventListener('wheel', (evt) => {
+    if (scrollFlag) {
+        return
+    }
     let delta = evt.deltaY;
+
     if (delta > 0) {
         scrollSection('next');
     }
@@ -248,6 +267,7 @@ window.addEventListener('keydown', (evt) => {
     if (evt.key === 'ArrowUp' && countPage > 0) {
         countPage -= 1;
     }
+    // sliderMoveY(countPage);
     dots.forEach(item => {
         item.classList.remove('page-pagination__item_active');
     });
@@ -318,7 +338,7 @@ function secondsToTime(time) {
 
     return `${min}:${formattedSec}`;
 }
-const video = document.querySelector('.work__video');
+const video = document.querySelector('.player__video');
 const play = document.querySelector('.player__start');
 const time = document.querySelector('.player__duration-completed');
 const estimate = document.querySelector('.player__duration-estimate');
@@ -335,20 +355,79 @@ play.addEventListener('click', () => {
 });
 
 video.addEventListener('timeupdate', function () {
-    let interval;
     let countTime = Math.round(video.currentTime);
     let fullTime = Math.round(video.duration);
     let end = (countTime / fullTime) * 100;
 
     time.innerHTML = secondsToTime(countTime);
     estimate.innerHTML = secondsToTime(fullTime);
-    if (typeof interval !== 'undefined') {
-        clearTimeout(interval);
-    }
-    interval = setInterval(() => {
-
-        pointVideo.style.left = `${end}%`;
-    }, 1000);
-
+    pointVideo.style.left = `${end}%`;
 });
 
+// навигация по сайту
+const paginationPage = document.querySelector('.page-pagination');
+const desktopNav = document.querySelector('#desktopNav');
+const mobileNav = document.querySelector('.nav_mobile .nav__list');
+const order = document.querySelector('.order');
+const arrowDown = document.querySelector('.arrow');
+
+const navigationSite = (menuList, link) => {
+    menuList.addEventListener('click', evt => {
+        const target = evt.target;
+        if (target.classList.contains(link)) {
+            let linkNum = target.getAttribute('data-link');
+            sliderMoveY(linkNum);
+            dotsMove(linkNum);
+        }
+    });
+};
+
+navigationSite(paginationPage, 'page-pagination__link');
+navigationSite(desktopNav, 'nav__link');
+navigationSite(order, 'order__link');
+// navigationSite(arrowDown, 'arrow__link');
+
+
+mobileNav.addEventListener('click', evt => {
+    evt.preventDefault();
+    const target = evt.target;
+    if (target.classList.contains('nav__link')) {
+        let linkNum = target.getAttribute('data-link');
+        navMenu.classList.toggle('nav_mobile-show');
+        btn.classList.toggle('close-btn_active');
+        sliderMoveY(linkNum);
+        dotsMove(linkNum);
+    }
+});
+
+arrowDown.addEventListener('click', evt => {
+    const target = evt.target;
+    let linkNum = target.getAttribute('data-link');
+    if (target.closest('.arrow__link')) {
+        sliderMoveY(linkNum);
+        dotsMove(linkNum);
+    }
+});
+
+if (md.mobile()) {
+    $("#body").swipe( {
+        //Generic swipe handler for all directions
+        swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+            // $(this).text("You swiped " + direction );
+            const scroll = direction === 'up' ? 'prev' : 'next';
+            scrollSection(scroll);
+        }
+    });
+
+}
+// $(function() {
+//     $("#body").swipe( {
+//         //Generic swipe handler for all directions
+//         swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+//             // $(this).text("You swiped " + direction );
+//             const scroll = direction === 'up' ? 'prev' : 'next';
+//             scrollSection(scroll);
+//         }
+//     });
+//
+// });

@@ -6,6 +6,24 @@
     opacity: 0;
     transition: opacity 0.3s;
   }
+
+  &__wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  &__video {
+    max-width: rem(660px);
+    height: rem(370px);
+    @include media($mobile) {
+      max-width: rem(720px);
+      height: rem(450px);
+    }
+    @include media($extrasmall) {
+      max-width: rem(460px);
+      height: rem(280px);
+    }
+  }
 }
 
 .player__splash {
@@ -74,8 +92,15 @@
 
 .player__playback {
   height: 16px;
-  width: 446px;
+  width: rem(446px);
   position: relative;
+
+  @include media($mobile) {
+    width: rem(590px);
+  }
+  @include media($extrasmall) {
+    width: rem(375px);
+  }
 
   &:before {
     content: "";
@@ -106,4 +131,7 @@
 .player__duration {
   color: #626262;
   font-weight: bold;
+  @include media($mobile) {
+    display: none;
+  }
 }

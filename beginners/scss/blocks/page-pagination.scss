@@ -11,7 +11,7 @@
       margin-bottom: rem(10px);
     }
     &_active .page-pagination__link {
-      border-color: $coral;
+      border-color: $white;
     }
   }
 
@@ -31,7 +31,7 @@
       border-radius: 50%;
       width: 6px;
       height: 6px;
-      background-color: $coral;
+      background-color: $white;
     }
   }
 }

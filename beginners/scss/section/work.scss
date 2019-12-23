@@ -13,22 +13,4 @@
     color: $darkGrey;
     margin-bottom: 45px;
   }
-
-  &__wrap {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  &__video {
-    max-width: rem(660px);
-    height: rem(370px);
-    @include media($mobile) {
-      max-width: rem(720px);
-      height: rem(450px);
-    }
-    @include media($extrasmall) {
-      max-width: rem(720px);
-      height: rem(280px);
-    }
-  }
 }
