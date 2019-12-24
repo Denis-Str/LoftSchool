@@ -1,0 +1,8 @@
+.order {
+  //z-index: 6;
+  &__link {
+    @include font-family($UbuntuRegular);
+    display: flex;
+    transition: background-color .7s;
+  }
+}

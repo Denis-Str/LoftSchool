@@ -1,0 +1,38 @@
+.page-pagination {
+  position: fixed;
+  top: rem(90px);
+  right: rem(50px);
+  z-index: 2;
+  @include media($mobile) {
+    display: none;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: rem(10px);
+    }
+    &_active .page-pagination__link {
+      border-color: $white;
+    }
+  }
+
+  &__link {
+    width: rem(16px);
+    height: rem(16px);
+    border-radius: 50%;
+    border: solid 1px transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .4s;
+
+    &:before {
+      content: "";
+      display: block;
+      border-radius: 50%;
+      width: 6px;
+      height: 6px;
+      background-color: $white;
+    }
+  }
+}
+

@@ -1,9 +1,0 @@
-.contacts {
-  @include section-size();
-  position: relative;
-
-  &__map-block {
-    height: 100%;
-    width: 100%;
-  }
-}

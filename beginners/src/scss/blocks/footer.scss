@@ -1,0 +1,14 @@
+.footer {
+  @include section-bg(footer);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  &__container {
+    display: flex;
+    padding-top: rem(11px);
+    padding-bottom: rem(11px);
+    @include media($extrasmall) {
+      flex-direction: column;
+    }
+  }
+}

@@ -1,0 +1,112 @@
+.consist {
+  color: #fff;
+  &__container {
+    max-height: rem(470px);
+    height: 100%;
+    width: 100%;
+    margin-left: rem(15px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    position: absolute;
+    @include media($mobile) {
+      flex-direction: row;
+      align-items: center;
+      height: auto;
+      width: 100%;
+      max-width: rem(472px);
+      margin-left: 0;
+      //top: 0;
+      top: rem(-70px);
+    }
+    @include media($extrasmall) {
+      max-width: rem(300px);
+      top: rem(-90px);
+    }
+  }
+
+  &__burger {
+    max-width: rem(90px);
+    padding: rem(9px) 0;
+    background-color: rgba($coral, .4);
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 90;
+    svg {
+      margin-bottom: rem(9px);
+    }
+    &:hover .consist__drop {
+      display: block;
+    }
+  }
+
+  &__calories {
+    max-width: rem(60px);
+    opacity: .5;
+    position: relative;
+  }
+
+  &_calories-count {
+    font-size: rem(20px);
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 35%;
+  }
+
+  &__drop {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: rem(90px);
+    background-color: rgba($white, .9);
+    border-radius: 5px;
+    width: 100%;
+    max-width: rem(270px);
+    padding: 5% 4%;
+    @include media($extrasmall) {
+      max-width: rem(220px);
+      padding: 7% 6%;
+    }
+    &-list {
+      display: flex;
+      flex-direction: column;
+    }
+    &-item {
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      &:not(:last-child) {
+        margin-bottom: rem(15px);
+      }
+    }
+    &-svg {
+      flex: 1;
+    }
+    &-subtitle {
+      flex: 2;
+      display: flex;
+      padding-left: 5%;
+    }
+    &-subtitle, &-wt {
+      @include font-family($UbuntuRegular);
+      color: $darkGrey;
+    }
+    &-wt {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+    }
+    &_close {
+      display: none;
+      @include media($mobile) {
+        position: absolute;
+        z-index: 70;
+        right: 0;
+        top: 0;
+        display: block;
+      }
+    }
+  }
+}

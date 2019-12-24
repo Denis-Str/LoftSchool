@@ -1,0 +1,55 @@
+.advantage {
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    @include media($extrasmall) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-basis: rem(300px);
+    @include media($extrasmall) {
+      flex-basis: 100%;
+      flex-direction: row;
+      margin-bottom: rem(60px);
+    }
+  }
+
+  &__img {
+    margin-bottom: rem(33px);
+    @include media($extrasmall) {
+      flex: 1;
+      margin-bottom: 0;
+      margin-right: 5px;
+    }
+  }
+
+  &__inner {
+    @include media($extrasmall) {
+      flex: 3;
+      text-align: start;
+      max-width: rem(318px);
+    }
+  }
+
+  &__title {
+    @include font-family($LifehackMedium);
+    font-size: rem(24px);
+    color: $darkGrey;
+    margin-bottom: rem(24px);
+  }
+
+  &__desc p {
+    @include font-family($UbuntuLight);
+    font-size: rem(14px);
+    line-height: rem(24px);
+    color: rgba(47, 50, 52, 0.8);
+  }
+}
