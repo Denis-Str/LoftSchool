@@ -17,10 +17,11 @@ ___
 
 ___
 
-
     ВЕБ ДЛЯ НАЧИНАЮЩИХ
 ###### *18.11.2019 - 27.12.2019*
 [выпускной проект](https://denis-str.github.io/LoftSchool/beginners/dist/index.html)
+
+[димлом](https://loftschool.com/diploma/ON1562312794/ru/pdf)
 
 ___
 
