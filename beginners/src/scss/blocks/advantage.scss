@@ -34,7 +34,7 @@
   &__inner {
     @include media($extrasmall) {
       flex: 3;
-      text-align: start;
+      text-align: left;
       max-width: rem(318px);
     }
   }

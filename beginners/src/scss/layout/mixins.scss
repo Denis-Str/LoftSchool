@@ -27,12 +27,12 @@
   //height: 100vh;
   height: 100%;
   min-height: rem(650px);
-  @include media($mobile) {
-    min-height: rem(1024px);
-  }
-  @include media($extrasmall) {
-    min-height: rem(800px);
-  }
+  //@include media($mobile) {
+  //  min-height: rem(1024px);
+  //}
+  //@include media($extrasmall) {
+  //  min-height: rem(800px);
+  //}
 }
 
 @mixin container($width) {

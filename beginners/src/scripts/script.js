@@ -1,5 +1,3 @@
-const md = new MobileDetect(window.navigator.userAgent);
-
 // отключение скрола
 const scroll = value => document.body.style = `overflow-y: ${value}`;
 
@@ -208,13 +206,13 @@ let length = content.children.length -1;
 let countPage = 0;
 let scrollFlag = false;
 
+let touchstartY = 0;
+let touchendY = 0;
+
+
 dots[0].classList.add('page-pagination__item_active');
 
 const dotsMove = numLink => {
-    // if (numLink === '1' || numLink === '7' || numLink === '8') {
-    //     let elem = dots[numLink];
-    //     elem.style.borderColorolor = "#000";
-    // }
     dots.forEach(item => {
         item.classList.remove('page-pagination__item_active');
     });
@@ -224,9 +222,6 @@ const dotsMove = numLink => {
 const sliderMoveY = countPage => content.style.transform = `translateY(${countPage * -100}%)`;
 
 const scrollSection = direction => {
-    // if (scrollFlag === false) {
-    //
-    // }
     scrollFlag = true;
     if (direction === 'next' && countPage < length) {
         countPage += 1;
@@ -234,7 +229,6 @@ const scrollSection = direction => {
     if (direction === 'prev' && countPage > 0) {
         countPage -= 1;
     }
-    // dotsMove(countPage);
     dots.forEach(item => {
         item.classList.remove('page-pagination__item_active');
     });
@@ -243,6 +237,16 @@ const scrollSection = direction => {
     setTimeout(() => {
         scrollFlag = false;
     }, 1300)
+};
+
+const mobileDirection = () => {
+    if (touchendY <= touchstartY) {
+        scrollSection('next');
+    }
+
+    if (touchendY >= touchstartY) {
+        scrollSection('prev');
+    }
 };
 
 window.addEventListener('wheel', (evt) => {
@@ -258,6 +262,15 @@ window.addEventListener('wheel', (evt) => {
         scrollSection('prev');
     }
 });
+
+window.addEventListener('touchstart', function(event) {
+    touchstartY = event.changedTouches[0].screenY;
+}, false);
+
+window.addEventListener('touchend', function(event) {
+    touchendY = event.changedTouches[0].screenY;
+    mobileDirection();
+}, false);
 
 // переключение секций стрелками
 window.addEventListener('keydown', (evt) => {
@@ -328,7 +341,6 @@ function init(){
     }
 }
 
-
 // плеер
 function secondsToTime(time) {
     const roundTime = Math.round(time);
@@ -387,7 +399,6 @@ navigationSite(desktopNav, 'nav__link');
 navigationSite(order, 'order__link');
 // navigationSite(arrowDown, 'arrow__link');
 
-
 mobileNav.addEventListener('click', evt => {
     evt.preventDefault();
     const target = evt.target;
@@ -408,17 +419,3 @@ arrowDown.addEventListener('click', evt => {
         dotsMove(linkNum);
     }
 });
-
-if (md.mobile()) {
-    $(function() {
-        $("#body").swipe( {
-            //Generic swipe handler for all directions
-            swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-                // $(this).text("You swiped " + direction );
-                const scroll = direction === 'up' ? 'prev' : 'next';
-                scrollSection(scroll);
-            }
-        });
-
-    });
-}
