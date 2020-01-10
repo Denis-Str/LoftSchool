@@ -16,7 +16,7 @@ const gulpif = require('gulp-if');
 const env = process.env.NODE_ENV;
 
 const styles = [
-    'node_modules/node-normalize-scss/_normalize.scss',
+    // 'node_modules/node-normalize-scss/_normalize.scss',
     'src/scss/*.scss'
 ];
 
