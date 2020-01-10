@@ -1,0 +1,35 @@
+mixin icon(name, className)
+  - var icon = require(`images/icons/${name}.svg`);
+  svg(class=className viewBox=icon.viewBox preserveAspectRatio="none")
+    use(xlink:href=icon.url)
+
+mixin image(path, className)
+  img(src=require(`images/${path}`) class=className alt=`${className}`)
+
+mixin menuList(className, items, links)
+  ul(class=`${className}__list`)
+    each item, ndx in items
+      li(class=`${className}__item`)
+        a(class=`${className}__link` href=`${links[ndx]}`)= item
+
+mixin socialList(className, items, links)
+  ul(class=`${className}__list`)
+     each item, ndx in items
+      li(class=`${className}__item`)
+        a(class=`${className}__link` href=`${links[ndx]}`)
+          span.visually-hidden= item
+          +icon(`${item}`, `${className}__svg`)
+
+mixin skillsList(skillsName, skills)
+  h3(class=`${skillsName}__title`)= skillsName.slice(0, 1).toUpperCase() + skillsName.slice(1)
+  ul(class=`${skillsName}__list`)
+    each skill in skills
+      li(class=`${skillsName}__item`)= skill
+        div(class=`${skillsName}__block-lower`)
+          svg(class=`${skillsName}__svg` stroke="gray" stroke-width="10" fill="transparent")
+            circle(cx="60" cy="60" r="50")
+        div(class=`${skillsName}__block-upper`)
+          svg(class=`${skillsName}__svg` stroke="blue" stroke-width="15" fill="transparent")
+            circle(cx="60" cy="60" r="50")
+
+

@@ -1,0 +1,17 @@
+section.about
+    .container.about__container
+        .about__left-column
+            .about__pic-block
+                +image("content/user.jpg", "about__img")
+            .about__list
+                ul.name
+                    each name in ["Проживаю", "Возраст", "Родился"]
+                        li.name__item= `${name}:`
+                ul.value
+                    each value in ["Ростов-на-Дону", "27 лет", "1 мая 1981"]
+                        li.value__item= `${value}`
+        .about__rigth-column
+            .about__greeting  Привет, меня зовут
+            h2.title.about__title #{authorName}
+            p.about__text занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+            p.about__footnote Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
