@@ -1,0 +1,8 @@
+- var images = [1, 2, 3, 4, 5];
+
+.preview__miniatures
+    ul.preview__list
+        each img in images
+            li.preview__item
+                a.preview__link(href="#")
+                    +image(`content/worksPreview/${img}.jpg`, "preview__img-mini")

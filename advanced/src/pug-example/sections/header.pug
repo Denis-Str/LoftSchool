@@ -1,10 +1,8 @@
 header.header
     .container.header__container
-    .main-logo
-        +image("content/logo.png", "main-logo__img")
-    nav.nav-menu
-        .nav-menu__wrap
+        .main-logo
+            +image("content/logo.png", "main-logo__img")
+        nav.nav-menu
             include ../components/nav-menu
-    .social
-        .social__wrap
-            include ../components/social
+        .social
+            include ../components/social-list

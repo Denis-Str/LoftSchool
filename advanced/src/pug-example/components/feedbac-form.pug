@@ -1,0 +1,42 @@
+form(action="#" class="form" enctype="multipart/form-data" method="post")
+    .form__row
+        div(class="form__field")
+            label(for="name" class="form__label") Имя
+            .form__field_wrap
+                +icon("user", "form__field-svg")
+                input(
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="form__input"
+                    required
+                    aria-label="Имя"
+                    placeholder="Ковальчук Дмитрий"
+                )
+        div(class="form__field")
+            label(for="email" class="form__label") Введите ваш email
+            .form__field_wrap
+                +icon("envelope", "form__field-svg")
+                input(
+                    type="text"
+                    id="email"
+                    name="email"
+                    class="form__input"
+                    required
+                    aria-label="email"
+                    placeholder="loftschool@study.com"
+                )
+    .form__row
+        div(class="form__field")
+            label(for="comment" class="form__label") Сообщение к письму
+            .form__field_wrap
+                +icon("message", "form__field-svg")
+                textarea(
+                    id="comment"
+                    name="comment"
+                    class="form__comment"
+                    required
+                    aria-label="comment"
+                    placeholder="Требуется ваша помощь в создании сайта.Интересуют сроки и цена вопроса"
+                )
+    button(type="submit" class="btn form__btn-submit") Отправить

@@ -32,4 +32,18 @@ mixin skillsList(skillsName, skills)
           svg(class=`${skillsName}__svg` stroke="blue" stroke-width="15" fill="transparent")
             circle(cx="60" cy="60" r="50")
 
-
+mixin directionArrow(directions)
+  .controls
+    ul.controls-list
+      each direction in directions
+        li.controls__item
+          a(href="#").controls__link
+            case direction
+              when "up"
+                +icon("arrow", `arrow__${direction}`)
+              when "down"
+                +icon("arrow", `arrow__${direction}`)
+              when "left"
+                +icon("arrow", `arrow__${direction}`)
+              when "right"
+                +icon("arrow", `arrow__${direction}`)

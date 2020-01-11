@@ -1,0 +1,19 @@
+footer.footer
+    .container.footer__container
+        .footer__left-column
+            .copyright &copy 2019
+            .promo_inner
+                .about__site Личный сайт веб разработчика
+                .title.promo__title #{authorName}
+        .footer__right-column
+            nav.footer-menu
+                include ../components/nav-menu
+            .footer__content
+                .footer__content-left
+                    p.about__footnote Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
+                    .social
+                        include ../components/social-list
+                .footer__content-right
+                    blockquote.blockquote
+                        p.blockquote__text Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете
+                        cite.blockquote__author Martin Golding

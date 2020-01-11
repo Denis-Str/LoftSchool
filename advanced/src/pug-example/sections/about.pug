@@ -4,10 +4,10 @@ section.about
             .about__pic-block
                 +image("content/user.jpg", "about__img")
             .about__list
-                ul.name
+                ul.name__list
                     each name in ["Проживаю", "Возраст", "Родился"]
                         li.name__item= `${name}:`
-                ul.value
+                ul.value__list
                     each value in ["Ростов-на-Дону", "27 лет", "1 мая 1981"]
                         li.value__item= `${value}`
         .about__rigth-column
