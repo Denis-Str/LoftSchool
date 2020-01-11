@@ -27,5 +27,8 @@ ___
 
     ПРОДВИНУТЫЙ ВЕБ
 ###### *13.01.2020 - 19.02.2020*
+[выпускной проект](https://denis-str.github.io/LoftSchool/advanced/dist/index.html)
+
+[димлом](https://loftschool.com/diploma/ON1562312794/ru/pdf)
 
 ___
