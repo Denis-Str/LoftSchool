@@ -1,42 +1,43 @@
 form(action="#" class="form" enctype="multipart/form-data" method="post")
-    .form__row
+    .form__row.form__row_flex-sb
         div(class="form__field")
-            label(for="name" class="form__label") Имя
-            .form__field_wrap
+            label(for="name" class="form__label") Введите ваше имя
+            .form__wrap.form__wrap_mr.form__wrap_error
                 +icon("user", "form__field-svg")
                 input(
                     type="text"
                     id="name"
                     name="name"
-                    class="form__input"
+                    class="form__input title"
                     required
                     aria-label="Имя"
                     placeholder="Ковальчук Дмитрий"
                 )
+            .form__error Какая то ошибка
         div(class="form__field")
             label(for="email" class="form__label") Введите ваш email
-            .form__field_wrap
+            .form__wrap
                 +icon("envelope", "form__field-svg")
                 input(
                     type="text"
                     id="email"
                     name="email"
-                    class="form__input"
+                    class="form__input title"
                     required
                     aria-label="email"
                     placeholder="loftschool@study.com"
                 )
-    .form__row
-        div(class="form__field")
+    .form__row.form__row_comment-mb
+        div(class="form__field form__field_size")
             label(for="comment" class="form__label") Сообщение к письму
-            .form__field_wrap
-                +icon("message", "form__field-svg")
+            .form__wrap
+                +icon("message", "form__field-svg form__field-svg_mb")
                 textarea(
                     id="comment"
                     name="comment"
-                    class="form__comment"
+                    class="form__comment title"
                     required
                     aria-label="comment"
-                    placeholder="Требуется ваша помощь в создании сайта.Интересуют сроки и цена вопроса"
+                    placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса"
                 )
     button(type="submit" class="btn form__btn-submit") Отправить

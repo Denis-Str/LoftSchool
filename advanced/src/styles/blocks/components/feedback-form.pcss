@@ -1,5 +1,106 @@
 .form {
-    &__field-svg {
-        width: 17px;
+    max-width: 851px;
+    &__row {
+        display: flex;
+        &_flex-sb {
+            justify-content: space-between;
+        }
+        &_comment-mb {
+            margin-bottom: 60px;
+        }
     }
+    &__field {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        max-width: 377px;
+        &_size {
+            max-width: 100%;
+        }
+        &:hover svg {
+            transition: .4s;
+
+            fill: #5500f2;
+        }
+        &:hover .form__wrap {
+            border-bottom-color: #5500f2;
+        }
+    }
+    &__label {
+        color: rgba($text-color, .3);
+        margin-bottom: 20px;
+    }
+    &__wrap {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        border-bottom: solid 2px $text-color;
+        &_mr {
+            margin-right: 10px;
+        }
+        &_error {
+            border-bottom-color: #cd1515;
+        }
+    }
+    &__field-svg {
+        width: 30px;
+        margin-right: 20px;
+        margin-bottom: 15px;
+        fill: rgba($text-color, .3);
+        &_mb {
+            margin-bottom: 50px;
+        }
+    }
+    &__input {
+        //line-height: 48px;
+    }
+    &__comment {
+        resize: none;
+    }
+    &__input,
+    &__comment {
+        font-size: 18px;
+        width: 100%;
+        font-weight: bold;
+        outline: none;
+        border: none;
+        opacity: 1;
+        color: $text-color;
+        &:focus {
+            outline: none;
+        }
+    }
+    &__input::placeholder,
+    &__comment::placeholder {
+        //opacity: 1;
+        //color: $text-color;
+    }
+    &__comment::placeholder {
+        max-width: 450px;
+    }
+
+    &__error {
+        position: absolute;
+        bottom: -32px;
+        left: 45px;
+        padding: 17px 20px;
+        font-size: 14px;
+        color: #ffffff;
+        background-color: #cd1515;
+        font-weight: normal;
+        &::before {
+            position: absolute;
+            content: "";
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-bottom: 10px solid #cd1515;
+            top: -10px;
+            left: 50%;
+            margin-left: -15px;
+        }
+    }
+
 }
