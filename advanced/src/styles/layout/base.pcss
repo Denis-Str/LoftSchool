@@ -14,21 +14,27 @@ html {
 body {
   font-family: 'Open Sans', Helvetica, sans-serif;
   font-size: 16px;
+  font-weight: 600;
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: $text-color;
+  color: rgba($text-color, .5);
 }
 
 .wrapper {
-  overflow: hidden;
+  //overflow: hidden;
+  height: 100%;
   min-height: 100%;
   position: relative;
 }
 
+.maincontent {
+  height: 100%;
+}
+
 .container {
   margin: 0 auto;
-  max-width: $bp-desktop-hd;
+  max-width: 1480px;
   width: 95%;
   // width: 1490px;
 
@@ -40,6 +46,20 @@ body {
 .fullscreen-section {
   height: 100vh;
   min-height: 650px;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 button {
@@ -80,10 +100,21 @@ button[type="button"] {
 a {
   color: inherit;
   cursor: pointer;
+  text-decoration: none;
 }
 
 img {
   display: block;
   max-width: 100%;
   max-height: 100%;
+}
+
+.title {
+  font-family: Open Sans;
+  font-weight: bold;
+  font-size: 30px;
+  color: $text-color;
+  &_size {
+    font-size: 24px;
+  }
 }

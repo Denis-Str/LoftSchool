@@ -1,10 +1,8 @@
 section.promo
     .container.promo__container
-        .promo_inner
+        .promo__inner
             .about__site Личный сайт веб разработчика
             h1.title.promo__title #{authorName}
-    .promo__scroll
-        .container.promo__scroll-container
-            .scroll
-                a(href="#", title="Scroll").scroll__link Скролл
-                    +icon("scroll", "scroll__svg")
+        .scroll.promo__scroll
+            a(href="#", title="Scroll").scroll__link Скролл
+                +icon("scroll", "scroll__svg")

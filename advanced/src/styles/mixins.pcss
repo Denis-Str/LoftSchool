@@ -1,3 +1,7 @@
+@mixin bg-img($path) {
+  background-image: url("../images/content/#{path}");
+}
+
 @mixin desktopHd() {
   @media screen and (max-width: $bp-desktop-hd) {
     @content;

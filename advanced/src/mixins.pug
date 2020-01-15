@@ -20,21 +20,27 @@ mixin socialList(className, items, links)
           span.visually-hidden= item
           +icon(`${item}`, `${className}__svg`)
 
+//mixin skillsList(skillsName, skills)
+//  h3(class=`title title_size ${skillsName}__title`)= skillsName.slice(0, 1).toUpperCase() + skillsName.slice(1)
+//  ul.skills__list
+//    each skill in skills
+//      li.skills__item= skill
+//        div.skills__svg
+//          svg(class=`${skillsName}__svg` stroke="blue" fill="transparent")
+//            circle(cx="0" cy="0" r="67")
+
 mixin skillsList(skillsName, skills)
-  h3(class=`${skillsName}__title`)= skillsName.slice(0, 1).toUpperCase() + skillsName.slice(1)
-  ul(class=`${skillsName}__list`)
+  h3(class="title title_size skills__title")= skillsName.slice(0, 1).toUpperCase() + skillsName.slice(1)
+  ul.skills__list
     each skill in skills
-      li(class=`${skillsName}__item`)= skill
-        div(class=`${skillsName}__block-lower`)
-          svg(class=`${skillsName}__svg` stroke="gray" stroke-width="10" fill="transparent")
-            circle(cx="60" cy="60" r="50")
-        div(class=`${skillsName}__block-upper`)
-          svg(class=`${skillsName}__svg` stroke="blue" stroke-width="15" fill="transparent")
-            circle(cx="60" cy="60" r="50")
+      li.skills__item= skill
+        div.skills__svg
+          svg.skills__svg
+            circle(r="67")
 
 mixin directionArrow(directions)
   .controls
-    ul.controls-list
+    ul.controls__list
       each direction in directions
         li.controls__item
           a(href="#").controls__link

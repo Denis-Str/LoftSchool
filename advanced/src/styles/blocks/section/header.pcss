@@ -1,0 +1,41 @@
+.header {
+    position: absolute;
+    width: 100%;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 64px;
+        padding-bottom: 47px;
+    }
+
+    .nav-menu {
+        max-width: 978px;
+        width: 100%;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .social {
+        display: flex;
+        max-width: 163px;
+        width: 100%;
+        justify-content: flex-end;
+        &__list {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+        }
+        &__item {
+            max-width: 25px;
+            max-height: 25px;
+        }
+        &__svg {
+            fill: $text-color;
+            &:hover {
+                fill: $links-hover;
+            }
+        }
+    }
+}
