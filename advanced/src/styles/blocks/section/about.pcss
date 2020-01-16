@@ -1,5 +1,15 @@
 .about {
     height: 100%;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 50vw solid transparent;
+        border-right: 50vw solid transparent;
+        border-top: 9vh solid #f8f8fa;
+    }
     &__container {
         height: 100%;
         display: flex;

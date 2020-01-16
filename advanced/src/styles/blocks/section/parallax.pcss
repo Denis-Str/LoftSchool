@@ -1,5 +1,14 @@
-.parallax {
+.parallax__top {
     position: absolute;
     z-index: -1;
-    //@include bg-img("bg/mountain-baloon.png")
+    @include bg-img(bg/mountain-baloon.jpg);
+    width: 100%;
+    height: 200%;
+}
+.parallax__bottom {
+    position: absolute;
+    z-index: -1;
+    @include bg-img(bg/budda.jpg);
+    width: 100%;
+    height: 200%;
 }

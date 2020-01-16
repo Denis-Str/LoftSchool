@@ -20,15 +20,6 @@ mixin socialList(className, items, links)
           span.visually-hidden= item
           +icon(`${item}`, `${className}__svg`)
 
-//mixin skillsList(skillsName, skills)
-//  h3(class=`title title_size ${skillsName}__title`)= skillsName.slice(0, 1).toUpperCase() + skillsName.slice(1)
-//  ul.skills__list
-//    each skill in skills
-//      li.skills__item= skill
-//        div.skills__svg
-//          svg(class=`${skillsName}__svg` stroke="blue" fill="transparent")
-//            circle(cx="0" cy="0" r="67")
-
 mixin skillsList(skillsName, skills)
   h3(class="title title_size skills__title")= skillsName.slice(0, 1).toUpperCase() + skillsName.slice(1)
   ul.skills__list
@@ -36,7 +27,7 @@ mixin skillsList(skillsName, skills)
       li.skills__item= skill
         div.skills__svg
           svg.skills__svg
-            circle(r="67")
+            circle(rx="50" ry="50" r="67")
 
 mixin directionArrow(directions)
   .controls

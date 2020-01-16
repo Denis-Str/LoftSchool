@@ -1,5 +1,8 @@
 @mixin bg-img($path) {
-  background-image: url("../images/content/#{path}");
+  background-image: url("../images/content/#{$path}");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 @mixin desktopHd() {
