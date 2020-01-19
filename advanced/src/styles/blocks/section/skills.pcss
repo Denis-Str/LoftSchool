@@ -1,10 +1,10 @@
 .skills {
     height: 100%;
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
     &__container {
         display: flex;
-        padding-bottom: 50px;
+        padding-top: 100px;
     }
 
     &__rigth-column {
@@ -25,17 +25,19 @@
     &__title {
         margin-bottom: 60px;
     }
-    .about__footnote {
+    &__footnote {
         max-width: 600px;
         margin-bottom: 90px;
-        &::before {
-            content: "";
-        }
     }
     &__block {
         max-width: 756px;
         width: 100%;
         justify-self: end;
+        &_inner {
+            &:not(:last-child) {
+                margin-bottom: 50px;
+            }
+        }
     }
     &__list {
         display: flex;
@@ -47,20 +49,27 @@
         justify-content: center;
         align-items: center;
         position: relative;
-        width: 134px;
-        height: 134px;
-        border: solid 10px #e9e9e9;
-        border-radius: 50%;
+        width: 150px;
+        height: 150px;
     }
-    .skills__svg {
+    &__svg-block {
         position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        stroke-width: 20px;
-        stroke: blue;
+        width: 150px;
+        height: 150px;
+    }
+    &__text {
+        max-width: 100px;
+        text-align: center;
+    }
+    &__circle-lower {
         fill: transparent;
-        width: 134px;
-        height: 134px;
+        stroke-width: 5px;
+        stroke: #e9e9e9;
+    }
+    &__circle-upper {
+        fill: transparent;
+        stroke-width: 10px;
+        stroke-dasharray: 276;
+        stroke-dashoffset: 20;
     }
 }

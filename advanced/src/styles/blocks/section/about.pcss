@@ -1,15 +1,6 @@
 .about {
     height: 100%;
     position: relative;
-    &::after {
-        content: "";
-        position: absolute;
-        width: 0;
-        height: 0;
-        border-left: 50vw solid transparent;
-        border-right: 50vw solid transparent;
-        border-top: 9vh solid #f8f8fa;
-    }
     &__container {
         height: 100%;
         display: flex;
@@ -31,8 +22,13 @@
     &__pic-block {
         max-width: 200px;
         margin-bottom: 80px;
+        //border-radius: 50%;
+
     }
     &__img {
+        //width: 100%;
+        //height: 100%;
+        //object-fit: cover;
         border-radius: 50%;
     }
     &__info {
@@ -66,10 +62,8 @@
         margin-bottom: 100px;
     }
     &__footnote {
-        font-style: italic;
         display: flex;
         position: relative;
-        line-height: 30px;
         &::before {
             content: "*";
             position: absolute;
@@ -79,5 +73,8 @@
             left: -50px;
         }
     }
-
+    &__triangles {
+        bottom: 0;
+        color: #ffffff;
+    }
 }

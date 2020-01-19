@@ -1,8 +1,8 @@
 header.header
     .container.header__container
-        .main-logo
+        .header__logo
             .title ДС
-        nav.nav-menu
-            include ../components/nav-menu
-        .social
-            include ../components/social-list
+        nav.header__menu
+            +nav(navData)
+        .header__social
+            +social(socialData)

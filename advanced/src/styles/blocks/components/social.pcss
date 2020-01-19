@@ -1,12 +1,26 @@
 .social {
     &__list {
         display: flex;
+        width: 100%;
+        justify-content: space-between;
     }
     &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         transition: .4s;
+    }
+    &__link {
+        display: flex;
+        &:hover svg {
+            fill: $links-hover;
+        }
     }
     &__svg {
         transition: .4s;
+        fill: $text-color;
+        width: 25px;
+        height: 25px;
     }
 
 }

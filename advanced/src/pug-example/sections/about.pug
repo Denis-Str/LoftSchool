@@ -7,12 +7,17 @@ section.about
                 .about__info
                     ul.about__list-column
                         each name in ["Проживаю", "Возраст", "Родился"]
-                            li.about__list-row= `${name}:`
+                            li.about__list-row #{name+":"}
                     ul.about__list-column
                         each value in ["Ростов-на-Дону", "27 лет", "1 мая 1981"]
-                            li.about__list-row.about__list-row_color= `${value}`
+                            li.about__list-row.about__list-row_color #{value}
             .about__rigth-column
                 .about__greeting  Привет, меня зовут
                 h2.title.about__title #{authorName}
-                p.about__text   Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-                p.about__footnote Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+                .about__text   Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                .footnote.about__footnote Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+    .triangles.about__triangles
+        svg.triangles__item(viewBox="0 0 1000 100" preserveAspectRatio="none")
+            polyline(points="0,0 0,100 1000,100")
+        svg.triangles__item(viewBox="0 0 1000 100" preserveAspectRatio="none")
+            polyline(points="1000,0 1000,100 0,100")

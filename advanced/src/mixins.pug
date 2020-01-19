@@ -6,28 +6,35 @@ mixin icon(name, className)
 mixin image(path, className)
   img(src=require(`images/${path}`) class=className alt=`${className}`)
 
-mixin menuList(className, items, links)
-  ul(class=`${className}__list`)
-    each item, ndx in items
-      li(class=`${className}__item`)
-        a(class=`${className}__link` href=`${links[ndx]}`)= item
+mixin nav(obj, activeClass)
+  ul.nav__list
+    each key, value in obj
+      li.nav__item
+        a(class=`nav__link ${activeClass}` href=`${key}`) #{value}
 
-mixin socialList(className, items, links)
-  ul(class=`${className}__list`)
-     each item, ndx in items
-      li(class=`${className}__item`)
-        a(class=`${className}__link` href=`${links[ndx]}`)
-          span.visually-hidden= item
-          +icon(`${item}`, `${className}__svg`)
+mixin social(obj)
+  .social
+    ul(class="social__list")
+      each key, value in obj
+        li(class="social__item")
+          a(class="social__link" href=`${key}`)
+            span.visually-hidden #{value}
+            +icon(`${value}`, "social__svg")
 
 mixin skillsList(skillsName, skills)
-  h3(class="title title_size skills__title")= skillsName.slice(0, 1).toUpperCase() + skillsName.slice(1)
-  ul.skills__list
-    each skill in skills
-      li.skills__item= skill
-        div.skills__svg
-          svg.skills__svg
-            circle(rx="50" ry="50" r="67")
+  .skills__block_inner
+    h3(class="title title_size skills__title")= skillsName.slice(0, 1).toUpperCase() + skillsName.slice(1)
+    ul.skills__list
+      each skill in skills
+        li.skills__item
+          span.skills__text #{skill}
+          .skills__svg-block
+            svg(class="skills__svg" viewBox="0 0 100 100")
+              circle(cx="50" cy="50" r="44").skills__circle-lower
+              circle(cx="50" cy="50" r="44" stroke="url(#skillsGrad)" transform="rotate(180 50 50)").skills__circle-upper
+              linearGradient(id="skillsGrad" x1="0%" y1="0%" x2="100%" y2="0%")
+                stop(offset="0%" stop-color="#9300e8")
+                stop(offset="100%" stop-color="#4a00ed")
 
 mixin directionArrow(directions)
   .controls
