@@ -21,17 +21,17 @@ mixin social(obj)
             span.visually-hidden #{value}
             +icon(`${value}`, "social__svg")
 
-mixin skillsList(skillsName, skills)
-  .skills__block_inner
-    h3(class="title title_size skills__title")= skillsName.slice(0, 1).toUpperCase() + skillsName.slice(1)
-    ul.skills__list
-      each skill in skills
-        li.skills__item
-          span.skills__text #{skill}
-          .skills__svg-block
-            svg(class="skills__svg" viewBox="0 0 100 100")
-              circle(cx="50" cy="50" r="44").skills__circle-lower
-              circle(cx="50" cy="50" r="44" stroke="url(#skillsGrad)" transform="rotate(180 50 50)").skills__circle-upper
+mixin stack(arrStack)
+  .stack
+    h3(class="title stack__title")= arrStack[0].slice(0, 1).toUpperCase() + arrStack[0].slice(1)
+    ul.stack__list
+      each skill in arrStack.slice(1)
+        li.stack__item
+          span.stack__text #{skill}
+          .stack__svg-block
+            svg(class="stack__svg" viewBox="0 0 100 100")
+              circle(cx="50" cy="50" r="40").stack__circle-lower
+              circle(cx="50" cy="50" r="40" stroke="url(#skillsGrad)" transform="rotate(180 50 50)").stack__circle-upper
               linearGradient(id="skillsGrad" x1="0%" y1="0%" x2="100%" y2="0%")
                 stop(offset="0%" stop-color="#9300e8")
                 stop(offset="100%" stop-color="#4a00ed")

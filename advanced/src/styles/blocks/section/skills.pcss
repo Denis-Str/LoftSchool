@@ -1,16 +1,27 @@
 .skills {
     height: 100%;
     display: flex;
-    flex-direction: column;
+    &__title {
+        margin-bottom: 55px;
+    }
     &__container {
         display: flex;
-        padding-top: 100px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        &_inner {
+            display: flex;
+            width: 100%;
+        }
     }
-
     &__rigth-column {
         max-width: 885px;
         width: 100%;
-        display: grid;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-height: 720px;
     }
     &__left-column {
         max-width: 475px;
@@ -22,54 +33,16 @@
         display: flex;
         align-items: end;
     }
-    &__title {
-        margin-bottom: 60px;
-    }
+
     &__footnote {
         max-width: 600px;
         margin-bottom: 90px;
     }
     &__block {
-        max-width: 756px;
+        max-width: 882px;
         width: 100%;
-        justify-self: end;
-        &_inner {
-            &:not(:last-child) {
-                margin-bottom: 50px;
-            }
-        }
-    }
-    &__list {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    &__item {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        width: 150px;
-        height: 150px;
-    }
-    &__svg-block {
-        position: absolute;
-        width: 150px;
-        height: 150px;
-    }
-    &__text {
-        max-width: 100px;
-        text-align: center;
-    }
-    &__circle-lower {
-        fill: transparent;
-        stroke-width: 5px;
-        stroke: #e9e9e9;
-    }
-    &__circle-upper {
-        fill: transparent;
-        stroke-width: 10px;
-        stroke-dasharray: 276;
-        stroke-dashoffset: 20;
+        flex-direction: column;
+        align-items: end;
     }
 }
