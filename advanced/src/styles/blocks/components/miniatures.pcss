@@ -1,0 +1,21 @@
+.miniatures {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+    &__item {
+        position: relative;
+    }
+    &__active {
+        border: solid 3px #dc9322;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    &__img-mini {
+        max-width: 185px;
+    }
+}

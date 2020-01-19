@@ -1,5 +1,6 @@
 .works {
     height: 100%;
+    min-height: 650px;
     &__container {
         height: 100%;
         display: flex;
@@ -23,17 +24,23 @@
     }
     &__slider-rigth {
         display: flex;
-        position: relative;
+        width: 100%;
+        max-width: 504px;
     }
     &__number {
-        position: absolute;
         width: 100%;
+        max-width: 157px;
+        position: relative;
+
+    }
+    &__value {
+        position: absolute;
+        left: -80px;
+        top: -40px;
+        z-index: -1;
         font-weight: 800;
         font-size: 400px;
         color: #e6e6e6;
-        left: -229px;
-        top: -40px;
-        z-index: -1;
     }
     &__content {
         max-width: 348px;
@@ -55,6 +62,10 @@
     &__link {
         color: #586ed3;
         font-size: 18px;
+    }
+    &__preview {
+        margin: 0;
+        position: relative;
     }
     .controls {
         position: absolute;

@@ -5,9 +5,22 @@ section.works
             ul.works__list
                 li.works__item
                     .works__slider-left
-                        figure.preview
+                        figure.works__preview
                             +image("content/worksPreview/1.jpg", "preview__img-full")
-                            include ../components/preview-miniatures
+                            - var images = [1, 2, 3, 4];
+                                .miniatures
+                                    ul.miniatures__list
+                                        each img in images
+                                            case img
+                                                when 1
+                                                    li.miniatures__item
+                                                        .miniatures__active
+                                                        a.miniatures__link(href="#")
+                                                            +image(`content/worksPreview/${img}.jpg`, "miniatures__img-mini")
+                                                default
+                                                    li.miniatures__item
+                                                        a.miniatures__link(href="#")
+                                                            +image(`content/worksPreview/${img}.jpg`, "miniatures__img-mini")
                         +directionArrow(["up", "down"])
                     .works__slider-rigth
                         .works__number
