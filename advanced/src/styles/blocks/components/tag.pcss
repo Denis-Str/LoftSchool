@@ -1,9 +1,15 @@
 .tag {
     max-width: 280px;
+    @include tablets {
+       max-width: auto;
+    }
     &__list {
         display: flex;
         justify-content: space-between;
         margin-bottom: 50px;
+        @include tablets {
+            margin-bottom: 20px;
+        }
     }
     &__item {
         border-radius: 22px;
@@ -14,5 +20,11 @@
         justify-content: center;
         font-size: 15px;
         font-weight: 600;
+        @include tablets {
+            &:not(:last-child) {
+                margin-right: 15px;
+            }
+        }
+
     }
 }

@@ -10,20 +10,35 @@
     }
     &__inner {
         display: flex;
-        max-width: 1010px;
+        justify-content: space-between;
+        max-width: 988px;
+        width: 100%;
+        @include phones {
+            flex-direction: column;
+        }
+
     }
     &__left-column {
-        max-width: 380px;
-        margin-right: 30px;
+        max-width: 284px;
+        min-width: 260px;
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
+        @include tablets {
+            max-width: 216px;
+        }
+        @include phones {
+            margin-bottom: 40px;
+        }
     }
     &__pic-block {
         max-width: 200px;
         margin-bottom: 80px;
         //border-radius: 50%;
+        @include phones {
+            margin-bottom: 25px;
+        }
 
     }
     &__img {
@@ -34,10 +49,12 @@
     }
     &__info {
         display: flex;
+        justify-content: space-between;
         width: 100%;
-    }
-    &__list-column {
-        flex: 1;
+        @include tablets {
+            padding-right: 15px;
+        }
+
     }
     &__list-row {
         color: rgba($text-color, .3);
@@ -47,20 +64,43 @@
     }
     &__list-row:not(:last-child) {
         margin-bottom: 23px;
+        @include tablets {
+            margin-bottom: 15px;
+        }
+
     }
     &__site {
         font-size: 18px;
         line-height: 30px;
     }
     &__rigth-column {
+        max-width: 550px;
         padding-left: 40px;
+        @include tablets {
+            max-width: 370px;
+            padding: 0;
+        }
     }
     &__greeting,
     &__title {
         margin-bottom: 35px;
+        @include phones {
+            margin-bottom: 10px;
+        }
+
+    }
+
+    &__title    {
+        @include tablets {
+            font-size: 30px;
+        }
     }
     &__text {
-        margin-bottom: 100px;
+        margin-bottom: 50px;
+        line-height: 24px;
+        @include phones {
+            margin-bottom: 30px;
+        }
     }
     &__footnote {
         display: flex;
@@ -70,8 +110,11 @@
             position: absolute;
             color: rgba(219, 2, 0, 0.1);
             font-size: 48px;
-            top: -10px;
-            left: -50px;
+            top: 10px;
+            left: -60px;
+            @include tablets {
+                left: -35px;
+            }
         }
     }
     &__triangles {

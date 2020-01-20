@@ -2,10 +2,12 @@ html {
   @include desktop {
     font-size: 16px;
   }
-  @include tablets {
-    font-size: 14px;
-  }
+  //@include tablets {
+  //  font-size: 14px;
+  //  line-height: 24px;
+  //}
 }
+
 body,
 html {
   height: 100%;
@@ -20,6 +22,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: rgba($text-color, .5);
   min-width: 320px;
+  @include phones {
+    font-size: 14px;
+  }
+
 }
 
 .wrapper {
@@ -37,13 +43,18 @@ body {
   margin: 0 auto;
   max-width: 1480px;
   width: 95%;
-  // width: 1490px;
-
+  @include desktop {
+    max-width: 1080px;
+  }
+  @include tablets {
+    max-width: 688px;
+  }
   @include phones {
+    max-width: 260px;
     width: 85%;
   }
-}
 
+}
 .fullscreen-section {
   height: 100vh;
   min-height: 650px;
@@ -112,10 +123,16 @@ img {
 
 .title {
   font-family: Open Sans;
-  font-weight: bold;
-  font-size: 30px;
+  font-weight: 800;
+  font-size: 36px;
   color: $text-color;
   &_size {
+    font-size: 24px;
+  }
+  @include tablets {
+    font-size: 30px;
+  }
+  @include phones {
     font-size: 24px;
   }
 }
@@ -133,4 +150,7 @@ img {
 .copyright {
   font-size: 48px;
   color: rgba(255, 255, 255, 0.1);
+  @include desktop {
+    margin-bottom: 25px;
+  }
 }

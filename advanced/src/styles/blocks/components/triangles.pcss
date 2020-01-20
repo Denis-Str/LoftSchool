@@ -6,5 +6,12 @@
         height: 120px;
         width: 50%;
         fill: currentColor;
+        @include tablets {
+            height: 50px;
+        }
+        @include phones {
+            height: 30px;
+        }
+
     }
 }

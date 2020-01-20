@@ -2,8 +2,15 @@
     height: 100%;
     min-height: 650px;
     display: flex;
+    @include tablets {
+        text-align: center;
+    }
     &__title {
         margin-bottom: 55px;
+        @include tablets {
+            margin-bottom: 20px;
+        }
+
     }
     &__container {
         display: flex;
@@ -12,8 +19,19 @@
         align-items: center;
         height: 100%;
         &_inner {
+            position: relative;
             display: flex;
             width: 100%;
+            justify-content: space-between;
+            @include desktop {
+                justify-content: flex-end;
+                padding-left: 250px;
+            }
+            @include tablets {
+                flex-direction: column-reverse;
+                padding-left: 0;
+                align-items: center;
+            }
         }
     }
     &__rigth-column {
@@ -22,13 +40,31 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        max-height: 720px;
+        @include desktop {
+            max-width: 805px;
+            align-items: center;
+        }
+        @include tablets {
+            margin-bottom: 90px;
+        }
     }
     &__left-column {
         max-width: 475px;
         width: 100%;
-        margin-right: 30px;
         display: flex;
+        @include desktop {
+            position: absolute;
+            bottom: 0;
+            left: -160px;
+        }
+        @include tablets {
+            position: relative;
+            max-width: 200px;
+            left: 0;
+        }
+        @include phones {
+            display: none;
+        }
     }
     &__pic {
         display: flex;
@@ -38,12 +74,17 @@
     &__footnote {
         max-width: 600px;
         margin-bottom: 90px;
+        @include tablets {
+            margin-bottom: 45px;
+            font-size: 14px;
+            max-width: 450px;
+        }
     }
     &__block {
-        max-width: 882px;
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: end;
+        justify-items: flex-end;
     }
 }

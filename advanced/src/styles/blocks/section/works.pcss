@@ -5,10 +5,13 @@
         height: 100%;
         display: flex;
         flex-direction: column;
-        padding-top: 20px;
+        justify-content: center;
     }
     &__title {
         margin-bottom: 90px;
+        @include tablets {
+            margin-bottom: 50px;
+        }
     }
     &__list {
         display: flex;
@@ -17,36 +20,64 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
+        @include tablets {
+            flex-direction: column;
+        }
     }
     &__slider-left {
         position: relative;
         max-width: 977px;
+        flex: 2;
+        @include desktop {
+            max-width: 623px;
+        }
+        @include tablets {
+            margin-bottom: 90px;
+        }
     }
     &__slider-rigth {
         display: flex;
         width: 100%;
         max-width: 504px;
+        flex: 1;
+        justify-content: flex-end;
+        @include tablets {
+            max-width: 100%;
+            justify-content: center;
+        }
     }
     &__number {
-        width: 100%;
-        max-width: 157px;
-        position: relative;
-
-    }
-    &__value {
         position: absolute;
-        left: -80px;
+        right: -160px;
         top: -40px;
         z-index: -1;
         font-weight: 800;
         font-size: 400px;
         color: #e6e6e6;
+        @include desktop {
+            font-size: 300px;
+            right: -125px;
+        }
+        @include tablets {
+            right: -125px;
+            top: -115px;
+        }
+        @include phones {
+            display: none;
+        }
     }
     &__content {
         max-width: 348px;
         width: 100%;
+        @include tablets {
+            max-width: 452px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
         &-title {
             margin-bottom: 35px;
+            //font-size: 30px;
         }
         &-desc {
             line-height: 30px;
@@ -70,6 +101,9 @@
     .controls {
         position: absolute;
         right: 0;
+        @include phones {
+            bottom: 0;
+        }
         &__item {
             width: 50px;
             height: 50px;

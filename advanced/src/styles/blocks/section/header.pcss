@@ -14,10 +14,29 @@
         width: 100%;
         margin-right: 10px;
         margin-left: 10px;
+        @include desktop {
+            max-width: 688px;
+        }
+        &_desktop {
+            @include tablets {
+                display: none;
+            }
+        }
+        &_tablets {
+            display: none;
+            @include tablets {
+                display: block;
+            }
+        }
+
     }
 
     &__social {
         max-width: 163px;
         width: 100%;
+        @include phones {
+            display: none;
+        }
+
     }
 }

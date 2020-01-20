@@ -2,6 +2,10 @@
     position: absolute;
     bottom: 0;
     right: 0;
+    @include phones {
+        display: none;
+    }
+
     &__list {
         display: flex;
         flex-direction: column;
@@ -17,5 +21,8 @@
     }
     &__img-mini {
         max-width: 185px;
+        @include desktop {
+            max-width: 130px;
+        }
     }
 }

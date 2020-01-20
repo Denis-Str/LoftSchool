@@ -1,14 +1,32 @@
 .stack {
     max-width: 750px;
     width: 100%;
+    @include desktop {
+        max-width: 680px;
+    }
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     &:not(:last-child) {
         margin-bottom: 50px;
+        @include tablets {
+            margin-bottom: 30px;
+        }
     }
     &__list {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        //flex-wrap: wrap;
+        @include tablets {
+            max-width: 590px;
+            //justify-content: center;
+        }
+        @include phones {
+            flex-wrap: wrap;
+        }
     }
     &__item {
         display: flex;
@@ -17,7 +35,11 @@
         position: relative;
     }
     &__title {
+        font-size: 24px;
         margin-bottom: 40px;
+        @include tablets {
+            margin-bottom: 16px;
+        }
     }
     //при сжатии уменьшаеться, не работает в обратную сторону
     &__svg-block {
@@ -30,6 +52,10 @@
         max-width: 100px;
         text-align: center;
         position: absolute;
+        font-size: 18px;
+        @include tablets {
+            font-size: 16px;
+        }
 
     }
     &__circle-lower {

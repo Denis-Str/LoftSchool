@@ -2,7 +2,9 @@ header.header
     .container.header__container
         .header__logo
             .title ДС
-        nav.header__menu
+        nav.header__menu.header__menu_desktop
             +nav(navData)
+        //nav.header__menu.header__menu_tablets
+        //    +nav(navData)
         .header__social
             +social(socialData)

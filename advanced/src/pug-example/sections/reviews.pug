@@ -13,10 +13,7 @@ section.reviews
         .reviews__slider
             ul.reviews__list
                 li.reviews__item
-                    .reviews__left
-                        .reviews__quote-block
-                            +icon("quote", "reviews__quote-svg")
-                    .reviews__right
+                    .reviews__content
                         .reviews__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
                         .reviews__author
                             .reviews__author-block
@@ -25,11 +22,8 @@ section.reviews
                                 .reviews__author-info
                                     h3.title.reviews__author-name Ковальчук Дмитрий
                                     .reviews__author-profession Основатель Loftschool
-                li.reviews__item
-                    .reviews__left
-                        .reviews__quote-block
-                            +icon("quote", "reviews__quote-svg")
-                    .reviews__right
+                li.reviews__item.reviews__item_hidden
+                    .reviews__content
                         .reviews__text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
                         .reviews__author
                             .reviews__author-block
