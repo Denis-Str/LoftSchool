@@ -51,10 +51,6 @@
         display: flex;
         justify-content: space-between;
         width: 100%;
-        @include tablets {
-            padding-right: 15px;
-        }
-
     }
     &__list-row {
         color: rgba($text-color, .3);
@@ -75,10 +71,13 @@
     }
     &__rigth-column {
         max-width: 550px;
-        padding-left: 40px;
+        margin-left: 40px;
         @include tablets {
             max-width: 370px;
-            padding: 0;
+            margin-left: 30px;
+        }
+        @include phones {
+            margin-left: 0;
         }
     }
     &__greeting,
