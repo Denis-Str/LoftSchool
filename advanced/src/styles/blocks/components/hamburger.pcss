@@ -1,0 +1,32 @@
+.hamburger {
+    right: 0;
+    color: #ffffff;
+    padding: 0;
+    border: none;
+    z-index: 5;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+
+    &__line1, &__line2, &__line3 {
+        width: 24px;
+        height: 4px;
+        background-color: $text-color;
+        margin: 5px 0;
+        transition: 0.3s;
+        border-radius: 7px;
+        display: block;;
+    }
+
+    &_active .hamburger {
+        &__line1 {
+            transform: rotate(-45deg) translate(-9px, 6px);
+        }
+        &__line2 {
+            opacity: 0
+        }
+        &__line3 {
+            transform: rotate(45deg) translate(-7px, -4px);
+        }
+    }
+}

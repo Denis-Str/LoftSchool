@@ -6,11 +6,11 @@ mixin icon(name, className)
 mixin image(path, className)
   img(src=require(`images/${path}`) class=className alt=`${className}`)
 
-mixin nav(obj, activeClass)
+mixin nav(obj)
   ul.nav__list
     each key, value in obj
       li.nav__item
-        a(class=`nav__link ${activeClass}` href=`${key}`) #{value}
+        a(class="nav__link" href=`${key}`) #{value}
 
 mixin social(obj)
   .social
@@ -21,27 +21,10 @@ mixin social(obj)
             span.visually-hidden #{value}
             +icon(`${value}`, "social__svg")
 
-mixin stack(arrStack)
-  .stack
-    h3(class="title stack__title")= arrStack[0].slice(0, 1).toUpperCase() + arrStack[0].slice(1)
-    ul.stack__list
-      each skill in arrStack.slice(1)
-        li.stack__item
-          span.stack__text #{skill}
-          .stack__svg-block
-            svg(class="stack__svg" viewBox="0 0 100 100")
-              circle(cx="50" cy="50" r="40").stack__circle-lower
-              circle(cx="50" cy="50" r="40" stroke="url(#skillsGrad)" transform="rotate(180 50 50)").stack__circle-upper
-              linearGradient(id="skillsGrad" x1="0%" y1="0%" x2="100%" y2="0%")
-                stop(offset="0%" stop-color="#9300e8")
-                stop(offset="100%" stop-color="#4a00ed")
-
 mixin directionArrow(directions)
   .controls
-    ul.controls__list
       each direction in directions
-        li.controls__item
-          a(href="#").controls__link
+          button(type="button" class=`controls__button controls_${direction}`)
             case direction
               when "up"
                 +icon("arrow", `arrow__${direction}`)

@@ -1,15 +1,29 @@
 .feedback {
+    position: relative;
+
+  &__container {
     height: 100%;
-    min-height: 650px;
-    &__container {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding-bottom: 140px;
+    @include desktop {
+      padding-bottom: 170px;
     }
-    &__title {
-        margin-bottom: 90px;
-        text-align: center;
+    @include tablets {
+      padding-bottom: 110px;
     }
+  }
+
+  &__title {
+    margin-bottom: 90px;
+    @include tablets {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    @include tablets {
+      text-align: center;
+    }
+  }
 }

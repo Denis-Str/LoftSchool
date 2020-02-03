@@ -4,31 +4,8 @@ section.reviews
             polyline(points="0,0 1000,0 1000,100")
         svg.triangles__item(viewBox="0 0 1000 100" preserveAspectRatio="none")
             polyline(points="1000,0 0,0 0,100")
-
-    .parallax__bottom
     .container.reviews__container
         .reviews__top
             h2.title.reviews__title Что обо мне говорят
             +directionArrow(["left", "right"])
-        .reviews__slider
-            ul.reviews__list
-                li.reviews__item
-                    .reviews__content
-                        .reviews__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
-                        .reviews__author
-                            .reviews__author-block
-                                .reviews__author-pic
-                                    +image("content/reviews/author1.png", "author__img")
-                                .reviews__author-info
-                                    h3.title.reviews__author-name Ковальчук Дмитрий
-                                    .reviews__author-profession Основатель Loftschool
-                li.reviews__item.reviews__item_hidden
-                    .reviews__content
-                        .reviews__text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
-                        .reviews__author
-                            .reviews__author-block
-                                .reviews__author-pic
-                                    +image("content/reviews/author2.png", "author__img")
-                                .reviews__author-info
-                                    h3.title.reviews__author-name Владимир Сабанцев
-                                    .reviews__author-profession Преподаватель
+        #reviews-component

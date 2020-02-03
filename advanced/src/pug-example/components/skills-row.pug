@@ -1,0 +1,8 @@
+script(type="text/x-template")#skills-row
+    ul.stack__list
+        li.stack__item(v-for="(skillPercent, skillName) in skill.skills")
+            span.stack__text {{skillName}}
+            skill(
+                :skillName="skillName"
+                :skillPercent="skillPercent"
+            )

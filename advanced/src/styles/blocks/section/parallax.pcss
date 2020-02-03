@@ -1,14 +1,29 @@
-.parallax__top {
+.parallax {
     position: absolute;
-    z-index: -1;
-    @include bg-img(bg/mountain-baloon.jpg);
-    width: 100%;
-    height: 200%;
-}
-.parallax__bottom {
-    position: absolute;
-    z-index: -1;
-    @include bg-img(bg/budda.jpg);
-    width: 100%;
-    height: 200%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    &__img {
+        position: absolute;
+        max-width: unset;
+        max-height: unset;
+    }
+    &__layer {
+        @include tablets {
+            display: none;
+        }
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        will-change: transform;
+        &:nth-child(1) {
+            .parallax__img {
+                object-fit: cover;
+            }
+        }
+    }
 }

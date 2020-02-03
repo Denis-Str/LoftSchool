@@ -1,0 +1,7 @@
+script(type="text/x-template")#stack
+    .skills__block
+        .stack(v-for="skill in skills")
+            h3(class="title stack__title") {{skill.skillsName}}
+            skills-row(
+                :skill="skill"
+            )

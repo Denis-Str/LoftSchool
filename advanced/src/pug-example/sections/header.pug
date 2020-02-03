@@ -1,10 +1,14 @@
 header.header
     .container.header__container
-        .header__logo
-            .title ДС
-        nav.header__menu.header__menu_desktop
-            +nav(navData)
-        //nav.header__menu.header__menu_tablets
-        //    +nav(navData)
-        .header__social
-            +social(socialData)
+        .header__inner
+            .header__logo
+                .title ДС
+            nav.header__menu
+                +nav(navData)
+            .header__social
+                +social(socialData)
+        .header__hamburger
+            .hamburger
+                span.hamburger__line1
+                span.hamburger__line2
+                span.hamburger__line3

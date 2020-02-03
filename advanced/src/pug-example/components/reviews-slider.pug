@@ -1,0 +1,13 @@
+script(type="text/x-template")#reviews-slider
+    .reviews__slider
+        swiper(:options="swiperOption" ref="mySwiper").reviews__list
+            swiper-slide.reviews__item(v-for="review in reviews")
+                .reviews__content
+                    .reviews__text {{review.text}}
+                    .reviews__author
+                        .reviews__author-block
+                            .reviews__author-pic
+                                img(:src="review['author-pic']").author__img
+                            .reviews__author-info
+                                h3.title.reviews__author-name {{review['author-name']}}
+                                .reviews__author-profession {{review['author-prof']}}

@@ -1,4 +1,5 @@
 include ./mixins.pug
+
 -
   var authorName = "Денис Стрельцов"
   var  navData = {
@@ -27,10 +28,41 @@ html(lang="ru")
     .wrapper
       .maincontent
         include ./pug-example/sections/header
-        include ./pug-example/sections/promo
-        include ./pug-example/sections/about
+        .wrap__top
+          .parallax
+            .parallax__layer(data-speed="0")
+              +image('content/promo-parallax/1.jpg', 'parallax__img')
+            - var i = 0
+            each item in [2, 3, 4, 5, 6]
+              .parallax__layer(data-speed=`${(i += 0.2).toFixed(2)}`)
+                +image(`content/promo-parallax/${item}.png`, 'parallax__img')
+            .parallax__layer(data-speed="0")
+              +image('content/promo-parallax/7.png', 'parallax__img')
+          include ./pug-example/sections/promo
+          include ./pug-example/sections/about
         include ./pug-example/sections/skills
         include ./pug-example/sections/works
-        include ./pug-example/sections/reviews
-        include ./pug-example/sections/feedback
+        .wrap__bottom
+          .parallax
+            .parallax__layer(data-speed="0")
+              +image('content/budda-parallax/1.jpg', 'parallax__img')
+            - var i = 0
+            each item in [2, 3]
+              .parallax__layer(data-speed=`${(i += 0.2).toFixed(2)}`)
+                +image(`content/budda-parallax/${item}.png`, 'parallax__img')
+            .parallax__layer(data-speed="0")
+              +image('content/budda-parallax/4.png', 'parallax__img')
+          include ./pug-example/sections/reviews
+          include ./pug-example/sections/feedback
         include ./pug-example/sections/footer
+        nav.header__menu-mobile.menu-mobile
+          .menu-mobile.menu-mobile__hamburger
+            .hamburger.hamburger_active
+              span.hamburger__line1
+              span.hamburger__line2
+              span.hamburger__line3
+          .menu-mobile__container
+            nav.nav
+              +nav(navData, "header__mobile")
+            +social(socialData)
+      include pug-example/sections/entry

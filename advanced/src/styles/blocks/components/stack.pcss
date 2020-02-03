@@ -1,13 +1,15 @@
 .stack {
-    max-width: 750px;
+    padding-left: 14%;
     width: 100%;
     @include desktop {
         max-width: 680px;
+        padding-left: 0;
     }
     @include tablets {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding-left: 0;
     }
 
     &:not(:last-child) {
@@ -20,12 +22,21 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include desktop {
+            max-width: 670px;
+            justify-content: center;
+        }
         @include tablets {
-            max-width: 590px;
-            //justify-content: center;
+            flex-wrap: wrap;
+            max-width: 100%;
+            width: 100%;
+            padding-left: 0;
         }
         @include phones {
-            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 270px;
+            //width: 100%;
+
         }
     }
     &__item {
@@ -33,10 +44,12 @@
         justify-content: center;
         align-items: center;
         position: relative;
-        //max-width: 135px;
-        //width: 100%;
-        //max-height: 135px;
-        //height: 100%;
+        @include desktop {
+            margin-right: 10px;
+        }
+        @include tablets {
+            margin-right: 0;
+        }
     }
     &__title {
         font-size: 24px;
@@ -45,20 +58,15 @@
             margin-bottom: 16px;
         }
     }
-    &__svg-block {
-        //max-height: 135px;
-        //height: 100%;
-    }
-
     &__svg {
         max-width: 135px;
         width: 100%;
-        @include tablets {
-            max-width: 130px;
-        }
-        @include phones {
-            max-width: 120px;
-        }
+        //@include tablets {
+        //    max-width: 130px;
+        //}
+        //@include phones {
+        //    max-width: 120px;
+        //}
     }
     &__text {
         max-width: 100px;
@@ -68,20 +76,7 @@
         @include tablets {
             font-size: 16px;
         }
-
     }
-    //&__svg {
-    //    width: 135px;
-    //    height: 135px;
-    //    @include tablets {
-    //        width: 130px;
-    //        height: 130px;
-    //    }
-    //    @include phones {
-    //        width: 120px;
-    //        height: 120px;
-    //    }
-    //}
     &__circle-lower {
         fill: transparent;
         stroke-width: 5px;
@@ -90,7 +85,7 @@
     &__circle-upper {
         fill: transparent;
         stroke-width: 10px;
-        stroke-dasharray: 251;
+        stroke-dasharray: 252;
         stroke-dashoffset: 20;
     }
 }

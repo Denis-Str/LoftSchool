@@ -1,0 +1,147 @@
+body,
+html {
+    height: 100%;
+}
+body {
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.42;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: rgba(65, 76, 99, 0.7);
+    min-width: 320px;
+    @include phones {
+        font-size: 14px;
+    }
+}
+.wrapper {
+    /*height: 100%;*/
+    /*min-height: 100%;*/
+    position: relative;
+    background-color: #e8f0f3;
+}
+.container {
+    margin: 0 auto;
+    max-width: 1080px;
+    width: 95%;
+    @include desktop {
+        max-width: 1080px;
+    }
+    @include tablets {
+        max-width: 688px;
+    }
+    @include phones {
+        max-width: 260px;
+        width: 85%;
+    }
+}
+button {
+    border: 0;
+    cursor: pointer;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    cursor: pointer;
+    background-color: transparent;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+input {
+    max-width: 270px;
+    border: none;
+    color: #414c63;
+    font-weight: 600;
+    font-size: 18px;
+    &:disabled {
+        background-color: transparent;
+        color: #414c63;
+        font-weight: 600;
+        font-size: 18px;
+    }
+}
+
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.section {
+    padding-top: 60px;
+}
+
+.title {
+    font-family: Open Sans;
+    font-weight: 900;
+    font-size: 22px;
+    color: #414c63;
+    margin-bottom: 60px;
+    &_size {
+        font-size: 24px;
+    }
+    @include tablets {
+        font-size: 30px;
+    }
+    @include phones {
+        font-size: 24px;
+    }
+}
+
+.btn {
+    border-radius: 25px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.edit-string {
+    border-bottom: 1px solid #000000
+}

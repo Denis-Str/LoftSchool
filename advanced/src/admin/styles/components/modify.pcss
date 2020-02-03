@@ -1,0 +1,74 @@
+.modify {
+    max-width: 50px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    &__add {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-image: linear-gradient(to right, #006aed, #3f35cb);
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &::after, &::before {
+            content: "";
+            width: 15px;
+            height: 2px;
+            display: block;
+            position: absolute;
+            background-color: #fff;
+        }
+        &::after {
+            transform: rotate(90deg);
+            transform-origin: 50% 50%;
+        }
+        &_big {
+            width: 145px;
+            height: 145px;
+            background-image: none;
+            border-radius: 50%;
+            border: 2px solid   #ffffff;
+            margin-bottom: 30px;
+            &::after, &::before {
+                width: 25px;
+                height: 2px;
+            }
+        }
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        span {
+            color: rgba(65, 76, 99, .15);
+            font-size: 16px;
+            margin-right: 10px;
+        }
+    }
+    &__del {
+        width: 13px;
+        height: 13px;
+        background-image: svg-load("remove.svg", fill=#414c63);
+        &_red {
+            background-image: svg-load("remove.svg", fill=#bf2929);
+        }
+    }
+    &__tick {
+        background-image: svg-load("tick.svg", fill=#00d70a);
+        width: 15px;
+        height: 15px;
+    }
+    &__pencil {
+        width: 15px;
+        height: 15px;
+        background-image: svg-load("pencil.svg", fill=#00d70a);
+    }
+    &__trash {
+        width: 20px;
+        height: 20px;
+        background-image: svg-load("trash.svg", fill=#414c63);
+    }
+}

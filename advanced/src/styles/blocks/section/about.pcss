@@ -1,12 +1,19 @@
 .about {
-    height: 100%;
-    min-height: 650px;
     position: relative;
     &__container {
-        height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
+        padding-bottom: 270px;
+        @include desktop {
+            padding-bottom: 220px;
+        }
+        @include tablets {
+            padding-bottom: 150px;
+        }
+        @include phones {
+            padding-bottom: 105px;
+        }
     }
     &__inner {
         display: flex;
@@ -15,8 +22,8 @@
         width: 100%;
         @include phones {
             flex-direction: column;
+            align-items: center;
         }
-
     }
     &__left-column {
         max-width: 284px;
@@ -30,9 +37,11 @@
         }
         @include phones {
             margin-bottom: 40px;
+            max-width: unset;
         }
     }
     &__pic-block {
+        width: 100%;
         max-width: 200px;
         margin-bottom: 80px;
         //border-radius: 50%;
@@ -71,27 +80,33 @@
     }
     &__rigth-column {
         max-width: 550px;
-        margin-left: 40px;
+
+        @include desktop {
+            margin-left: 40px;
+        }
         @include tablets {
             max-width: 370px;
             margin-left: 30px;
         }
         @include phones {
             margin-left: 0;
+            max-width: unset;
         }
     }
-    &__greeting,
-    &__title {
+    &__greeting {
         margin-bottom: 35px;
         @include phones {
             margin-bottom: 10px;
         }
-
     }
 
     &__title    {
+        margin-bottom: 35px;
         @include tablets {
             font-size: 30px;
+        }
+        @include phones {
+            font-size: 40px;
         }
     }
     &__text {
@@ -111,6 +126,9 @@
             font-size: 48px;
             top: 10px;
             left: -60px;
+            @include desktop {
+                left: -45px;
+            }
             @include tablets {
                 left: -35px;
             }

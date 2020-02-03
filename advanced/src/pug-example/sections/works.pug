@@ -1,36 +1,40 @@
 section.works
-    .container.works__container
+    .works__slider-mobile
         h2.title.works__title Мои работы
-        .works__slider
-            ul.works__list
-                li.works__item
-                    .works__slider-left
-                        figure.works__preview
-                            +image("content/worksPreview/1.jpg", "preview__img-full")
-                            - var images = [1, 2, 3, 4];
-                                .miniatures
-                                    ul.miniatures__list
-                                        each img in images
-                                            case img
-                                                when 1
-                                                    li.miniatures__item
-                                                        .miniatures__active
-                                                        a.miniatures__link(href="#")
-                                                            +image(`content/worksPreview/${img}.jpg`, "miniatures__img-mini")
-                                                default
-                                                    li.miniatures__item
-                                                        a.miniatures__link(href="#")
-                                                            +image(`content/worksPreview/${img}.jpg`, "miniatures__img-mini")
-                        +directionArrow(["up", "down"])
-                        .works__number 1
-                    .works__slider-rigth
-                        .works__content
-                            .tag
-                                ul.tag__list
-                                    each tag in ["HTML", "CSS", "Javascript"]
-                                        li.tag__item= tag
-                            h3.title.works__content-title Сайт школы  образования
-                            .works__content-desc Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
-                            .works__content-site
-                                +icon("link", "works__site-svg")
-                                a(href="#").works__link Посмотреть сайт
+        figure.works__preview
+            +image("content/worksPreview/1.jpg", "works__img-full")
+        +directionArrow(["up", "down"])
+    .container.works__container
+        h2.title.works__title.works__title-hidden Мои работы
+        .works__sliders
+            .works__slide
+                .works__slider-left
+                    figure.works__preview
+                        +image("content/worksPreview/1.jpg", "works__img-full")
+                        - var images = [1, 2, 3, 4];
+                            .miniatures
+                                ul.miniatures__list
+                                    each img in images
+                                        case img
+                                            when 1
+                                                li.miniatures__item
+                                                    .miniatures__active
+                                                    a.miniatures__link(href="#")
+                                                        +image(`content/worksPreview/${img}.jpg`, "miniatures__img-mini")
+                                            default
+                                                li.miniatures__item
+                                                    a.miniatures__link(href="#")
+                                                        +image(`content/worksPreview/${img}.jpg`, "miniatures__img-mini")
+                    +directionArrow(["up", "down"])
+                    .works__number 2
+                .works__slider-rigth
+                    .works__content
+                        .tag
+                            ul.tag__list
+                                each tag in ["HTML", "CSS", "Javascript"]
+                                    li.tag__item= tag
+                        h3.title.works__content-title Сайт школы  образования
+                        .works__content-desc Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+                        .works__content-site
+                            +icon("link", "works__site-svg")
+                            a(href="#").works__link Посмотреть сайт

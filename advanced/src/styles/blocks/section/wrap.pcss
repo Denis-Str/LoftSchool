@@ -1,0 +1,91 @@
+.wrap {
+  &__top {
+    position: relative;
+
+    .parallax {
+      @include tablets {
+        z-index: -20;
+        @include bg-img(bg/mountain-baloon.jpg);
+        background-position: center center;
+      }
+
+      &__layer {
+        &:nth-child(2) {
+          .parallax__img {
+            top: 10%;
+            right: 0;
+          }
+        }
+
+        &:nth-child(3) {
+          .parallax__img {
+            left: 50%;
+            top: 15%;
+            margin-left: 15%;
+          }
+        }
+
+        &:nth-child(4) {
+          .parallax__img {
+            left: 0;
+            top: 20%;
+          }
+        }
+
+        &:nth-child(5) {
+          .parallax__img {
+            top: 25%;
+          }
+        }
+
+        &:nth-child(6) {
+          .parallax__img {
+            right: 0;
+            top: 20%;
+          }
+        }
+
+        &:nth-child(7) {
+          .parallax__img {
+            left: 0;
+            bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    position: relative;
+
+    .parallax {
+      @include tablets {
+        z-index: -10;
+        @include bg-img(bg/budda.jpg);
+        background-position: center center;
+      }
+
+      &__layer {
+        &:nth-child(2) {
+          .parallax__img {
+            top: 45%;
+          }
+        }
+
+        &:nth-child(3) {
+          .parallax__img {
+            left: 50%;
+            top: 75%;
+            margin-left: 10%;
+          }
+        }
+
+        &:nth-child(4) {
+          .parallax__img {
+            bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

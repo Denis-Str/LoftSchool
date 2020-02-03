@@ -3,6 +3,9 @@
 
 # Учебный шаблон проекта Portfolio
 
+[выпускной проект](https://denis-str.github.io/advanced/dist/index.html)
+
+
 > Перед установкой зависимостей и запуском проекта убедитесь, что у вас установлена [последняя версия Node.js & NPM](https://nodejs.org/en/download/current/), а так же 
 [последняя версия Yarn](https://yarnpkg.com/ru/docs/install)
 
@@ -29,4 +32,4 @@ $ npm run имя_скрипта
 ##### Либо:
 ```sh
 $ yarn имя_скрипта
-```
+```# advanced
