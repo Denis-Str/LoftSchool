@@ -4,7 +4,7 @@
     .work__group.desc
       h3.desc__title.title Редактирование работы
       .desc__inner
-        .desc__column
+        .desc__column.desc__column_flex
           .desc__load-img
             button(type="button" class="btn desc__load-btn") Загрузить
         .desc__column
@@ -24,30 +24,31 @@
             .desc__tag-item
               .desc__tag-content Html
               .modify
-                button(type="button" class="modify__del")
-                  span.visually-hidden Delete
+                button(type="button" class="modify__del modify__del_small" aria-label="Delete")
           .desc__btn-group
             button(type="button" class="btn desc__cancel-btn")  Отменить
             button(type="button" class="btn desc__save-btn") Сохранить
     .desc-mini
-      .desc-mini__row.desc-mini__row_add
-        button(type="button" class="modify__add modify__add_big")
-        span Добавить работу
-      .desc-mini__row
-        .desc-mini__load-img
-          img(class="desc-mini__img" :src="img")
-          .desc__tag-list
-            .desc__tag-item
-              .desc__tag-content Html
-        .desc-mini__inner
-          h3.desc-mini__title Сайт школы образования
-          .desc-mini__content Этот парень проходил обучение веб-разработке не где-то, а в Loftshool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
-          a(class="desc-mini__link" href="#") http://loftschool.ru
-          .modify
-            button(type="button" class="modify__edit") Edit
-            .modify__inner
-              span Удалить
-              button(type="button" class="modify__del modify__del_red")
+        .desc-mini__row.desc-mini__row_add
+          button(type="button" class="modify__add modify__add_big")
+          span Добавить работу
+        .desc-mini__row
+          .desc-mini__load-img
+            img(class="desc-mini__img" :src="img")
+            .desc__tag-list
+              .desc__tag-item
+                .desc__tag-content Html
+          .desc-mini__inner
+            h3.desc-mini__title Сайт школы образования
+            .desc-mini__content Этот парень проходил обучение веб-разработке не где-то, а в Loftshool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+            a(class="desc-mini__link" href="#") http://loftschool.ru
+            .modify
+              .modify__inner
+                span Править
+                button(type="button" class="modify__pencil" aria-label="Edit")
+              .modify__inner
+                span Удалить
+                button(type="button" class="modify__del modify__del_red")
 
 </template>
 
@@ -64,6 +65,7 @@
 </script>
 
 <style  lang="postcss">
+  @import "../../styles/mixins.pcss";
   @import "../styles/components/modify.pcss";
   @import "../styles/components/desc.pcss";
   @import "../styles/components/desc-mini.pcss";

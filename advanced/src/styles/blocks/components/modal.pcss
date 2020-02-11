@@ -1,0 +1,51 @@
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 100;
+  background-color: rgba(65, 76, 99, .9);
+
+  &__message {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 50px 0;
+  }
+  &__text {
+    margin-bottom: 25px;
+    @include desktop {
+      font-size: 32px;
+    }
+    @include tablets {
+      font-size: 28px;
+    }
+    @include phones {
+      font-size: 24px;
+    }
+  }
+  &__close {
+    @include tablets {
+      padding: 25px 60px;
+    }
+  }
+
+  &_show {
+    display: flex;
+  }
+  .container {
+    min-width: 320px;
+    max-width: 580px;
+    @include tablets {
+      max-width: 380px;
+    }
+  }
+}

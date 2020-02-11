@@ -24,6 +24,7 @@
 </script>
 
 <style scoped lang="postcss">
+  @import "../../styles/mixins.pcss";
   .header {
     background-color: #414c63;
     color: #ffffff;
@@ -60,5 +61,10 @@
   }
   .logout {
     display: flex;
+  }
+  .subtitle {
+    @include phones {
+      display: none;
+    }
   }
 </style>

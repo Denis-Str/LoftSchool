@@ -3,6 +3,7 @@ script(type="text/x-template")#slider-container
         display(
             :works="works",
             :currentWork="currentWork"
+            :currentIndex="currentIndex"
             @slide="handleSlide"
         )
 
@@ -12,10 +13,12 @@ script(type="text/x-template")#slider-display
             figure.works__preview
                 img(:src="currentWork.photo" alt="" class="works__img-full")
                 previews(
-                    :works="works"
+                    :works="reversePrev"
+                    :currentWork="currentWork"
+                    :currentIndex = "currentIndex"
                 )
             btns(
-                @slide="$emit('slide', '$event')"
+                @slide="$emit('slide', $event)"
             )
             .works__number {{currentWork.id}}
         .works__slider-rigth
@@ -25,24 +28,28 @@ script(type="text/x-template")#slider-display
 
 script(type="text/x-template")#slider-btns
     .controls
-        button(@click="$emit('slide', 'prev')" type="button" class="controls__button controls_up")
+        button(@click="$emit('slide', 'next')" type="button" class="controls__button controls_up")
             +icon("arrow", "arrow__up")
-        button(@click="$emit('slide', 'next')" type="button" class="controls__button controls_down")
+        button(@click="$emit('slide', 'prev')" type="button" class="controls__button controls_down")
             +icon("arrow", "arrow__down")
 
 
 script(type="text/x-template")#slider-preview
     .miniatures
-        ul.miniatures__list
-            li.miniatures__item(v-for="work in works")
+        ul.miniatures__list(ref="list" :style="{ transform: `translateY(${translate}px)` }"
+        )
+            li.miniatures__item(
+                v-for="work in works"
+                ref="item"
+            )
+                div(:class="{miniatures__active: work.id === currentWork.id}")
                 a.miniatures__link(href="#")
                     img(:src="work.photo" alt="" class="miniatures__img-mini")
-
 
 script(type="text/x-template")#slider-info
     .works__content
         tags(
-            :tags="currentWork.skills"
+            :tags="tagsArray"
         )
         h3.title.works__content-title {{currentWork.title}}
         .works__content-desc {{currentWork.desc}}
@@ -53,17 +60,4 @@ script(type="text/x-template")#slider-info
 script(type="text/x-template")#slider-tags
     .tag
         ul.tag__list
-            li.tag__item
-
-
-// - var images = [1, 2, 3, 4];
-//     .miniatures
-//         ul.miniatures__list
-//             each img in images
-//                 case img
-//                     when 1
-//                         li.miniatures__item
-//                             .miniatures__active
-//                             a.miniatures__link(href="#")
-//                                 +image(`content/worksPreview/${img}.jpg`, "miniatures__img-mini")
-//@slide="handleSlide"  @slide="$emit('slide', '$event')"
+            li.tag__item(v-for="tag in tags") {{tag}}

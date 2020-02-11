@@ -2,7 +2,7 @@ form(action="#" class="form" enctype="multipart/form-data" method="post")
     .form__row.form__row_flex-sb
         div(class="form__field form__field_ph-mr")
             label(for="name" class="form__label") Введите ваше имя
-            .form__wrap.form__wrap_mr.form__wrap_error
+            .form__wrap.form__wrap_mr
                 +icon("user", "form__field-svg")
                 input(
                     type="text"
@@ -13,10 +13,10 @@ form(action="#" class="form" enctype="multipart/form-data" method="post")
                     aria-label="Имя"
                     placeholder="Ковальчук Дмитрий"
                 )
-                .form__error Какая то ошибка
+                .form__error Ошибка
         div(class="form__field")
             label(for="email" class="form__label") Введите ваш email
-            .form__wrap.form__wrap_error
+            .form__wrap
                 +icon("envelope", "form__field-svg")
                 input(
                     type="text"
@@ -27,10 +27,11 @@ form(action="#" class="form" enctype="multipart/form-data" method="post")
                     aria-label="email"
                     placeholder="loftschool@study.com"
                 )
+                .form__error Ошибка
     .form__row.form__row_comment-mb
         div(class="form__field form__field_size")
             label(for="comment" class="form__label") Сообщение к письму
-            .form__wrap.form__wrap_error
+            .form__wrap
                 +icon("message", "form__field-svg form__field-svg_mb")
                 textarea(
                     id="comment"
@@ -40,5 +41,6 @@ form(action="#" class="form" enctype="multipart/form-data" method="post")
                     aria-label="comment"
                     placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса"
                 )
+                .form__error Ошибка
     .form__row.form__row_jc
         button(type="submit" class="btn form__btn-submit") Отправить

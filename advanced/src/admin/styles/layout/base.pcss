@@ -32,7 +32,7 @@ body {
         max-width: 688px;
     }
     @include phones {
-        max-width: 260px;
+        max-width: 100%;
         width: 85%;
     }
 }
@@ -86,6 +86,7 @@ img {
 
 input {
     max-width: 270px;
+    width: 100%;
     border: none;
     color: #414c63;
     font-weight: 600;
@@ -126,11 +127,8 @@ input[type="radio"].visually-hidden {
     &_size {
         font-size: 24px;
     }
-    @include tablets {
-        font-size: 30px;
-    }
     @include phones {
-        font-size: 24px;
+        font-size: 18px;
     }
 }
 
@@ -142,6 +140,3 @@ input[type="radio"].visually-hidden {
     text-transform: uppercase;
 }
 
-.edit-string {
-    border-bottom: 1px solid #000000
-}

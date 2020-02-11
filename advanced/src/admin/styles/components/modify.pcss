@@ -37,11 +37,18 @@
                 height: 2px;
             }
         }
+        &_small {
+            width: 20px;
+            height: 20px;
+            &::after, &::before {
+                width: 8px;
+            }
+        }
     }
     &__inner {
         display: flex;
         justify-content: space-between;
-        align-items: baseline;
+        align-items: center;
         span {
             color: rgba(65, 76, 99, .15);
             font-size: 16px;
@@ -49,26 +56,35 @@
         }
     }
     &__del {
-        width: 13px;
-        height: 13px;
+        width: 15px;
+        height: 15px;
         background-image: svg-load("remove.svg", fill=#414c63);
+        background-size: cover;
         &_red {
             background-image: svg-load("remove.svg", fill=#bf2929);
+            background-size: cover;
+        }
+        &_small {
+            width: 10px;
+            height: 10px;
         }
     }
     &__tick {
         background-image: svg-load("tick.svg", fill=#00d70a);
+        background-size: cover;
         width: 15px;
         height: 15px;
     }
     &__pencil {
         width: 15px;
         height: 15px;
-        background-image: svg-load("pencil.svg", fill=#00d70a);
+        background-image: svg-load("pencil.svg", fill=#a0a5b1);
+        background-size: cover;
     }
     &__trash {
-        width: 20px;
-        height: 20px;
-        background-image: svg-load("trash.svg", fill=#414c63);
+        width: 15px;
+        height: 15px;
+        background-image: svg-load("trash.svg", fill=#a0a5b1);
+        background-size: cover;
     }
 }

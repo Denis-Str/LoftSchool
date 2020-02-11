@@ -4,10 +4,10 @@
     .reviews__group.desc
       h3.desc__title.title Новый отзыв
       .desc__inner
-        .desc__column
+        .desc__column.desc__column-user
           .desc__load-img
             img(class="desc-mini__img" :src="user")
-          button(type="button" class="btn desc__load-btn") Добавить фото
+          button(type="button" class="btn desc__load-btn desc__load-btn_padding") Добавить фото
         .desc__column
           .desc__field-wrap
             .desc__field
@@ -35,11 +35,13 @@
               .user__name Владимир Сабанцев
               .user__profession Преподаватель
           .desc-mini__content Этот парень проходил обучение веб-разработке не где-то, а в Loftshool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
-            .modify
-              button(type="button" class="modify__edit") Edit
-              .modify__inner
-                span Удалить
-                button(type="button" class="modify__del modify__del_red")
+          .modify
+            .modify__inner
+              span Править
+              button(type="button" class="modify__pencil" aria-label="Edit")
+            .modify__inner
+              span Удалить
+              button(type="button" class="modify__del modify__del_red")
 </template>
 
 <script>
@@ -58,6 +60,7 @@
 </script>
 
 <style scoped lang="postcss">
+  @import "../../styles/mixins.pcss";
   @import "../styles/components/user.pcss";
   .reviews {
     &__group {
@@ -72,16 +75,28 @@
     }
     .desc {
       &__column {
-        flex: unset;
+        /*flex: unset;*/
         &:last-child {
           max-width: 613px;
           width: 100%;
         }
+        &-user {
+          max-width: 200px;
+          flex-grow: 2;
+        }
+        &_flex {
+          flex: 3;
+        }
       }
+      &__inner {
+        align-items: center;
+      }
+
       &__load-img {
-        max-width: 200px;
-        max-height: 200px;
+        width: 200px;
+        height: 200px;
         border-radius: 50%;
+        margin-bottom: 25px;
         border: none;
         &::before {
           content: none;
@@ -106,13 +121,6 @@
       &__row {
         height: 380px;
       }
-      &__inner {
-
-      }
-    }
-    .modify {
-      position: absolute;
-      bottom: 0;
     }
   }
 </style>
