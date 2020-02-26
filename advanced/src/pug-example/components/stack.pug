@@ -1,7 +1,7 @@
 script(type="text/x-template")#stack
     .skills__block
-        .stack(v-for="skill in skills")
-            h3(class="title stack__title") {{skill.skillsName}}
+        .stack(v-for="skill in skills" :key="skill.skillsGroup" v-if="skill.skills.length")
+            h3(class="title stack__title") {{skill.category}}
             skills-row(
                 :skill="skill"
             )

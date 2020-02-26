@@ -5,28 +5,38 @@
       h3.desc__title.title Новый отзыв
       .desc__inner
         .desc__column.desc__column-user
-          .desc__load-img
-            img(class="desc-mini__img" :src="user")
-          button(type="button" class="btn desc__load-btn desc__load-btn_padding") Добавить фото
+          .desc__load-img(
+            :class="{filled: renderedPhoto.length}"
+            :style="{backgroundImage: `url(${renderedPhoto})`}"
+            :src="user"
+          )
+            .desc-mini__img
+          label.desc__load-label.desc__load-btn_padding Добавить фото
+            input(
+              type="file"
+              class="btn desc__load-btn"
+              @change="handleFile"
+            )
         .desc__column
           .desc__field-wrap
             .desc__field
               label(class="desc__label" for="workName") Имя автора
-              input(id="workName" class="desc__input" type="text")
+              input(v-model="review.author" id="workName" class="desc__input" type="text")
             .desc__field
               label(class="desc__label" for="workLink") Титул автора
-              input(id="workLink" class="desc__input" type="text")
+              input(v-model="review.occ" id="workLink" class="desc__input" type="text")
           .desc__field
             label(class="desc__label" for="workDesc") Отзыв
-            textarea(id="workDesc" class="desc__content")
+            textarea(v-model="review.text" id="workDesc" class="desc__content")
           .desc__btn-group
             button(type="button" class="btn desc__cancel-btn")  Отменить
-            button(type="button" class="btn desc__save-btn") Сохранить
+            button(type="button" class="btn desc__save-btn" @click="send") Сохранить
     .desc-mini
       .desc-mini__row.desc-mini__row_add
         button(type="button" class="modify__add modify__add_big")
         span Добавить работу
-      .desc-mini__row
+      .desc-mini__row(:review="review")
+        pre {{review}}
         .desc-mini__inner
           .user.desc-mini__user
             .user__pic
@@ -45,18 +55,47 @@
 </template>
 
 <script>
-    import user from "../../images/content/user-default.png"
-    import avatar from "../../images/content/avatar.jpg"
-    export default {
-        name: "Reviews",
-        data() {
-            return {
-                user,
-                avatar
-            }
-
+  import user from "../../images/content/user-default.png"
+  import avatar from "../../images/content/avatar.jpg"
+  import {mapActions} from "vuex";
+  export default {
+    name: "Reviews",
+    data() {
+      return {
+        user,
+        avatar,
+        renderedPhoto: "",
+        review: {
+          photo: {},
+          author: "",
+          occ: "",
+          text: ""
         }
+      }
+    },
+    methods: {
+      ...mapActions("addFile", ["addReview"]),
+      handleFile(e) {
+        const file = e.target.files[0];
+        this.review.photo = file;
+        this.renderImageFile(file);
+      },
+      renderImageFile(file) {
+        const reader = new FileReader();
+        try {
+          reader.readAsDataURL(file);
+          reader.onloadend = () => {
+            this.renderedPhoto =  reader.result;
+          }
+        } catch (error) {
+          throw new Error("Ошибка при чтении файла")
+        }
+      },
+      send() {
+       this.addReview(this.review)
+      }
     }
+  }
 </script>
 
 <style scoped lang="postcss">
@@ -111,15 +150,32 @@
           margin-right: 30px;
         }
       }
-      .desc__load-btn {
+      .desc__load-label {
         background-image: none;
         color: #383bcf;
         text-transform: unset;
+        text-align: center;
+      }
+      .desc__load-btn {
+        position: absolute;
+        top: 0;
+        left: -9999px;
       }
     }
-    .desc-mini {
+    .desc__load-img {
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
       &__row {
         height: 380px;
+      }
+      .desc-mini__img {
+        background-image: svg-load("user.svg", fill="#fff");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        width: 100px;
+        height: 100px;
       }
     }
   }

@@ -2,11 +2,14 @@
   .reg
     .reg__content
       h2.title Аворизация
-      form(action="#" class="form" enctype="multipart/form-data" method="post")
+      form(
+        @submit.prevent="login"
+        ).form
         div(class="form__field")
           label(for="name" class="form__label") Логин
           .form__wrap
             input(
+            v-model="user.name"
               type="text"
               id="name"
               name="name"
@@ -17,11 +20,12 @@
             .form__error Ошибка
         div(class="form__field")
           label(for="password" class="form__label") Пароль
-          .form__wrap
+          .form__wrap.form__wrap_svg
             input(
+            v-model="user.password"
               type="password"
               id="password"
-              name="email"
+              name="password"
               class="form__input"
               required
               aria-label="пароль"
@@ -29,23 +33,49 @@
             .form__error Ошибка
         .form__row
           button(type="submit" class="btn form__btn-submit") Отправить
-      .modify
-        button(type="button" class="modify__del" aria-label="Delete")
 </template>
 
 <script>
-    export default {
-        name: "reg"
+  import $axios from "../request";
+
+  export default {
+      name: "reg",
+      data() {
+        return {
+          user: {
+            name: "",
+            password: ""
+          }
+        }
+    },
+    methods: {
+      async login() {
+        try {
+          const response = await $axios.post('/login', this.user);
+          const token = response.data.token;
+
+          localStorage.setItem('token', token);
+
+          $axios.defaults.headers['Authorization'] = `Bearer ${token}`;
+          this.$route.replace("/");
+
+        } catch (error) {
+
+        }
+      }
     }
+  }
 </script>
 
 <style  lang="postcss" scoped>
   @import "../../styles/mixins.pcss";
   @import "../../styles/blocks/components/feedback-form.pcss";
   .reg {
-    /*position: fixed;*/
-    height: 100vh;
-    width: 100vw;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -105,10 +135,14 @@
         content: "";
         width: 25px;
         height: 25px;
-        background-image: svg-load("user.svg", fill=#414c63);
+        background-image: svg-load("user.svg", "fill=#414c63");
         background-size: cover;
         margin-bottom: 15px;
-
+      }
+      &_svg {
+        &::before {
+          background-image: svg-load("key.svg", "fill=#414c63");
+        }
       }
     }
     &__label {
@@ -117,12 +151,5 @@
     &__input {
       padding-left: 10px;
     }
-}
-.modify {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  max-width: unset;
-  width: auto;
 }
 </style>

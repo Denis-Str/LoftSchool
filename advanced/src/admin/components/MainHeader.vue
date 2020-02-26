@@ -7,11 +7,12 @@
         .user__name Денис Стрельцов
       .header__inner
         .subtitle Панель администрирования
-        a(class="logout" href="#") Выйти
+        a(@click="logoutUser" class="logout" href="#") Выйти
 </template>
 
 <script>
     import imgUser from "../../images/content/user.jpg";
+    import {mapActions} from "vuex";
 
     export default {
         name: "MainHeader",
@@ -20,6 +21,13 @@
                 imgUser
             }
         },
+      methods: {
+        ...mapActions("user", ["logout"]),
+        logoutUser() {
+          this.logout();
+          this.$router.replace("/login");
+        }
+      }
     }
 </script>
 

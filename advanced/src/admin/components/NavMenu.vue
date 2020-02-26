@@ -1,9 +1,10 @@
 <template lang="pug">
   nav.nav
-    .nav__container.container
-      ul.nav__list
-        li.nav__item(v-for="link in navLinks")
-          a(class="nav__link" :href="link.href").nav__link {{link.title}}
+    ul.nav__list.container
+      li.nav__item(v-for="link in navLinks")
+        router-link(
+          :to="link.href"
+        ).nav__link {{link.title}}
 </template>
 
 <script>
@@ -12,9 +13,9 @@
     data() {
       return {
         navLinks: [
-          {title: "Обо мне", href: "#"},
-          {title: "Работы", href: "#"},
-          {title: "Отзывы", href: "#"},
+          {title: "Обо мне", href: "/"},
+          {title: "Работы", href: "/work"},
+          {title: "Отзывы", href: "/reviews"},
         ]
       }
     }
@@ -28,14 +29,10 @@
     display: flex;
     justify-content: flex-start;
     /*padding: 32px 0;*/
-    &__container {
 
-    }
     &__list {
       height: 100%;
       display: flex;
-      /*max-width: 330px;*/
-      /*justify-content: space-between;*/
       align-items: center;
     }
     &__item {
@@ -51,5 +48,7 @@
         border-bottom: 3px solid $links-hover;
       }
     }
+  }
+  .router-link-active {
   }
 </style>
