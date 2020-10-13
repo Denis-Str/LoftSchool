@@ -32,7 +32,7 @@
     "gulp-uglify": "^3.0.2",
     "jquery-touchswipe": "^1.6.19",
     "node-normalize-scss": "^8.0.1",
-    "node-sass": "^4.13.0"
+    "node-sass": "^4.13.1"
   },
   "dependencies": {
     "jquery": "^3.4.1"
